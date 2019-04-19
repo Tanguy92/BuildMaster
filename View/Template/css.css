@@ -1,0 +1,260 @@
+
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+body{
+  background-color:#20355C;
+  height:100%;
+  font-family:sans-serif;
+/*   min-width:1024px; */
+}
+.topnav{
+  background-color:#fff;
+  height:100px;
+  padding:0 50px;
+  margin:50px 0;
+  box-shadow:0 5px 10px #111;
+}
+
+.logo{
+  height:80px;
+  margin:10px 0;
+}
+
+nav ul{
+  text-align:right;
+  float:right;
+line-height:100px;
+  background-color:#fff;
+   
+}
+nav li{
+  display:inline-block;
+  margin:0 5px;
+}
+nav li a{
+  text-decoration:none;
+  color:#20355C;
+}
+
+
+main{
+  margin:50px;
+}
+
+.abutton{
+  display:inline-block;
+  text-decoration:none;
+  color:#fff;
+  border:2px solid #fff;
+  margin:20px 0;
+  padding:10px 20px;
+}
+.abutton:hover{
+  background-color:#fff;
+  color:#20355C;
+  
+}
+
+.abutton-dark{
+  display:inline-block;
+  text-decoration:none;
+  color:#20355C;;
+  border:2px solid #20355C;
+  margin:20px 0;
+  padding:10px 20px;
+}
+.abutton-dark:hover{
+  background-color:#20355C;
+  color:#fff;
+  
+}
+h1{
+  margin:20px 0;
+}
+
+h2{
+  margin:10px 0;
+  font-size:1.2em;
+}
+.introcopy{
+font-size:1.3em;
+}
+.kvsection{
+  background-color:#fff;
+  box-shadow:0 5px 10px #111;
+}
+.kv{
+  color:#fff;
+  padding:50px 100px;
+  background-image:url(https://sdwebdesign.nl/wp-content/uploads/2016/04/alex-iPad-0005-1-1.jpg);
+  background-size:cover;
+}
+.kvsubbox{
+  padding:20px;
+  text-align:center;
+  display:table;
+  width:100%;
+/* border-collapse:collapse; */
+}
+.kvsub-left,.kvsub-right{
+  display:table-cell;
+  width:50%;
+  padding:20px;
+  text-align:center;
+}
+.kvsub-left{
+ border-right:2px solid #ddd; 
+}
+.kvsub-right{
+  border-left:2px solid #ddd;
+}
+
+/* .kvsub-right::before{
+  background-color:blue;
+  width:4px;
+  height:50px;
+  content:"";
+  top:5px;
+  left:-2px;
+position:absolute;
+} */
+.cardsection a{
+  color:#fff;
+  text-decoration:none;
+}
+.cardsection{
+display:flex;
+}
+.card-left,.card-right{
+  flex:1;
+  background-color:#294475;
+  color:#fff;
+    box-shadow:0 5px 10px #111;
+  display:flex;
+}
+.card-left{
+margin-right:20px;
+}
+
+.card-copy{
+  flex:2;
+  padding:20px;
+}
+.card-img{
+  flex:1;
+  height:100%;
+  background-size:cover;
+  background-position:center;
+}
+
+/* .error-img{
+  background:url(https://sdwebdesign.nl/wp-content/uploads/2016/04/waterlaptop-1.jpg);
+    background-size:cover;
+  background-position:center;
+} */
+
+
+.portofoliosection{
+  background-color:#fff;
+  padding:20px;
+  box-shadow:0 5px 10px #111;
+  text-align:center;
+}
+.projectbox{
+display:flex;
+}
+.thumbnail{
+  flex:1;
+  width:80%;
+}
+section{
+  margin-bottom:50px;
+}
+.linksection{
+  font-size:0;
+  box-shadow:0 5px 10px #111;
+}
+.biglink{
+  font-size:medium;
+  width:50%;
+  display:inline-block;
+  height:250px;
+  background-color:#fff;
+  text-decoration:none;
+  color:#20355C;
+  text-align:center;
+  padding:30px;
+  
+}
+.biglink h1{
+  font-size:1.8em;
+}
+.biglink-dark{
+  background-color:#294475;
+  color:#fff;
+  
+}
+
+.quotesection{
+  margin:50px;
+  padding:20px 20px 60px 20px;
+  color:#fff;
+  background: linear-gradient(rgba(26, 55, 94, 0.7),rgba(26, 55, 94, 0.7)), url(https://sdwebdesign.nl/wp-content/uploads/2016/04/blauw-lichtkopie.jpg);
+  background-size:cover;
+  text-align:center;
+  box-shadow:0 5px 10px #111;
+}
+
+blockquote{
+  vertical-align:top;
+display:inline-block;
+  width:40%;
+  font-weight:300;
+  line-height:1.5;
+  margin:0 3%;
+}
+/* blockquote>p::before{
+content:"\"jlkj\Ajlkj";
+} */
+
+.bigquote{
+  font-size:2em;
+  font-weight:bold;
+}
+
+blockquote footer{
+  font-size:small;
+}
+
+.infosection{
+  margin:0 50px;
+  background-color:#294475;
+  padding:25px 0;
+  color:#fff;
+/*   z-index:3; */
+  position:relative;
+}
+
+
+.infosection li{
+  list-style:none;
+  display:inline-block;
+  margin:0 20px;
+}
+
+.copyrightsection{
+  background-color:#fff;
+  padding:50px 50px 0 50px;
+  height:80px;
+  margin-top:-35px;
+  text-align:right;
+  color:#666;
+  font-size:small;
+/*   z-index:2; */
+/*   position:relative; */
+}
