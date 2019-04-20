@@ -1,2 +1,0 @@
-# BuildMaster
-Projet S2
