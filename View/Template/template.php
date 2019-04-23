@@ -19,7 +19,7 @@
 
     <header class="topnav">
         <nav>
-            <img class="logo" src="Logo.png">
+            <img class="logo" src="/BuildMaster/View/Image/Logo.png">
             <ul>
                 <li><a href="#">Diensten</a></li>
                 <li><a href="#">PrestaShop webshop</a></li>
