@@ -113,7 +113,7 @@
         </section>
 
 
-        <!-- <section class="portofoliosection">
+        <!-- <section class="portofoliosection" >
             <h1>Recente projecten</h1>
             <div class="projectbox">
                 <a href="#"><img class="thumbnail" src="https://sdwebdesign.nl/wp-content/uploads/2017/02/project-img-1.jpg"></a>
