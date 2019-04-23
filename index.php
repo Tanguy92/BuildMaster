@@ -2,18 +2,23 @@
 session_start();
 include("/BuildMaster/Modele/ConnectBDD.php");
 
+
 if (!isset($_GET['page'])) {
-    include 'c/accueil.php';
+    include('Controleur/Vendeur/acceuil.php');
 } else {
     switch ($_GET['page']) {
-        case 'toto':
-        include 'c/toto.php' ;
+        case 'messageVendeur':
+            include('Controleur/Vendeur/message.php');
             break;
-        case 'courgette':
-            include('./fichiers/page_courgette.html');
+        case 'articleVendeur':
+            include('Controleur/Vendeur/article.php');
             break;
-        case 'carotte':
-            include('./fichiers/page_carotte.html');
+            case 'commandeVendeur':
+            include('Controleur/Vendeur/commandeVenduer.php');
             break;
+            case 'pageAcceuilVendeur':
+            include('Controleur/Vendeur/pageAcceuilvendeur.php');
+            break;
+           
     }
 }
