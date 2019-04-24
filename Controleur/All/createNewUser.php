@@ -22,12 +22,21 @@ $pass =$_SESSION['pass'];
 $adresse =$_SESSION['adresse'];
 
 // Condition Vendeur 
-if ($grade === 'v'){
+if ($grade == "v"){
     
+    $reponse = $bdd->prepare("INSERT INTO `Membre` (`idMembre`, `nom`, `prenom`, `mail`, `mdp`, `adresse`, `idTheme`, `statut`)  VALUES (NULL,:Anom,:Aprenom,:Amail,:Amdp,:Aadresse,1,:Astatut);");
+    $reponse->execute(array(
+        'Anom' => $_SESSION['nom'],
+        'Aprenom' => $_SESSION["prenom"],
+        'Amail' => $_SESSION["mail"],
+        'Amdp' => $_SESSION["pass"],
+        'Aadresse' => 'toto',
+        'Astatut' => $_SESSION["grade"]
 
+
+    ));
     // Inster    
-    $bdd->exec("INSERT INTO `Membre` (`idMembre`, `nom`, `prenom`, `mail`, `mdp`,`statut` ) VALUES (NULL, '$nom', '$prenom', '$mail', '$pass','$grade');");
-    include("View/All/newUserV.html");
+    include("View/All/newUserV.html");           
 
     // }
 
