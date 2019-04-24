@@ -1,6 +1,6 @@
 <?php
 session_start();
-// include("/BuildMaster/Modele/ConnectBDD.php");
+include("/BuildMaster/Modele/ConnectBDD.php");
 
 
 if (!isset($_GET['page'])) {
