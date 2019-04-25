@@ -28,6 +28,8 @@ if (!isset($_GET['page'])) {
             case 'createNewUser':
             include('Controleur/All/createNewUser.php');
             break;
-           
+            case 'createNewUser2':
+            include('Controleur/All/createNewUser2.php');
+            break;
     }
 }
