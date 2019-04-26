@@ -16,9 +16,10 @@
 
          <h1>Connection</h1><br>
 
-         <form method="POST" action="test.php">
-            Email ou Pseudo <input type="text" name="pseudo" placeholder="ID">
-            Mot de passe <input type="password" name="pass" placeholder="Password">
+         <form method="POST" action="index.php?page=connexionUtilisateur">
+             
+            Email <input type="text" name="mail" required placeholder="Email">
+            Mot de passe <input type="password" required name="pass" placeholder="Password">
              <input type="submit" name="login" class="login login-submit" value="Connection">
          </form>
 

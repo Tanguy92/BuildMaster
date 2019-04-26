@@ -31,5 +31,18 @@ if (!isset($_GET['page'])) {
             case 'createNewUser2':
             include('Controleur/All/createNewUser2.php');
             break;
+            case 'connexionUtilisateur':
+            include('Controleur/All/connexionUtilisateur.php');
+            break;
+            case 'adminTheme':
+            include('Controleur/Admin/adminTheme.php');
+            break;
+            case 'articleVendeur':
+            include('Controleur/Vendeur/article.php');
+            break;
+            case 'ajouterArticle':
+            include('Controleur/Vendeur/ajouterArticle.php');
+            break;
     }
-}
+    }
+
