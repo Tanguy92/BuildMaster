@@ -1,3 +1,5 @@
+<?php session_start()
+?>
 <!DOCTYPE html>
 <html>
 
@@ -32,8 +34,8 @@
     <main>
         <section class="kvsection">
             <div class="kv">
-                <h1>pseudo : </h1>
-                <p class="introcopy">Boite a outil</p>
+                <h1>Bonjour : <?php echo  $_SESSION['prenom']; ?> </h1>
+                <p class="introcopy">Boite a outil : VENDEUR</p>
                 <a class="abutton" href="#">Onze diensten</a>
             </div>
             <div class="kvsubbox">

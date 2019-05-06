@@ -7,5 +7,7 @@ $id = "tanguy";
 // Indiquer votre Mot de passe
 $passs = "tan997";
 
-$bdd = new PDO('mysql:host=localhost;dbname=eval;charset=utf8', "$id","$passs");
+$bdd = new PDO('mysql:host=localhost;dbname=buildmaster;charset=utf8', "$id","$passs");
+$GLOBALS["bdd"]=$bdd;
+
 ?>
