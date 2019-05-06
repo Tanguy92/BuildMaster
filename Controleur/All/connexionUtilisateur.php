@@ -23,7 +23,7 @@ $_SESSION['mail'] = $_POST['mail'];
 
 
 
-$reponse = $bdd->prepare("SELECT `mdp` FROM `Membre` WHERE `mail` LIKE :mail");
+$reponse = $bdd->prepare("SELECT `mdp` FROM `membre` WHERE `mail` LIKE :mail");
 $reponse->execute(array(
     'mail' => $_SESSION['mail']
 ));
@@ -34,7 +34,7 @@ while ($donnees = $reponse->fetch()) {
 }
 // //// recuperation du  pseudo
 
-$reponse2 = $bdd->prepare("SELECT `prenom` FROM `Membre` WHERE `mail` LIKE :mail");
+$reponse2 = $bdd->prepare("SELECT `prenom` FROM `membre` WHERE `mail` LIKE :mail");
 $reponse2->execute(array(
     'mail' => $_SESSION['mail']
 ));
@@ -46,7 +46,7 @@ while ($donnees2 = $reponse2->fetch()) {
 
 // //// recuperation du grade
 
-$reponse3 = $bdd->prepare("SELECT `statut` FROM `Membre` WHERE `mail` LIKE :mail");
+$reponse3 = $bdd->prepare("SELECT `statut` FROM `membre` WHERE `mail` LIKE :mail");
 $reponse3->execute(array(
     'mail' => $_SESSION['mail']
 ));

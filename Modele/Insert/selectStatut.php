@@ -1,5 +1,5 @@
 <?php
-$reponse3 = $bdd->prepare("SELECT `statut` FROM `Membre` WHERE `mail` LIKE :mail");
+$reponse3 = $bdd->prepare("SELECT `statut` FROM `membre` WHERE `mail` LIKE :mail");
 $reponse3->execute(array(
     'mail' => $_SESSION['mail']
 ));

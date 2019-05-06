@@ -7,9 +7,9 @@ if (!isset($_GET['page'])) {
     include('Controleur/All/acceuil.php');
 } else {
     switch ($_GET['page']) {
-        case 'messageVendeur':
-            include('Controleur/Vendeur/message.php');
-            break;
+        // case 'messageVendeur':
+        //     include('Controleur/Vendeur/message.php');
+        //     break;
         case 'articleVendeur':
             include('Controleur/Vendeur/article.php');
             break;
@@ -42,6 +42,9 @@ if (!isset($_GET['page'])) {
             break;
             case 'ajouterArticle':
             include('Controleur/Vendeur/ajouterArticle.php');
+            break;
+            case 'messageVendeur':
+            include('Controleur/Vendeur/indexMessage.php');
             break;
     }
     }

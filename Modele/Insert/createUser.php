@@ -1,6 +1,6 @@
 <?php
   
-  $reponse = $bdd->prepare("INSERT INTO `Membre` (`nom`, `prenom`, `mail`, `mdp`, `adresse`, `idTheme`, `statut`, `magasin`) 
+  $reponse = $bdd->prepare("INSERT INTO `membre` (`nom`, `prenom`, `mail`, `mdp`, `adresse`,`statut`,`magasin`,`0`, `idTheme`,) 
   VALUES (:nom,:prenom,:mail,:pass,:adresse,:theme,:grade,:magasin);");
   $reponse->execute(array(
       'nom' => $_SESSION['nom'],
