@@ -1,6 +1,5 @@
 <?php
-include("Modele/connectBDD.php");
-
+// Fonction Instert Amine
 function insertArticle($s1,$s2,$s3,$s4){
     $bdd = $GLOBALS["bdd"];
 
@@ -22,24 +21,37 @@ function insertArticle($s1,$s2,$s3,$s4){
     return $check;
 }
 
-
+// Fonction Tanguy
 function createMembre()
 {
-    $reponse = $bdd->prepare("INSERT INTO `membre` (`nom`, `prenom`, `mail`, `mdp`, `adresse`,`statut`,`magasin`,`0`, `idTheme`,) 
-    VALUES (:nom,:prenom,:mail,:pass,:adresse,:theme,:grade,:magasin);");
+    $toto= 0;
+    $bdd = $GLOBALS["bdd"];
+
+    $reponse = $bdd->prepare("INSERT INTO `membre` (`nom`, `prenom`, `mail`, `mdp`, `adresse`, `statut`, `magasin`, `signalements`, `idTheme`)
+    VALUES (:nom,:prenom,:mail,:pass,:adresse,:grade,:magasin,'0',:theme);");
     $reponse->execute(array(
         'nom' => $_SESSION['nom'],
         'prenom' => $_SESSION["prenom"],
         'mail' => $_SESSION["mail"],
         'pass' => $_SESSION["pass"],
         'adresse' => $_SESSION["adresse"],
-        'theme' => $_SESSION["theme"],
         'grade' => $_SESSION["grade"],
-        'magasin' => $_SESSION["magasin"]
+        'magasin' => $_SESSION["magasin"],
+        'theme' => $_SESSION["theme"]
     ));
+    
 }
 
+function updatePc($path) 
+{
 
+    $bdd = $GLOBALS["bdd"];
+
+    $reponse = $bdd->prepare("UPDATE `membre` SET `photo` = (:photo) WHERE `membre`.`mail` = (:mail);");
+
+    $reponse->execute(array(
+        'photo' => $path,
+        'mail' => $_SESSION["mail"]
+    ));
+}
 ?>
-
-

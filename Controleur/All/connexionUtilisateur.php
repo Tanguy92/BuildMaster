@@ -12,9 +12,14 @@ $_SESSION['prenom'] = prenom();
 $grade = statut();
 
 // //// redirection de compte ///////////
+
 if ($mdp === $_SESSION['pass'] && $grade === "v" ) {
-    include ("View/Vendeur/template.php");
+    include ("Controleur/Vendeur/boiteOutil.php");
     
 }elseif($mdp === $_SESSION['pass'] && $grade === "a"){
-    include ("View/Admin/template.php");
+    include ("Controleur/Admin/boiteOutil.php");
+}else {
+    include ("Controleur/All/retry.php");
 }
+
+?>

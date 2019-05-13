@@ -28,3 +28,24 @@
                 <li><a href="index.php?page=boiteOutil">Boite a Outil</a></li>
                 <li><a href="#">Déconnexion</a></li>
     </header>
+    <?php affiche($chemin); ?>
+    <main>
+        <section class="kvsection">
+            <div class="kv">
+
+                <p class="introcopy">Nom du magasin:</p>
+                <a class="abutton" href="#">Onze diensten</a>
+            </div>
+            <div class="kvsubbox">
+                <div class="kvsub-left">
+                    <h2>Changer de Photo de Couverture</h2>
+                    <form action="index.php?page=monSite" method="POST" enctype="multipart/form-data">
+                        <p><input type="file" id="pic" name="avatar"></h2><br><button type="submit">Changer</button>
+                    </form>
+                </div>
+                <div class="kvsub-right">
+                    <h2>Chnager de theme</h2>
+                    <p>1 2 3 4 5 6</p>
+                </div>
+            </div>
+        </section>

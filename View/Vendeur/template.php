@@ -1,12 +1,11 @@
-<?php session_start()
-?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Index</title>
+    <title>Vendeur</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="View/Template/css.css">
     <script src="log.js"></script>
@@ -27,6 +26,7 @@
                 <li><a href="index.php?page=articleVendeur">Mes Articles</a></li>
                 <li><a href="#">Mes Commandes</a></li>
                 <li><a href="#">Mon site</a></li>
+                <li><a href="#">Mon compte</a></li>
                 <li><a href="#">Déconnexion</a></li>
               
         </nav>
@@ -102,9 +102,9 @@
 
             <div class="card-right">
                 <div class="card-copy">
-                    <h1>Websites</h1></a>
-                    <p>Sinds 2010 ontwikkelen wij front-end interfaces voor het website platform WordPress. Altijd met aandacht voor een functionele lay-out, optimale snelheid en een goede ervaring voor de gebruikers.</p>
-                    <a class="abutton" href="#">Meer weten</a>
+                    <h1>Modifier Mon Site</h1></a>
+                    <p>Cette fonctionalité vous permet de modifier vos site affiche.</p>
+                    <a class="abutton" href="index.php?page=monSite">goo</a>
                 </div>
                 <div class="card-img" style="background-image:url(https://sdwebdesign.nl/wp-content/uploads/2016/04/prestashop-bord-1.jpg)">
                   
@@ -162,14 +162,14 @@
         <section class="infosection">
             <ul class="contact-info">
                 <li>
-                    <a>info@sdwebdesign.nl
+                    <a>info@BuildMaster.fr
                     </a>
                 </li>
                 <li>
-                    <a>0546 - 23 20 04</a>
+                    <a>06.51.20.36.80</a>
                 </li>
                 <li>
-                    Hofkampstraat 49 7607NC Almelo</li>
+                    Intech infi</li>
         </section>
         <div class="copyrightsection">
             <p>&copy;SD Webdesign - Algemene voorwaarden</p>

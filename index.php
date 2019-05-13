@@ -46,7 +46,12 @@ if (!isset($_GET['page'])) {
             case 'messageVendeur':
             include('Controleur/Vendeur/indexMessage.php');
             break;
-            //
+            case 'monSite':
+            include('Controleur/Vendeur/monSite.php');
+            break;
+            case 'boiteOutil':
+            include('Controleur/Vendeur/boiteOutil.php');
+            break;
     }
     }
 
