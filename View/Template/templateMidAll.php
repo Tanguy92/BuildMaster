@@ -1,9 +1,9 @@
-</header>
+<!-- </header> -->
 <main>
     <section class="kvsection">
         <div class="kv">
             <h1>Bonjour : <?php echo  $_SESSION['prenom']; ?> </h1>
-            <p class="introcopy">Boite a outil : ADMIN</p>
+            <p class="introcopy">ALL</p>
             <a class="abutton" href="#">Onze diensten</a>
         </div>
         <div class="kvsubbox">
