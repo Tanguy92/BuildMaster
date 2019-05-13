@@ -1,15 +1,12 @@
 <?php
 session_start();
-include("/BuildMaster/Modele/ConnectBDD.php");
+include("Modele/connectBDD.php");
 
 
 if (!isset($_GET['page'])) {
     include('Controleur/All/acceuil.php');
 } else {
     switch ($_GET['page']) {
-        // case 'messageVendeur':
-        //     include('Controleur/Vendeur/message.php');
-        //     break;
         case 'articleVendeur':
             include('Controleur/Vendeur/article.php');
             break;
@@ -43,10 +40,26 @@ if (!isset($_GET['page'])) {
             case 'ajouterArticle':
             include('Controleur/Vendeur/ajouterArticle.php');
             break;
+            //MESSAGE
             case 'messageVendeur':
             include('Controleur/Vendeur/indexMessage.php');
             break;
-            //
+            case 'conversation':
+            include('Controleur/Vendeur/conversation.php');
+            break;
+            case 'addMessage':
+            include('Controleur/Vendeur/ajouterMessage.php');
+            break;
+            //SIGNALER
+            case 'signaler':
+            include('Controleur/Vendeur/signaler.php');
+            break;
+            case 'signaler2':
+            include('Controleur/Vendeur/enrgistrer.php');
+            break;
+            case 'supSign':
+            include('Controleur/Vendeur/supSignale.php');
+            break;
     }
     }
 

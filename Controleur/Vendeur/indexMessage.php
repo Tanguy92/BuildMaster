@@ -1,63 +1,28 @@
 <?php
-
-session_start();
-//La connexion va donner le bon ID 
-$_SESSION['id'] = 5;
-
-
-include("/BuildMaster/Modele/connectBDD.php");
-include("View/Template/templateTop.html");
-
-
-// include ('tmp.php');
-include ('Modele/select.php');
-
-$donnees = selectMembre($bdd);
-
-echo '<h1>Ecrire un message à : ';
-	include ('View/Vendeur/message.php');
-echo "Aller dans la conversation de : ";
-/*
 $moi = $_SESSION['id'];			
 $toi = null;
+    include('Modele/connectBDD.php');
+    include('View/Template/templateTop.html');
+    include('Modele/select.php');
 
-$reponse = $bdd ->query('SELECT DISTINCT Destinataire, Expediteur FROM messagerie');
-while ($donnees = $reponse->fetch()) {
-	if ($donnees['Destinataire'] != "1") {
-		if ($donnees['Expediteur'] == $moi) {
-			$toi = $donnees['Destinataire'];
-		} elseif ($donnees['Destinataire'] == $moi) {
-			$toi = $donnees['Expediteur'];
-		}
+if($moi != "1") {
+    //Menu deroulant avec les membre dispo pour parler
+    $donnees = selectMembre($bdd);
+    include ('View/Vendeur/message.php');
 
-		if (is_null($toi)) {
-		echo " ";	
+//Boutons avec les noms des gens qui ont des conversations en cours
+$message = selectMessage($bdd);
+include ('View/Vendeur/chat.php');
 
-		} else {
-			$identifiant = $bdd ->query('SELECT * FROM membre');
-			while ($tmp = $identifiant->fetch()) {
-				if ($tmp['idMembre'] == $toi) {
-					if ($tmp['statut'] == 'v') {
-								$prenom = $tmp['nomSite'];
-							} else {
-								$prenom = $tmp['prenom'];
-							}?>
-					<p>
-						<form action="message.php" method="POST">
-						<label><?php echo $prenom; ?></label>
-						<?php echo '<input type="hidden" name="destinataire" value="' . $tmp['idMembre'] . '">';?>
-						<input type="hidden" name="page" value="message.php">
-						<input type="submit" value="Go" style="background-color: Pink"></form></p>
-						<?php
-				}
-			}	
-	
-		}
-	}
+} else {
+    $adv = selectAdv($_SESSION['id']);
+  
+    for ($i = 0; $i < count($adv)-1; $i++) {
+        $pu = $adv[$i]['idMessagerie'];
+        $mot = $adv[$i]['text']; 
+        $top = strlen($mot)-1;
+        $sup = $mot[$top];
+        include ('View/Vendeur/adminSysteme.php');
+    }
 }
-
-if (is_null($toi)) {
-	echo "Pas de conversation";	
-
-	}
-?> **/
+?>

@@ -1,0 +1,92 @@
+#one {
+    display: block;
+  margin-left: 600px;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+    width: 300px;
+    align: right;
+  border: 2px solid DarkTurquoise;
+  background-color: DarkTurquoise;
+  border-radius: 20px;
+}
+
+#two {
+    display: block;
+  margin-left: auto;
+  margin-right: 600px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+    width: 300px;
+    align: left;
+  border: 2px solid LightBlue;
+  background-color: LightBlue;
+  border-radius: 20px;
+}
+
+#ligne {
+  width: 300px;
+  height: 100px;
+  text-align: center;
+}
+
+#col {
+  text-align: center;
+  width: 500px;
+}
+
+
+#sys {
+display: block;
+margin-top: 20px;
+margin-bottom: 20px;
+
+}
+
+
+#zoneText {
+  width: 300px;
+  border-radius: 20px;
+  background-color: Azure;
+  margin-bottom: 100px;
+}
+
+#zoneText2 {
+  width: 300px;
+  font-size: 150%;
+  border-radius: 20px;
+  background-color: Azure;
+  margin-bottom: 50px;
+}
+
+#conversation {
+  width: 300px;
+  font-size: 150%;
+  font-family: arial;
+  color: black;
+  border-radius: 20px;
+background-color: Azure;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+#bouton {
+  width: 300px;
+  font-size: 150%;
+  font-family: arial;
+  color: black;
+  border-radius: 20px;
+background-color: CornflowerBlue;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+
+#menuDeroulant {
+  width: 300px;
+  font-size: 150%;
+  font-family: arial;
+  color: black;
+  border-radius: 20px;
+background-color: Azure;
+}

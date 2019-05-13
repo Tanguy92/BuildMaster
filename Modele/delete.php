@@ -1,6 +1,7 @@
 <?php
 include("Modele/connectBDD.php");
 
+//Req Amine
 function deleteArticle($s1){
     $bdd = $GLOBALS["bdd"];
     $query = "DELETE FROM `Article` WHERE idProduit = :set1";
@@ -18,8 +19,17 @@ function deleteArticle($s1){
     return $check;
 }
 
+//Req Annia
+function deleteSignale($u) {
+    $bdd = $GLOBALS["bdd"];
+    $del = $bdd -> prepare('DELETE FROM `membre` WHERE idMembre = :lui');
+    $del -> execute(array('lui' => $u));
+}
 
-
-
+function deleteMessage($i) {
+    $bdd = $GLOBALS["bdd"];
+    $mes = $bdd -> prepare('DELETE FROM `messagerie` WHERE idMessagerie = :sa');
+    $mes -> execute(array('sa' => $i));
+}
 
 ?>
