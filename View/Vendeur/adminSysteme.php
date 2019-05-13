@@ -18,7 +18,7 @@
                         <form action="index.php" method="GET">
                             <input type="hidden" name="page" value="supSign">
                             <input type="hidden" name="profil" value="<?php echo $sup; ?>">
-                            <input type="hidden" name="id" value="<?php echo $pu; ?>">
+                            <input type="hidden" name="id" value="<?php echo $pu;  ?>">
 		                    <input id="conversation" type="submit" value="Supprimer">
                         </form>
                     </td>
