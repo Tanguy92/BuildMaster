@@ -17,6 +17,7 @@ while ($donnees = $reponse->fetch()) {
 }
 
 if (isset($_POST["supprimer"])) {
+    deleteArticleAppartenance($_POST["supprimer"]);
     deleteArticle($_POST["supprimer"]);
     header("refresh:0;url=index.php?page=articleVendeur");
 }
