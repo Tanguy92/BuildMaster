@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("Modele/connectBDD.php");
 include("Modele/select.php");
 // $bdd = $GLOBALS["bdd"];
@@ -10,6 +9,9 @@ $_SESSION['mail'] = $_POST['mail'];
 $mdp = mdp();
 $_SESSION['prenom'] = prenom();
 $grade = statut();
+
+$id = detId();
+$_SESSION['id'] = $id;
 
 // //// redirection de compte ///////////
 

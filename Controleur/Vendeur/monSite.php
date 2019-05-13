@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("Modele/connectBDD.php");
 include("Modele/insert.php");
 include("Modele/select.php");

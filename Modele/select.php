@@ -42,6 +42,7 @@ function selectModifierArticle(){
 
 
 // Amine Annia
+//Requete Annia
 
 
 function selectMembre($bdd)
@@ -51,6 +52,41 @@ function selectMembre($bdd)
 
     while ($donnees[] = $reponse->fetch()) { }
     return $donnees;
+}
+
+function selectMessage($bdd) {
+	$premier = $bdd ->prepare('SELECT DISTINCT * FROM messagerie');
+	$premier -> execute(null);
+
+	while ($message[] = $premier->fetch()) {
+
+	}
+	return $message;
+}
+
+function selectAdv($o) {
+    $bdd = $GLOBALS["bdd"];
+	$a = $bdd ->prepare('SELECT * FROM messagerie WHERE expediteur = 2 and destinataire = :chose');
+	$a -> execute(array('chose' => $o));
+
+	while ($adv[] = $a->fetch()) {
+
+	}
+	return $adv;
+}
+
+function detId()
+{
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->prepare("SELECT `idMembre` FROM `membre` WHERE `mail` LIKE :mail");
+    $reponse->execute(array('mail' => $_SESSION['mail']));
+
+
+    while ($donnees = $reponse->fetch()) {
+        $mdp = $donnees['idMembre'];
+
+    }
+    return $mdp;
 }
 
 // Requete Tanguy
