@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("/BuildMaster/Modele/ConnectBDD.php");
+include("Modele/ConnectBDD.php");
 
 
 if (!isset($_GET['page'])) {
@@ -43,8 +43,14 @@ if (!isset($_GET['page'])) {
             case 'ajouterArticle':
             include('Controleur/Vendeur/ajouterArticle.php');
             break;
+            case 'modifierArticle':
+            include('Controleur/Vendeur/modifierArticle.php');
+            break;
             case 'messageVendeur':
             include('Controleur/Vendeur/indexMessage.php');
+            break;
+            case 'monSite':
+            include('Controleur/testTanguy.php');
             break;
             //
     }
