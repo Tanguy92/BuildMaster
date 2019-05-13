@@ -83,10 +83,10 @@ function detId()
 
 
     while ($donnees = $reponse->fetch()) {
-        $mdp = $donnees['idMembre'];
+        $id = $donnees['idMembre'];
 
     }
-    return $mdp;
+    return $id;
 }
 
 // Requete Tanguy

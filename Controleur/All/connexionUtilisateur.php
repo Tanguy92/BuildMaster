@@ -6,12 +6,14 @@ $_SESSION['pass'] = $_POST['pass'];
 $_SESSION['mail'] = $_POST['mail'];
 
 ////// Requete Sql ///////////
-$mdp = mdp();
-$_SESSION['prenom'] = prenom();
-$grade = statut();
+
 
 $id = detId();
 $_SESSION['id'] = $id;
+
+$_SESSION['prenom'] = prenom();
+$grade = statut();
+$mdp = mdp();
 
 // //// redirection de compte ///////////
 
