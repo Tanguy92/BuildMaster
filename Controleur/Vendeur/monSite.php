@@ -3,30 +3,26 @@ include("Modele/connectBDD.php");
 include("Modele/insert.php");
 include("Modele/select.php");
 include("Controleur/Vendeur/function.php");
-// var_dump($_FILES);
-
-
-
-
-
-
 
 // Browse image 
-if(!empty($_FILES['avatar']))
+if(!empty($_FILES['photo']))
 {   
-    $dir = "./View/Image/";
+    $dir = "./View/Images/";
     if(!is_dir($dir))
     {
         mkdir($dir);
     }
     
-    $path = $dir.basename($_FILES['avatar']['name']);
+    $path = $dir.basename($_FILES['photo']['name']);
 
-    if(move_uploaded_file($_FILES['avatar']['tmp_name'],$path))
+    if(move_uploaded_file($_FILES['photo']['tmp_name'],$path))
     {
-        // echo 'fichier déplacé';
+        //echo '<script>alert("fichier déplacé");</script>';
         
         updatePc($path) ;
+    } else {
+        //echo '<script>alert("fichier non déplacé");</script>';
+
     }
     
    
@@ -43,6 +39,7 @@ while ($donnees4 = $reponse4->fetch()) {
     $chemin = $donnees4['photo'];
 
 }
+
 
 
 
