@@ -6,6 +6,8 @@
 
 Nom de l'article : <input type="text" value=<?php echo $nom; ?> name="nomArticle" required> <br>
 Prix unitaire de l'article : <input type="number" value=<?php echo $prix; ?> name="prixArticle" required> € <br>
+<?php $y = date('y'); $m = date('m'); $d = date('d');echo $y;?> 
+Date de disponibilité : de <input type="date" name="dateDebut" value=<?php echo $dateDebut; ?> min=<?php echo "20".$y."-".$m."-".$d;?> required>  à <input type="date" name="dateFin"  value=<?php echo $dateFin; ?> min=<?php echo "20".$y."-".$m."-".$d;?> required> <br>
 Catégorie de l'article : <select name ="categorieArticle" required> <br>
 
 

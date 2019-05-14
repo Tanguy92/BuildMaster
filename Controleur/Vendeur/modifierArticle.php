@@ -14,12 +14,23 @@ if (isset($_POST["modifier"])){
         $idCategorie = $donnees["idCategorie"];
         $nomCate = $donnees["nomCate"];
         $idProduit = $donnees["idProduit"];
+        $dateDebut = $donnees["dateDebut"];
+        $dateFin = $donnees["dateFin"];
     }
     include("View/Vendeur/modifierArticle.php");
 }
 
 if (isset($_POST["modifierArticle"])) {
     $echec = false;
+
+    if(isset($_POST["dateDebut"]) && isset($_POST["dateFin"])){
+        if($_POST["dateDebut"]> $_POST["dateFin"]){
+            echo "La date de début de la location ne peut pas être supérieur à la date de fin";
+            header("refresh:1;url=index.php?page=articleVendeur");
+            $echec = true;
+        }
+    }
+
     if(!empty($_FILES['icone']))
 {
     $dir = "View/Image/";
@@ -47,9 +58,11 @@ if (isset($_POST["modifierArticle"])) {
         $nom = $_POST['nomArticle'];
         $prix = $_POST['prixArticle']; 
         $categorie = $_POST['categorieArticle'];
+        $dateDebut = $_POST["dateDebut"];
+        $dateFin = $_POST["dateFin"];
 
 
-        if(updateArticle($nom,$prix,$categorie,$photo)){
+        if(updateArticle($nom,$prix,$categorie,$photo,$dateDebut,$dateFin)){
             header("refresh:0;url=index.php?page=articleVendeur");
         }
     }

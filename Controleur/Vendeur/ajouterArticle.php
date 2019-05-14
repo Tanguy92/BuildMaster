@@ -16,6 +16,13 @@ while ($donnees = $reponse->fetch()) {
 
 $echec = false;
 
+if(isset($_POST["dateDebut"]) && isset($_POST["dateFin"])){
+    if($_POST["dateDebut"]> $_POST["dateFin"]){
+        echo "La date de début de la location ne peut pas être supérieur à la date de fin";
+        $echec = true;
+    }
+}
+
 if(!empty($_FILES['icone']))
 {
     $dir = "View/Image/";
@@ -51,10 +58,12 @@ if($echec != true){
             $quantite = $_POST['nombreArticle'];
             $nom = $_POST['nomArticle'];
             $categorie = $_POST['categorieArticle'];
+            $dateDebut = $_POST["dateDebut"];
+            $dateFin = $_POST["dateFin"];
 
         }
         for ($i=1; $i <= $quantite ; $i++) { 
-            if(insertArticle($nom,$prix,$categorie,$path) ){
+            if(insertArticle($nom,$prix,$categorie,$path,$dateDebut,$dateFin) ){
                 $reponse1 = selectDernierArticle();
 
                 while ($donnees1 = $reponse1->fetch()) {
