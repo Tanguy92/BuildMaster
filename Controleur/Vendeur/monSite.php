@@ -7,6 +7,18 @@ include("Controleur/Vendeur/function.php");
 
 
 
+var_dump($_FILES);
+
+echo "<br>";
+
+
+
+var_dump(fileperms ("/View/Image/"));
+
+echo "<br>";
+
+var_dump(is_writable("/View/Image/"));
+
 
 
 
