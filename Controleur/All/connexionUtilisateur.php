@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("Modele/connectBDD.php");
 // $bdd = $GLOBALS["bdd"];
 $_SESSION['pass'] = $_POST['pass'];
