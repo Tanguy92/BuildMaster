@@ -2,7 +2,7 @@
 <main>
     <section class="kvsection">
         <div class="kv">
-            <h1>Rechercher un articles</h1>
+            <h1>Rechercher un article</h1>
             <p class="introcopy">
                 <form id="searchthis" action="www.google.fr" style="display:inline;" method="get">
                   
@@ -10,7 +10,7 @@
                     <input id="namanyay-search-btn" value="Rechercher" type="submit" />
                 </form>
             </p>
-            <a class="abutton" href="#">Onze diensten</a>
+           <!-- <a class="abutton" href="#">Onze diensten</a> -->
 
         </div>
         <!-- <div class="kvsubbox">

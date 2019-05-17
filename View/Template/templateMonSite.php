@@ -26,18 +26,18 @@
                 <li><a href="#">Mes Commandes</a></li>
                 <li><a href="index.php?page=monSite">Mon site</a></li>
                 <li><a href="index.php?page=boiteOutil">Boite a Outil</a></li>
-                <li><a href="#">Déconnexion</a></li>
+                <li><a href="index.php?page=deconnexion">Déconnexion</a></li>
     </header>
 
-    '<style>
-</style>'
+    <style>
+</style>
     <?php affiche($chemin); ?>
     <main>
         <section class="kvsection">
             <div class="kv" id="blah">
 
                 <p class="introcopy">Nom du magasin:</p>
-                <a class="abutton" href="#">Onze diensten</a>
+                <!--<a class="abutton" href="#">Onze diensten</a>-->
             </div>
             <div class="kvsubbox">
                 <div class="kvsub-left">
@@ -47,7 +47,7 @@
                     </form>
                 </div>
                 <div class="kvsub-right">
-                    <h2>Chnager de theme</h2>
+                    <h2>Changer de theme</h2>
                     <p>1 2 3 4 5 6</p>
                 </div>
             </div>

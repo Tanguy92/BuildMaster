@@ -23,12 +23,12 @@
         <nav>
             <img class="logo" src="/BuildMaster/View/Image/Logo.png">
             <ul>
-                <li><a href="index.php?page=messageVendeur">Mes Messages</a></li>
+            <li><a href="index.php?page=messageVendeur">Mes Messages</a></li>
                 <li><a href="index.php?page=articleVendeur">Mes Articles</a></li>
                 <li><a href="#">Mes Commandes</a></li>
-                <li><a href="#">Mon site</a></li>
-                <li><a href="#">Mon compte</a></li>
-                <li><a href="#">Déconnexion</a></li>
+                <li><a href="index.php?page=monSite">Mon site</a></li>
+                <li><a href="index.php?page=boiteOutil">Boite a Outil</a></li>
+                <li><a href="index.php?page=deconnexion">Déconnexion</a></li>
               
         </nav>
     </header>
@@ -37,9 +37,9 @@
             <div class="kv">
                 <h1>Bonjour : <?php echo  $_SESSION['prenom']; ?> </h1>
                 <p class="introcopy">Boite a outil : VENDEUR</p>
-                <a class="abutton" href="#">Onze diensten</a>
+                <!--<a class="abutton" href="#">Onze diensten</a>-->
             </div>
-            <div class="kvsubbox">
+            <!--<div class="kvsubbox">
                 <div class="kvsub-left">
                     <h2>Missie</h2>
                     <p>De beleving tussen mensen en websites verbeteren.</h2>
@@ -48,7 +48,7 @@
                     <h2>Kenmerken</h2>
                     <p>Snelle communicatie, nuchterheid en kennis van zaken.</p>
                 </div>
-            </div>
+            </div>-->
         </section>
 
 
@@ -59,7 +59,7 @@
                         <h1>Mes articles</h1>
                     </a>
                     <p>Cette page vous permet de gere vos article .</p>
-                    <a class="abutton" href="index.php?page=articleVendeur">Goo</a>
+                    <a class="abutton" href="index.php?page=articleVendeur">Aller</a>
                 </div>
 
                 <div class="card-img" style="background-image:url(https://sdwebdesign.nl/wp-content/uploads/2016/04/waterlaptop-1.jpg)">
@@ -73,8 +73,8 @@
             <div class="card-right">
                 <div class="card-copy">
                     <h1>Mes Messages</h1></a>
-                    <p> Vous pouvez aller manger des pankaes</p>
-                    <a class="abutton" href="index.php?page=messageVendeur">Goo</a>
+                    <p> Consultez vos messages</p>
+                    <a class="abutton" href="index.php?page=messageVendeur">Aller</a>
                 </div>
                 <div class="card-img" style="background-image:url(https://sdwebdesign.nl/wp-content/uploads/2016/04/prestashop-bord-1.jpg)">
                   
@@ -90,7 +90,7 @@
                         <h1>Mes commande</h1>
                     </a>
                     <p>Suivez ici tout vos commande </p>
-                    <a class="abutton" href="#">Goo</a>
+                    <a class="abutton" href="#">Aller</a>
                 </div>
 
                 <div class="card-img" style="background-image:url(https://sdwebdesign.nl/wp-content/uploads/2016/04/waterlaptop-1.jpg)">
@@ -104,8 +104,8 @@
             <div class="card-right">
                 <div class="card-copy">
                     <h1>Modifier Mon Site</h1></a>
-                    <p>Cette fonctionalité vous permet de modifier vos site affiche.</p>
-                    <a class="abutton" href="index.php?page=monSite">goo</a>
+                    <p>Cette fonctionalité vous permet de modifier votre site affiche.</p>
+                    <a class="abutton" href="index.php?page=monSite">Aller</a>
                 </div>
                 <div class="card-img" style="background-image:url(https://sdwebdesign.nl/wp-content/uploads/2016/04/prestashop-bord-1.jpg)">
                   
@@ -143,7 +143,7 @@
  -->
 
     <footer>
-        <section class="quotesection">
+        <!--<section class="quotesection">
             <h1>Klanten over ons</h1>
             <blockquote><span class="bigquote">"</span>
                 <p>SD Webdesign luistert naar je wensen en zoekt naar de beste oplossing. Onze webshop is helemaal naar wens! We zijn zeer tevreden.</p>
@@ -158,7 +158,7 @@
                     <cite>- Roes.nu</cite>
                 </footer>
             </blockquote>
-        </section>
+        </section>-->
 
         <section class="infosection">
             <ul class="contact-info">
@@ -170,10 +170,10 @@
                     <a>06.51.20.36.80</a>
                 </li>
                 <li>
-                    Intech infi</li>
+                    Intech info</li>
         </section>
-        <div class="copyrightsection">
-            <p>&copy;SD Webdesign - Algemene voorwaarden</p>
+        <!--<div class="copyrightsection">
+            <p>&copy;SD Webdesign - Algemene voorwaarden</p> -->
             </section>
     </footer>
 

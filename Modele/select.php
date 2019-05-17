@@ -80,7 +80,7 @@ function detId()
     $bdd = $GLOBALS["bdd"];
     $reponse = $bdd->prepare("SELECT `idMembre` FROM `membre` WHERE `mail` LIKE :mail");
     $reponse->execute(array('mail' => $_SESSION['mail']));
-
+    $id = "";
 
     while ($donnees = $reponse->fetch()) {
         $id = $donnees['idMembre'];
@@ -100,7 +100,7 @@ function mdp()
     $reponse->execute(array(
         'mail' => $_SESSION['mail']
     ));
-
+    $mdp = "";
 
     while ($donnees = $reponse->fetch()) {
         $mdp = $donnees['mdp'];
@@ -132,7 +132,7 @@ function statut()
     $reponse3->execute(array(
         'mail' => $_SESSION['mail']
     ));
-
+    $grade = "";
 
     while ($donnees3 = $reponse3->fetch()) {
         $grade = $donnees3['statut'];

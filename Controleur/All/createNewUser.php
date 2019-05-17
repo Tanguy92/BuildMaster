@@ -1,6 +1,5 @@
 <?php
-session_start();
-include("/BuildMaster/Modele/connectBDD.php");
+include("Modele/connectBDD.php");
 include("View/Template/templateTopAll.html");
 
 
@@ -18,7 +17,9 @@ $prenom =   $_SESSION['prenom'];
 $mail =  $_SESSION['mail'];
 $grade =$_SESSION['grade'];
 $pass =$_SESSION['pass'];
-$adresse =$_SESSION['adresse'];
+if(isset($_SESSION['adresse'])){
+    $adresse =$_SESSION['adresse'];
+}
 
 // Condition Vendeur 
 if ($grade == "v"){

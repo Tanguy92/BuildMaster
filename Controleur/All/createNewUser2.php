@@ -1,7 +1,10 @@
 <?php
-session_start();
 include("Modele/connectBDD.php");
+include("Modele/select.php");
 include("Modele/insert.php");
+
+
+
 
 // include("View/Template/templateTopAll.html");
 $_SESSION['magasin'] = $_POST['magasin'];
@@ -19,6 +22,8 @@ $grade = $_SESSION['grade'];
 if ($grade === "v") {
     // Insertion sql
     createMembre();
+    $id = detId();
+    $_SESSION['id'] = $id;
     // HTML VENDEUR
     include("View/Vendeur/template.php");
 }

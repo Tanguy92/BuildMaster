@@ -14,7 +14,7 @@
  <body>
      <div class="login-card">
 
-         <h1>Connection</h1><br>
+         <h1>Connexion</h1><br>
          <h2>Email ou mot de passe incorect</h2>
 
          <form method="POST" action="index.php?page=connexionUtilisateur">

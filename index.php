@@ -51,6 +51,7 @@ if (!isset($_GET['page'])) {
             break;
             case 'boiteOutil':
             include('Controleur/Vendeur/boiteOutil.php');
+            break;
             //MESSAGE
             case 'messageVendeur':
             include('Controleur/Vendeur/indexMessage.php');
