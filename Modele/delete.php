@@ -18,6 +18,21 @@ function deleteArticleAppartenance($s1){
     return $check;
 }
 
+function deleteTheme($v1){
+    $bdd = $GLOBALS["bdd"];
+
+    try
+    {
+        $query =  $bdd -> prepare('DELETE FROM `theme` WHERE `idTheme` = :set1');
+        $query -> execute(array('set1' => $v1));
+
+    } catch(PDOException $ex)
+    {
+        die("failed to run the query : ".$ex->getMessage());
+    }
+
+}
+
 
 function deleteArticle($s1){
     $bdd = $GLOBALS["bdd"];

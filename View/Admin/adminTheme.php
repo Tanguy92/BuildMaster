@@ -1,35 +1,64 @@
+<html>
+<link rel="stylesheet" type="text/css" media="screen" href="View/Admin/theme.css">
+<script
+			  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+			  crossorigin="anonymous"></script>
 
-<body>
+<body id="body">
     <br>
-    <br>
-    <form class="box" action="index.php" method ="GET">
-        <input type="submit" name="page" value="Ajouter un thème" method ="GET"><br>
-        <input type="submit" name="page" value="Modifier un thème" method ="GET"><br>
-        <input type="submit" name="page" value="Supprimer un thème" method ="GET"><br>
-    </form>
+        Choisissez les thèmes à rendre disponibles
+<section>
+
     <?php
+            $reponse = selectAllTheme();
+            $i=0;
+            while($donnees = $reponse->fetch()){
+         
+?>
+<form class="submit" action="index.php?page=adminTheme" method ="POST">
 
-if ( isset($_GET['page'])) {
-    if ( isset($_GET['Ajouter'])) {
-        include('ajouter.php');
-    } elseif ( isset($_GET['Modifier'])) {
-        include('modifier.php');
-    } elseif ( isset($_GET['Supprimer'])) {
-        include('supprimer.php');
-    }
-}
+  <div class="checkbox">
+    <div class="figure-container">
+      <div class="figure face"></div>
+    </div>
+    <div class="text" onclick="changeColor(this.id);" id="<?= $i; ?>">
+     <span><input type="radio" id="color<?= $i; ?>"
+     name="theme" value="<?php echo $donnees['couleur']; ?>"><?php echo $donnees['nom']; ?></span> 
+     <input type="hidden" name="oldColor" value="<?php echo $donnees['idTheme']; ?>">
+    </div>
+  </div>
+  <div class="submitt">
+      <div class="text">
+        <span><button type="submitt" value="changer">Rendre indispo</button></span>
+      </div>
+    </div>
+  </form>
+  <?php
+      $i++;
+            }
+            ?>
 
-if ( isset($_GET['page'])) {
-    if ( isset($_GET['Ajouter'])) {
-        echo "Vous avez choisi d'ajouter le thème.";
-    }
-    if ( isset($_GET['Modifier'])) {
-        echo "Vous avez choisi de modifier le thème.";
-    }
-    if ( isset($_GET['Supprimer'])) {
-        echo "Vous avez choisi de supprimer le thème.";
-    }
-}
-    ?>
-</body>
+<form class="submit" action="index.php?page=adminTheme" method ="POST">
+            <input type="text" id="head" name="newColorName" value="">
+    <input type="color" id="head" name="newColor" value="">
+    <label for="head">Head</label>
+    <div class="submitt">
+      <div class="text">
+        <span><button type="submitt" value="changer">Rendre dispo</button></span>
+      </div>
+    </div>
+  </div>
+  </form> 
+  </body>
+</section> 
 </html>
+
+<script>
+
+    function changeColor(val)
+    {
+      document.getElementById('body').style.backgroundColor = document.getElementById('color' + val).value;
+    }
+
+</script>

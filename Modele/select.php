@@ -89,8 +89,18 @@ function detId()
     return $id;
 }
 
-// Requete Tanguy
-
+// Requete Ihsane
+// Sélectionne un thème selon l'ID choisi
+function selectAllTheme(){
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->query("SELECT * FROM theme");
+    return $reponse;
+}
+/*function selectTheme($id){
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->query("SELECT * FROM theme WHERE idTheme = $id");
+    return $reponse;
+}*/
 
 /////// Trouve un Mot de passe  ////
 function mdp()

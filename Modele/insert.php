@@ -32,9 +32,26 @@ function insertAppartenance($s1,$s2){
     try {
         $queries = $bdd -> prepare($query);
         $queries -> execute(array(":set1" => $s1,
-                                  ":set2" => $s2,));
+                                  ":set2" => $s2
+                                ));
         $check = true;
-       
+        }catch(PDOException $ex)
+        {
+            die("Fail : ".$ex);
+        }
+    }
+function insertTheme($s2, $s3){
+    $bdd = $GLOBALS["bdd"];
+
+    $query =
+    "INSERT INTO theme (nom, couleur) VALUES(:set2, :set3)";
+    try {
+        $queries = $bdd -> prepare($query);
+        $queries -> execute(array(":set2" => $s2,
+                        ":set3" => $s3
+                    ));
+        $check = true;
+
     }catch(PDOException $ex)
     {
         die("Fail : ".$ex);
@@ -46,7 +63,29 @@ function insertMessage($c,$m,$t) {
     $bdd = $GLOBALS["bdd"];
     $requete = $bdd -> prepare("INSERT INTO `messagerie` (`idMessagerie`, `text`, `destinataire`, `expediteur`) VALUES (NULL, :corps, :toi, :moi);");
     $requete -> execute(array(":corps" => $c, ":moi" => $m, ":toi" => $t));
+
+
+    return $check;
 }
+
+function updateTheme(){
+    $bdd = $GLOBALS["bdd"];
+    $query =
+    "UPDATE membre SET idTheme = (SELECT idTheme FROM theme WHERE couleur LIKE '#000000') WHERE idMembre = 1";
+    try {
+        $queries = $bdd -> prepare($query);
+        $queries -> execute(array(
+                    ));
+        $check = true;
+
+    }catch(PDOException $ex)
+    {
+        die("Fail : ".$ex);
+    }
+
+    return $check;
+}
+
 
 function updateSignal($som,$com) {
     $bdd = $GLOBALS["bdd"];
