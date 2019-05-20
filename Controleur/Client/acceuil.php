@@ -1,5 +1,6 @@
 <?php
 //print_r($_SESSION);
+
 include("View/Template/templateTopAllClient.php");
 
 

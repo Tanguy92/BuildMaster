@@ -30,6 +30,9 @@ if (!isset($_GET['page'])) {
             case 'connexionUtilisateur':
             include('Controleur/All/connexionUtilisateur.php');
             break;
+            case 'search':
+            include('Controleur/All/search.php');
+            break;
             case 'adminTheme':
             include('Controleur/Admin/adminTheme.php');
             break;

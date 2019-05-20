@@ -4,9 +4,9 @@
         <div class="kv">
             <h1>Rechercher un article</h1>
             <p class="introcopy">
-                <form id="searchthis" action="www.google.fr" style="display:inline;" method="get">
+                <form id="searchthis" action="index.php?page=search" style="display:inline;" method="POST">
                   
-                    <input id="namanyay-search-box" name="q" size="80" type="text" placeholder="Rechercher un article" />
+                    <input id="namanyay-search-box" name="search" size="80" type="text" placeholder="Rechercher un article" />
                     <input id="namanyay-search-btn" value="Rechercher" type="submit" />
                 </form>
             </p>
