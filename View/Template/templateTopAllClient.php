@@ -25,11 +25,12 @@
                 <li><a href="index.php?page=articleVendeur"></a></li>
                 <li><a href="#"></a></li>
                 <li><a href="#"></a></li> -->
-                <li><a href="index.php?page=connexion">Mes messsages</a></li>
+                <li><a href="index.php?page=messageVendeur">Mes messsages</a></li>
                 <li><a href="index.php?page=connexion">Mes commandes</a></li>
-                <li><a href="index.php?page=connexion">Mon panier</a></li>
+                <li><a href="index.php?page=panier">Mon panier</a></li>
 
                 <li><a href="index.php?page=connexion" >Mon compte</a></li>
+                <li><a href="index.php?page=afficheArticle" >Afficher les articles</a></li>
                 <li><a href="index.php?page=deconnexion" >Déconnexion</a></li>
            
         </nav>

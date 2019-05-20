@@ -81,6 +81,10 @@ if (!isset($_GET['page'])) {
             case 'supCompte':
             include('Controleur/Admin/supCompte.php');
             break;
+            //Articles Client
+            case 'afficheArticle':
+            include('Controleur/Client/afficheArticle.php');
+            break;
 
             
             //Deconnexion

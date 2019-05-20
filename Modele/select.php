@@ -1,7 +1,7 @@
 <?php
 include("Modele/connectBDD.php");
 
-//AMINE
+//Article
 function selectCategorie()
 {
     $bdd = $GLOBALS["bdd"];
@@ -14,6 +14,14 @@ function selectArticle()
     $bdd = $GLOBALS["bdd"];
     $mail = $_SESSION["mail"];
     $reponse = $bdd->query("SELECT article.nom,article.idProduit,article.photo,prix FROM article JOIN appartenance ON article.idProduit = appartenance.idProduit JOIN membre ON appartenance.idMembre = membre.idMembre  WHERE  mail LIKE '$mail' ");
+    return $reponse;
+}
+
+function selectAllArticle()
+{
+    $bdd = $GLOBALS["bdd"];
+    $mail = $_SESSION["mail"];
+    $reponse = $bdd->query("SELECT * FROM article ");
     return $reponse;
 }
 
