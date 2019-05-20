@@ -2,7 +2,6 @@
 session_start();
 include("Modele/ConnectBDD.php");
 
-
 if (!isset($_GET['page'])) {
     include('Controleur/All/acceuil.php');
 } else {
@@ -51,6 +50,9 @@ if (!isset($_GET['page'])) {
             break;
             case 'boiteOutil':
             include('Controleur/Vendeur/boiteOutil.php');
+            break;
+            case 'acceuilClient':
+            include('Controleur/Client/acceuil.php');
             break;
             //MESSAGE
             case 'messageVendeur':
