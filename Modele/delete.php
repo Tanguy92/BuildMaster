@@ -51,17 +51,34 @@ function deleteArticle($s1){
     return $check;
 }
 
-//Req Annia
+//REQ ANNIA
+// Admin supprime la personne signalée plus de 6 fois
 function deleteSignale($u) {
     $bdd = $GLOBALS["bdd"];
     $del = $bdd -> prepare('DELETE FROM `membre` WHERE idMembre = :lui');
     $del -> execute(array('lui' => $u));
 }
 
+//Suppression de messages specifiques (id donné)
 function deleteMessage($i) {
     $bdd = $GLOBALS["bdd"];
     $mes = $bdd -> prepare('DELETE FROM `messagerie` WHERE idMessagerie = :sa');
     $mes -> execute(array('sa' => $i));
+}
+
+//Suppression des articles qui appartient au vendeur qui sera sup
+function deleteArticleA($art) {
+    $bdd = $GLOBALS["bdd"];
+    $ip = $bdd -> prepare('DELETE FROM `article` WHERE idProduit = :aaa');
+    $ip -> execute(array('aaa' => $art));
+
+}
+
+//Suppression de la liaison vendeur - article 
+function deleteApp($appa) {
+    $bdd = $GLOBALS["bdd"];
+    $ia = $bdd -> prepare('DELETE FROM `appartenance` WHERE idAppartenance = :ap');
+    $ia -> execute(array('ap' => $appa));
 }
 
 ?>

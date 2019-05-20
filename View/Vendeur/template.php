@@ -27,6 +27,7 @@
                 <li><a href="index.php?page=articleVendeur">Mes Articles</a></li>
                 <li><a href="#">Mes Commandes</a></li>
                 <li><a href="index.php?page=monSite">Mon site</a></li>
+                <li><a href="index.php?page=signaler">Signaler un compte</a></li>
                 <li><a href="index.php?page=boiteOutil">Boite a Outil</a></li>
                 <li><a href="index.php?page=deconnexion">Déconnexion</a></li>
               
