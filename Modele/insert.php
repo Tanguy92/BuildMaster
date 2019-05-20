@@ -1,6 +1,7 @@
 <?php
 include("Modele/connectBDD.php");
 
+//AMINE
 function insertArticle($s1,$s2,$s4,$s5,$s6,$s7){
     $bdd = $GLOBALS["bdd"];
 
@@ -58,14 +59,19 @@ function insertTheme($s2, $s3){
     }
 }
 
-//Req Annia
+//ANNIA
+//Inserer un nouveau message
 function insertMessage($c,$m,$t) {
     $bdd = $GLOBALS["bdd"];
     $requete = $bdd -> prepare("INSERT INTO `messagerie` (`idMessagerie`, `text`, `destinataire`, `expediteur`) VALUES (NULL, :corps, :toi, :moi);");
     $requete -> execute(array(":corps" => $c, ":moi" => $m, ":toi" => $t));
+}
 
-
-    return $check;
+//Actualiser le nb de signalements +1
+function updateSignal($som,$com) {
+    $bdd = $GLOBALS["bdd"];
+    $s = $bdd -> prepare("UPDATE `membre` SET `signalements` = :nb WHERE `membre`.`idMembre` = :identifiant;");
+    $s -> execute(array('nb' => $som, 'identifiant' => $com));
 }
 
 /*function updateTheme(){
@@ -87,17 +93,8 @@ function insertMessage($c,$m,$t) {
 }*/
 
 
-function updateSignal($som,$com) {
-    $bdd = $GLOBALS["bdd"];
-    $s = $bdd -> prepare("UPDATE `membre` SET `signalements` = :nb WHERE `membre`.`idMembre` = :identifiant;");
-    $s -> execute(array('nb' => $som, 'identifiant' => $com));
 
-
-
-    return $check;
-}
-
-// Fonction Tanguy
+//TANGUY
 function createMembre()
 {
     $toto= 0;

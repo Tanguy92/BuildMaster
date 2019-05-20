@@ -72,11 +72,20 @@ if (!isset($_GET['page'])) {
             case 'supSign':
             include('Controleur/Vendeur/supSignale.php');
             break;
+            //Affichage des utilisateurs
+            case 'affUser':
+            include('Controleur/Admin/user.php');
+            break;
+            case 'supCompte':
+            include('Controleur/Admin/supCompte.php');
+            break;
+
+            
             //Deconnexion
             case 'deconnexion':
             include('Controleur/deconnexion.php');
             break;
     }
-    }
+}
 
     

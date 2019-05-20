@@ -25,6 +25,7 @@
                 <li><a href="index.php?page=articleVendeur">Mes Articles</a></li>
                 <li><a href="#">Mes Commandes</a></li>
                 <li><a href="#">Mon site</a></li>
+                <li><a href="index.php?page=signaler">Signaler un compte</a></li>
                 <li><a href="#">Déconnexion</a></li>
               
         </nav>
@@ -77,6 +78,8 @@
                   
                 </div>
             </div>
+
+            
         </section>
 
 
@@ -97,6 +100,20 @@
                 </div>
             </div>
 
+            <div class="card-right">
+                <div class="card-copy">
+                        <h1>Afficher les utilisateurs</h1>
+                    </a>
+                    <p>Liste des utilisateurs du site</p>
+                    <a class="abutton" href="index.php?page=affUser">Afficher</a>
+                </div>
+
+                <div class="card-img" style="background-image:url(https://sdwebdesign.nl/wp-content/uploads/2016/04/waterlaptop-1.jpg)">
+                    <div class="card-img error-img">
+
+                    </div>
+                </div>
+            </div>
 
            
         </section>
