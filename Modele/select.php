@@ -127,7 +127,7 @@ function prenom()
         'mail' => $_SESSION['mail']
     ));
 
-
+    $prenom = "";
     while ($donnees2 = $reponse2->fetch()) {
         $_SESSION['prenom'] = $donnees2['prenom'];
     }

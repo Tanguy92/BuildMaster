@@ -40,8 +40,8 @@
             ?>
 
 <form class="submit" action="index.php?page=adminTheme" method ="POST">
-            <input type="text" id="head" name="newColorName" value="">
-    <input type="color" id="head" name="newColor" value="">
+            <input type="text" id="head" name="newColorName" require >
+    <input type="color" id="head" name="newColor">
     <label for="head">Head</label>
     <div class="submitt">
       <div class="text">

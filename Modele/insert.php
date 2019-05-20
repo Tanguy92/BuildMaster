@@ -68,7 +68,7 @@ function insertMessage($c,$m,$t) {
     return $check;
 }
 
-function updateTheme(){
+/*function updateTheme(){
     $bdd = $GLOBALS["bdd"];
     $query =
     "UPDATE membre SET idTheme = (SELECT idTheme FROM theme WHERE couleur LIKE '#000000') WHERE idMembre = 1";
@@ -84,7 +84,7 @@ function updateTheme(){
     }
 
     return $check;
-}
+}*/
 
 
 function updateSignal($som,$com) {
