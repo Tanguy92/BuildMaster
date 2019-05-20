@@ -14,7 +14,7 @@
 
 
     <head>
-        <meta name="format-detection" content="telephone=no" />
+        <meta name="format-detection" content="telephone=no"/>
     </head>
 
     <header class="topnav">
@@ -23,10 +23,10 @@
             <ul>
                 <li><a href="index.php?page=messageVendeur">Mes Messages</a></li>
                 <li><a href="index.php?page=articleVendeur">Mes Articles</a></li>
-                <li><a href="#">Mes Commandes</a></li>
-                <li><a href="#">Mon site</a></li>
+                <li><a href="index.php?page=connexionUtilisateur">Mes Commandes</a></li>
+                <li><a href="index.php?page=adminTheme">Mon site</a></li>
                 <li><a href="index.php?page=signaler">Signaler un compte</a></li>
-                <li><a href="#">Déconnexion</a></li>
+                <li><a href="index.php?">Déconnexion</a></li>
               
         </nav>
     </header>

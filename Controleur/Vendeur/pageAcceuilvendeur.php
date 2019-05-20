@@ -1,4 +1,3 @@
 <?php
-include ("View/template/template.html")
-
+include ("View/template/template.html");
 ?>
