@@ -7,7 +7,16 @@ $_SESSION["search"] =$_POST["search"];
 //print_r($_SESSION);
 include("View/Template/templateTopAll.html");
 
-echo $_SESSION["search"];
+$search = '%'+$_SESSION["search"];
+
+$reponse = search($search);
+
+
+while ($donnees = $reponse->fetch()) {
+    include("Controleur/Client/function.php");
+    // echo $donnees["prix"];
+    
+}
 
 include("View/Template/templateMidAll.php");
 
