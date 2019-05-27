@@ -20,8 +20,22 @@ function selectArticle()
 function selectAllArticle()
 {
     $bdd = $GLOBALS["bdd"];
-    $mail = $_SESSION["mail"];
-    $reponse = $bdd->query("SELECT * FROM article ");
+    $reponse = $bdd->query("SELECT * FROM article");
+    return $reponse;
+}
+
+function selectArticlePanier($s1)
+{
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->query("SELECT article.idProduit,article.nom,article.prix,article.photo,article.dateDebut,article.dateFin,article.idCategorie,commande.idMembre FROM article JOIN commande ON article.idProduit = commande.idProduit WHERE idMembre = $s1 AND panier LIKE 'true'");
+    return $reponse;
+}
+
+function selectDispo()
+{
+    $bdd = $GLOBALS["bdd"];
+    $idProduit = $_POST["commander"];
+    $reponse = $bdd->query("SELECT dateDebut,dateFin FROM commande WHERE idProduit = $idProduit AND etat NOT LIKE 'ferme'");
     return $reponse;
 }
 
@@ -47,6 +61,22 @@ function selectModifierArticle(){
  
     return $reponse;
 }
+
+
+function selectCommandeOuverte($s1)
+{
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->query("SELECT commande.prix,commande.dateFin,commande.dateDebut,article.nom,article.photo FROM commande JOIN article ON commande.idProduit = article.idProduit WHERE etat LIKE 'ouverte' AND idMembre = $s1");
+    return $reponse;
+}
+
+function selectCommandeFerme($s1)
+{
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->query("SELECT commande.prix,commande.dateFin,commande.dateDebut,article.nom,article.photo  FROM commande JOIN article ON commande.idProduit = article.idProduit WHERE etat LIKE 'ferme' AND idMembre = $s1");
+    return $reponse;
+}
+
 
 //ANNIA
 //Prendre tous les infos de la table 

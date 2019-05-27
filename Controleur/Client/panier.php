@@ -1,0 +1,62 @@
+<?php
+include("View/Template/templateTopAllClient.php");
+
+include("Modele/select.php");
+include("Modele/insert.php");
+include("Modele/delete.php");
+
+$echec = false;
+
+$selectidMembre = selectIdMembre();
+
+while ($donnees = $selectidMembre->fetch()) {
+    $idMembre = $donnees["idMembre"];
+}
+
+$selectArticlePanier = selectArticlePanier($idMembre);
+
+while ($donnees2 = $selectArticlePanier->fetch()) {
+    include("View/Client/panier.php");
+}
+
+if (isset($_POST["supprimerPanier"])) {
+    $idProduit = $_POST["supprimerPanier"];
+    deletePanier($idProduit, $idMembre);
+    header('Location: index.php?page=panier');
+}
+
+if(isset($_POST["dateDebut"]) && isset($_POST["dateFin"])){
+    if($_POST["dateDebut"]> $_POST["dateFin"]){
+        echo "La date de début de la location ne peut pas être supérieur à la date de fin";
+        $echec = true;
+    }
+    $selectDispo = selectDispo();
+
+    while ($donnees3 = $selectDispo->fetch()) {
+        if($donnees3["dateDebut"] <= $_POST["dateDebut"] && $_POST["dateDebut"] <= $donnees3["dateFin"]){
+            echo "La date du début de votre location est déjà prise veuillez en choisir une autre. <br>";
+            $echec = true;
+        }
+
+        if($donnees3["dateDebut"] <= $_POST["dateFin"] && $_POST["dateFin"] <= $donnees3["dateFin"]){
+            echo "La date de fin de votre location est déjà prise veuillez en choisir une autre.";
+            $echec = true;
+        }
+    }
+  
+
+}
+
+if (isset($_POST["commander"]) && $echec != true) {
+
+
+    $idProduit = $_POST["commander"];
+   // insertDispo($_POST["dateDebut"],$_POST["dateFin"],$idProduit);
+    //insertCommande();
+    updateDeletePanier($idProduit, $idMembre,$_POST["dateDebut"],$_POST["dateFin"]);
+    header('Location: index.php?page=panier');
+}
+
+
+
+?>

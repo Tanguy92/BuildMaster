@@ -26,7 +26,7 @@
                 <li><a href="#"></a></li>
                 <li><a href="#"></a></li> -->
                 <li><a href="index.php?page=messageVendeur">Mes messsages</a></li>
-                <li><a href="index.php?page=connexion">Mes commandes</a></li>
+                <li><a href="index.php?page=commande">Mes commandes</a></li>
                 <li><a href="index.php?page=panier">Mon panier</a></li>
 
                 <li><a href="index.php?page=connexion" >Mon compte</a></li>

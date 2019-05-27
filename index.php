@@ -1,6 +1,12 @@
 <?php
 session_start();
 include("Modele/ConnectBDD.php");
+require_once("Modele/Update.php");
+
+
+updateDateDebutArticle();
+updateFermetureCommande();
+
 
 if (!isset($_GET['page'])) {
     include('Controleur/All/acceuil.php');
@@ -84,6 +90,12 @@ if (!isset($_GET['page'])) {
             //Articles Client
             case 'afficheArticle':
             include('Controleur/Client/afficheArticle.php');
+            break;
+            case 'panier':
+            include('Controleur/Client/panier.php');
+            break;
+            case 'commande':
+            include('Controleur/Client/commande.php');
             break;
 
             

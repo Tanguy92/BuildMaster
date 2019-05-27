@@ -51,6 +51,25 @@ function deleteArticle($s1){
     return $check;
 }
 
+function deletePanier($s1,$s2){
+    $bdd = $GLOBALS["bdd"];
+    $query = "DELETE FROM `commande` WHERE idProduit = :set1 AND idMembre = :set2 AND panier LIKE 'true'";
+    try {
+        $queries = $bdd -> prepare($query);
+        $queries -> execute(array(":set1" => $s1,
+                                  ":set2" => $s2
+                                 ));
+
+        $check = true;
+       
+    }catch(PDOException $ex)
+    {
+        die("Fail : ".$ex);
+    }
+
+    return $check;
+}
+
 //REQ ANNIA
 // Admin supprime la personne signalée plus de 6 fois
 function deleteSignale($u) {
