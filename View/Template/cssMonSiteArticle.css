@@ -3,7 +3,7 @@
     -moz-box-sizing:border-box;
   }
   body {
-      background: url(//subtlepatterns.com/patterns/scribble_light.png);
+      /* background: url(//subtlepatterns.com/patterns/scribble_light.png); */
     font-family: Calluna, Arial, sans-serif;
     min-height: 1000px;
   }

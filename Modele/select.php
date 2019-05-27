@@ -188,7 +188,18 @@ function search($search)
     $reponse->execute(array(
         'search' => $search
     ));
+    return $reponse;
 }
    
+function description($idProduit){
+    
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->prepare("SELECT * FROM `article` WHERE `idProduit` LIKE :idProduit ");
+    $reponse->execute(array(
+        'idProduit' => $idProduit
+    ));
+   
+    return $reponse;
+}
 
 ?>
