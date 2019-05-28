@@ -204,4 +204,11 @@ function statut()
     }
     return $grade;
 }
+
+//Select toutes les categories.
+function selectAllCategorie(){
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->query("SELECT * FROM categorie");
+    return $reponse;
+}
 ?>

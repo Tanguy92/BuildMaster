@@ -129,4 +129,22 @@ function updateFermetureCommande(){
     return $check;
 }
 
+function updateDeleteCategorie($s1){
+    $bdd = $GLOBALS["bdd"];
+    $query =
+    "UPDATE `article` SET `idCategorie` = '10' WHERE idCategorie = $s1";
+    try {
+        $queries = $bdd -> prepare($query);
+        $queries -> execute(array());
+
+    $check = true;
+
+    }catch(PDOException $ex)
+    {
+        die("Fail : ".$ex);
+    }
+
+    return $check;
+}
+
 ?>

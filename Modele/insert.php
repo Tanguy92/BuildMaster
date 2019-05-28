@@ -167,4 +167,22 @@ function updatePc($path)
         'mail' => $_SESSION["mail"]
     ));
 }
+
+function insertCategorie($s1){
+    $bdd = $GLOBALS["bdd"];
+
+    $query =
+    "INSERT INTO categorie (nom) VALUES (:set1)";
+    try {
+        $queries = $bdd -> prepare($query);
+        $queries -> execute(array(":set1" => $s1
+                    ));
+        $check = true;
+
+    }catch(PDOException $ex)
+    {
+        die("Fail : ".$ex);
+    }
+}
+
 ?>

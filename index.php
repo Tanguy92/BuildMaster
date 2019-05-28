@@ -86,7 +86,7 @@ if (!isset($_GET['page'])) {
             break;
             case 'supCompte':
             include('Controleur/Admin/supCompte.php');
-            break;
+            break;  
             //Articles Client
             case 'afficheArticle':
             include('Controleur/Client/afficheArticle.php');
@@ -96,6 +96,9 @@ if (!isset($_GET['page'])) {
             break;
             case 'commande':
             include('Controleur/Client/commande.php');
+            break;
+            case 'categorie':
+            include('Controleur/Admin/categorie.php');
             break;
 
             

@@ -1,4 +1,4 @@
 
 <?php
-include ("View/Admin/template.php");
+include("View/Admin/template.php");
 ?>

@@ -100,4 +100,19 @@ function deleteApp($appa) {
     $ia -> execute(array('ap' => $appa));
 }
 
+
+function deleteCategorie($v1){
+    $bdd = $GLOBALS["bdd"];
+
+    try
+    {
+        $query =  $bdd -> prepare('DELETE FROM `categorie` WHERE `idCategorie` = :set1');
+        $query -> execute(array('set1' => $v1));
+
+    } catch(PDOException $ex)
+    {
+        die("failed to run the query : ".$ex->getMessage());
+    }
+
+}
 ?>
