@@ -45,7 +45,7 @@
     <label for="head">Catégorie</label>
     <div class="submitt">
       <div class="text">
-        <span><button type="submitt" value="changer">Rendre dispo</button></span>
+        <span><button type="submit" value="changer">Rendre dispo</button></span>
       </div>
     </div>
   </div>

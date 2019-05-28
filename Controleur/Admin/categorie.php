@@ -27,5 +27,4 @@ if (isset($_POST['supprCategorie'])){
     header('Location: index.php?page=categorie');
 }
 
-
 ?>
