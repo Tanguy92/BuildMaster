@@ -21,12 +21,12 @@ $mdp = mdp();
 if ($mdp === $_SESSION['pass'] && $grade === "v" ) {
     $_SESSION["connect"] = true;
    // include ("Controleur/Vendeur/boiteOutil.php");
-    header ("refresh:0;url=index.php?page=boiteOutil");
+    header ("refresh:0;url=index.php?page=boiteOutilV");
     
 }elseif($mdp === $_SESSION['pass'] && $grade === "a"){
     $_SESSION["connect"] = true;
  //   include ("Controleur/Admin/boiteOutil.php");
-    header ("refresh:0;url=index.php?page=boiteOutil");
+    header ("refresh:0;url=index.php?page=boiteOutilA");
 }elseif($mdp === $_SESSION['pass'] && $grade === "c"){
     $_SESSION["connect"] = true;
     header ("refresh:0;url=index.php?page=acceuilClient");

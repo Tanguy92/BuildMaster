@@ -54,8 +54,13 @@ if (!isset($_GET['page'])) {
             case 'monSite':
             include('Controleur/Vendeur/monSite.php');
             break;
-            case 'boiteOutil':
-            include('Controleur/Vendeur/boiteOutil.php');
+            // Boîte à outil en tant que Vendeur
+            case 'boiteOutilV':
+            include('Controleur/Vendeur/boiteOutilV.php');
+            break;
+            // Boîte à outil en tant qu'admin
+            case 'boiteOutilA':
+            include('Controleur/Admin/boiteOutilA.php');
             break;
             case 'acceuilClient':
             include('Controleur/Client/acceuil.php');

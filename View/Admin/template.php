@@ -18,13 +18,11 @@
     </head>
 
     <header class="topnav">
-        <nav>
+        <nav><a href="index.php?page=boiteOutilA">
             <img class="logo" src="/BuildMaster/View/Image/Logo.png">
             <ul>
                 <li><a href="index.php?page=messageVendeur">Mes Messages</a></li>
-                <li><a href="index.php?page=articleVendeur">Mes Articles</a></li>
-                <li><a href="index.php?page=connexionUtilisateur">Mes Commandes</a></li>
-                <li><a href="index.php?page=adminTheme">Mon site</a></li>
+                <li><a href="index.php?page=adminTheme">Modifier les thèmes</a></li>
                 <li><a href="index.php?page=signaler">Signaler un compte</a></li>
                 <li><a href="index.php?">Déconnexion</a></li>
               
@@ -33,18 +31,18 @@
     <main>
         <section class="kvsection">
             <div class="kv">
-                <h1>Bonjour : <?php echo  $_SESSION['prenom']; ?> </h1>
-                <p class="introcopy">Boite a outil : ADMIN</p>
+                <h1>Bonjour <?php echo  $_SESSION['prenom']; ?> </h1>
+                <p class="introcopy">Boite a outil : Admin</p>
                 <a class="abutton" href="#">Bouton</a>
             </div>
             <div class="kvsubbox">
                 <div class="kvsub-left">
-                    <h2>Title</h2>
-                    <p>Texte à rajouter.</h2>
+                    <h2>Bienvenue sur BuildMaster</h2>
+                    <p>Le site de location nouvelle génération</h2>
                 </div>
                 <div class="kvsub-right">
-                    <h2>Title</h2>
-                    <p>Texte à rajouter.</p>
+                    <h2>Loueur ou Vendeur</h2>
+                    <p>C'est ici que vous pourrez construire votre futur</p>
                 </div>
             </div>
         </section>
@@ -56,7 +54,7 @@
                     <a href="index.php?page=articleVendeur">
                         <h1>Gérer les utilisateurs</h1>
                     </a>
-                    <p>Cette page vous permet de gérer vos articles .</p>
+                    <p>Cette page vous permet de gérer vos articles</p>
                     <a class="abutton" href="index.php?page=articleVendeur">Goo</a>
                 </div>
 
@@ -71,7 +69,7 @@
             <div class="card-right">
                 <div class="card-copy">
                     <h1>Modifier un thème</h1></a>
-                    <p> Vous pouvez aller manger des pancakes</p>
+                    <p>Changer la couleur ainisi que son nom c'est possible ici</p>
                     <a class="abutton" href="index.php?page=adminTheme">Goo</a>
                 </div>
                 <div class="card-img" style="background-image:url(https://sdwebdesign.nl/wp-content/uploads/2016/04/prestashop-bord-1.jpg)">
@@ -89,7 +87,7 @@
                     <a href="#">
                         <h1>Mes Messages</h1>
                     </a>
-                    <p>Suivez ici toutes vos commandes </p>
+                    <p>Contactez les vendeurs ou loueurs de votre choix</p>
                     <a class="abutton" href="#">Goo</a>
                 </div>
 
@@ -104,7 +102,7 @@
                 <div class="card-copy">
                         <h1>Afficher les utilisateurs</h1>
                     </a>
-                    <p>Liste des utilisateurs du site</p>
+                    <p>Liste des utilisateurs étant inscrits sur BuildMaster</p>
                     <a class="abutton" href="index.php?page=affUser">Afficher</a>
                 </div>
 
@@ -149,36 +147,29 @@
 
     <footer>
         <section class="quotesection">
-            <h1>Title</h1>
-            <blockquote><span class="bigquote">"</span>
-                <p>Texte à rajouter.</p>
-                <footer>
-                    <cite>Texte à rajouter.</cite>
-                </footer>
+            <h1>BuildMaster</h1>
+            <blockquote>
+                <p>Il suffit d'avoir loué pour ne plus savoir y résister</p>
             </blockquote>
-
-            <blockquote><span class="bigquote">"</span>
-                <p>Texte à rajouter.</p>
-                <footer>
-                    <cite>Texte à rajouter.</cite>
-                </footer>
+            <blockquote>
+                <p>Vendre, parce que je le vaux bien</p>
             </blockquote>
         </section>
 
         <section class="infosection">
             <ul class="contact-info">
                 <li>
-                    <a>e-mail
+                    <a>admin@bm.fr
                     </a>
                 </li>
                 <li>
-                    <a>Numéro</a>
+                    <a>06 42 57 41 30</a>
                 </li>
                 <li>
-                    Texte à rajouter.</li>
+                    Contactez-nous en cas de besoin</li>
         </section>
         <div class="copyrightsection">
-            <p>&copy;Texte à rajouter.</p>
+            <p>&copy;BuildMaster</p>
             </section>
     </footer>
 

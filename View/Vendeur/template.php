@@ -20,15 +20,13 @@
     </head>
 
     <header class="topnav">
-        <nav>
+        <nav><a href="index.php?page=boiteOutilV">
             <img class="logo" src="/BuildMaster/View/Image/Logo.png">
             <ul>
             <li><a href="index.php?page=messageVendeur">Mes messages</a></li>
                 <li><a href="index.php?page=articleVendeur">Mes articles</a></li>
-                <li><a href="#">Mes commandes</a></li>
                 <li><a href="index.php?page=monSite">Mon site</a></li>
                 <li><a href="index.php?page=signaler">Signaler un compte</a></li>
-                <li><a href="index.php?page=boiteOutil">Boîte à Outil</a></li>
                 <li><a href="index.php?page=deconnexion">Déconnexion</a></li>
               
         </nav>
@@ -36,8 +34,8 @@
     <main>
         <section class="kvsection">
             <div class="kv">
-                <h1>Bonjour : <?php echo  $_SESSION['prenom']; ?> </h1>
-                <p class="introcopy">Boîte à outil : VENDEUR</p>
+                <h1>Bonjour <?php echo  $_SESSION['prenom']; ?> </h1>
+                <p class="introcopy">Boîte à outil : Vendeur</p>
                 <!--<a class="abutton" href="#">Onze diensten</a>-->
             </div>
             <!--<div class="kvsubbox">

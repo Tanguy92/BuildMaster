@@ -42,7 +42,7 @@
 <form class="submit" action="index.php?page=adminTheme" method ="POST">
             <input type="text" id="head" name="newColorName" require >
     <input type="color" id="head" name="newColor">
-    <label for="head">Head</label>
+    <label for="head">Couleur</label>
     <div class="submitt">
       <div class="text">
         <span><button type="submitt" value="changer">Rendre dispo</button></span>

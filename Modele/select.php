@@ -42,7 +42,7 @@ function selectDispo()
 function selectIdMembre(){
     $bdd =$GLOBALS["bdd"];
     $mail = $_SESSION["mail"];
-    $reponse = $bdd->query("SELECT idMembre FROM membre WHERE mail LIKE '$mail'");
+    $reponse = $bdd->query("SELECT * FROM membre WHERE mail LIKE '$mail'");
     return $reponse;
 }
 
