@@ -36,6 +36,9 @@ if (!isset($_GET['page'])) {
             case 'description':
             include('Controleur/All/description.php');
             break;
+            case 'monMagasin':
+            include('Controleur/All/monMagasin.php');
+            break;
             case 'adminTheme':
             include('Controleur/Admin/adminTheme.php');
             break;

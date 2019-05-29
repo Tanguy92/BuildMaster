@@ -1,6 +1,6 @@
 <?php
 include("Modele/connectBDD.php");
-// include("Modele/select.php");
+  //include("Modele/select.php");
 // include("Modele/insert.php");
 ?>
 <main>
@@ -34,7 +34,7 @@ include("Modele/connectBDD.php");
 <body>
 	<div id="wrap">
 	<div id="columns" class="columns_4">
-
+<H2>Article</H1>
 <?php
 
 $reponse = Tanguy();
@@ -89,4 +89,17 @@ while ($donnees = $reponse->fetch()) {
 // 	</figure>
   
 // </body>
+?>
+
+<H2>Magasin</H1>
+<?php
+
+$reponse = TanguyMagasin();
+
+
+while ($donnees = $reponse->fetch()) {
+    include("Controleur/Client/functionMagasin.php");
+    // echo $donnees["prix"];
+    
+}
 ?>
