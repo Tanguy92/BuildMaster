@@ -28,7 +28,12 @@
                 <li><a href="#">Mes commandes</a></li>
                 <li><a href="index.php?page=monSite">Mon site</a></li>
                 <li><a href="index.php?page=signaler">Signaler un compte</a></li>
+<<<<<<< HEAD
+                <li><a href="index.php?page=noter">Noter un magasin</a></li>
+                <li><a href="index.php?page=boiteOutil">Boite a Outil</a></li>
+=======
                 <li><a href="index.php?page=boiteOutil">Boîte à Outil</a></li>
+>>>>>>> d957945c73662f8afbd6a2d42296040cfc57ea9f
                 <li><a href="index.php?page=deconnexion">Déconnexion</a></li>
               
         </nav>
@@ -112,6 +117,36 @@
                   
                 </div>
             </div>
+        </section>
+
+        <section class="cardsection">
+            <div class="card-left">
+                <div class="card-copy">
+                    <a href="#">
+                        <h1>Mes infos</h1>
+                    </a>
+                    <p>Changez vos infos personnelles </p>
+                    <a class="abutton" href="index.php?page=change">Changer</a>
+                </div>
+
+                <div class="card-img" style="background-image:url(https://sdwebdesign.nl/wp-content/uploads/2016/04/waterlaptop-1.jpg)">
+                    <div class="card-img error-img">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-right">
+                <div class="card-copy">
+                    <h1>Supprimer mon compte</h1></a>
+                    <p>Quitter le site en supprimant le compte</p>
+                    <a class="abutton" href="index.php?page=sortir">Go</a>
+                </div>
+                <div class="card-img" style="background-image:url(https://sdwebdesign.nl/wp-content/uploads/2016/04/prestashop-bord-1.jpg)">
+                  
+                </div>
+            </div>
+
         </section>
 
 

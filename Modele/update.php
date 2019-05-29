@@ -28,4 +28,33 @@ function updateArticle($s1,$s2,$s3,$s4,$s5,$s6){
     return $check;
 }
 
+//ANNIA
+//Actualiser mail
+function updateMail($n, $personne) {
+    $bdd = $GLOBALS["bdd"];
+    $s = $bdd -> prepare("UPDATE `membre` SET `mail` = :nb WHERE `membre`.`idMembre` = :identifiant;");
+    $s -> execute(array('nb' => $n, 'identifiant' => $personne));
+}
+
+//Mot de passe
+function updateMdp($n, $personne) {
+    $bdd = $GLOBALS["bdd"];
+    $s = $bdd -> prepare("UPDATE `membre` SET `mdp` = :nb WHERE `membre`.`idMembre` = :identifiant;");
+    $s -> execute(array('nb' => $n, 'identifiant' => $personne));
+}
+
+//Adresse
+function updateAdresse($n, $personne) {
+    $bdd = $GLOBALS["bdd"];
+    $s = $bdd -> prepare("UPDATE `membre` SET `adresse` = :nb WHERE `membre`.`idMembre` = :identifiant;");
+    $s -> execute(array('nb' => $n, 'identifiant' => $personne));
+}
+
+//Magasin
+function updateMagasin($n, $personne) {
+    $bdd = $GLOBALS["bdd"];
+    $s = $bdd -> prepare("UPDATE `membre` SET `magasin` = :nb WHERE `membre`.`idMembre` = :identifiant;");
+    $s -> execute(array('nb' => $n, 'identifiant' => $personne));
+}
+
 ?>

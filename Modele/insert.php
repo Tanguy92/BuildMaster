@@ -74,7 +74,26 @@ function updateSignal($som,$com) {
     $s -> execute(array('nb' => $som, 'identifiant' => $com));
 }
 
+<<<<<<< HEAD
+//Inserer une note
+function insertNote($c,$m) {
+    $bdd = $GLOBALS["bdd"];
+    $requete = $bdd -> prepare("INSERT INTO `notes` (`idNotes`, `note`, `idMembre`) VALUES (NULL, :nb, :ven);");
+    $requete -> execute(array(":nb" => $c, ":ven" => $m));
+}
+
+//Actualiser la note du vendeur
+function updateNote($n, $personne) {
+    $bdd = $GLOBALS["bdd"];
+    $s = $bdd -> prepare("UPDATE `membre` SET `note` = :nb WHERE `membre`.`idMembre` = :identifiant;");
+    $s -> execute(array('nb' => $n, 'identifiant' => $personne));
+}
+
+//IHSANE
+function updateTheme(){
+=======
 /*function updateTheme(){
+>>>>>>> d957945c73662f8afbd6a2d42296040cfc57ea9f
     $bdd = $GLOBALS["bdd"];
     $query =
     "UPDATE membre SET idTheme = (SELECT idTheme FROM theme WHERE couleur LIKE '#000000') WHERE idMembre = 1";

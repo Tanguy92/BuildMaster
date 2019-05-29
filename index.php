@@ -90,7 +90,27 @@ if (!isset($_GET['page'])) {
             case 'supCompte':
             include('Controleur/Admin/supCompte.php');
             break;
-
+            //Noter des magasins
+            case 'noter':
+            include('Controleur/Vendeur/noter.php');
+            break;
+            case 'noter2':
+            include('Controleur/Vendeur/eNoter.php');
+            break;
+            //CHANGER
+            case 'change':
+            include('Controleur/Vendeur/changer.php');
+            break;
+            case 'change2':
+            include('Controleur/Vendeur/changer2.php');
+            break;
+            //Supprimer moi meme mon compte
+            case 'sortir':
+            include('Controleur/Vendeur/prep.php');
+            break;
+            case 'prep':
+            include('Controleur/Vendeur/sortir.php');
+            break;
             
             //Deconnexion
             case 'deconnexion':
