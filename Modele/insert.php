@@ -74,6 +74,20 @@ function updateSignal($som,$com) {
     $s -> execute(array('nb' => $som, 'identifiant' => $com));
 }
 
+//Inserer une note
+function insertNote($c,$m) {
+    $bdd = $GLOBALS["bdd"];
+    $requete = $bdd -> prepare("INSERT INTO `notes` (`idNotes`, `note`, `idMembre`) VALUES (NULL, :nb, :ven);");
+    $requete -> execute(array(":nb" => $c, ":ven" => $m));
+}
+
+//Actualiser la note du vendeur
+function updateNote($n, $personne) {
+    $bdd = $GLOBALS["bdd"];
+    $s = $bdd -> prepare("UPDATE `membre` SET `note` = :nb WHERE `membre`.`idMembre` = :identifiant;");
+    $s -> execute(array('nb' => $n, 'identifiant' => $personne));
+}
+
 //IHSANE
 function updateTheme(){
     $bdd = $GLOBALS["bdd"];

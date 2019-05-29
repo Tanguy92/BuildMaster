@@ -50,12 +50,37 @@ function selectMembre($bdd) {
     return $donnees;
 }
 
+function selectSpecMembre($to) {
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->prepare('SELECT * FROM membre WHERE idMembre = :t');
+    $reponse->execute(array('t' => $to));
+    $rep = $reponse->fetch();    
+    return $rep;
+}
+
 function selectMessage($bdd) {
 	$premier = $bdd ->prepare('SELECT DISTINCT * FROM messagerie');
 	$premier -> execute(null);
 
 	while ($message[] = $premier->fetch()) {}
 	return $message;
+}
+
+function selectNote($coco) {
+    $bdd = $GLOBALS["bdd"];
+	$premier = $bdd ->prepare('SELECT AVG(note) FROM notes WHERE idMembre = :ca');
+	$premier -> execute(array('ca' => $coco));
+
+	while ($noter[] = $premier->fetch()) {}
+    return $noter;
+}
+
+function selectNotes() {
+    $bdd = $GLOBALS["bdd"];
+	$premier = $bdd ->query('SELECT * FROM notes');
+
+	while ($noter[] = $premier->fetch()) {}
+    return $noter;
 }
 
 function selectAppartenance($bdd) {

@@ -1,4 +1,8 @@
 <?php
+ include('View/Template/templateTop.html');
+ include('Modele/delete.php');
+ include('Modele/select.php');
+ 
 //Supprimer tous les messages à lui
 $moi = $_GET["profil"];
 $mes = selectMessage($bdd);
@@ -20,6 +24,18 @@ for ($i = 0; $i < count($ap)-1; $i++) {
         $ip = deleteArticleA($prod);
         $ia = deleteApp($idA);
               
+    }
+}
+
+//Sup son compte de la table notes
+$ap = selectNotes($bdd);
+
+for ($i = 0; $i < count($ap)-1; $i++) {
+    if ($ap[$i]['idMembre'] == $moi) {
+        $idN = $ap[$i]['idNotes'];
+
+        $ip = deleteNote($idN);
+        
     }
 }
 

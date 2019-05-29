@@ -81,4 +81,11 @@ function deleteApp($appa) {
     $ia -> execute(array('ap' => $appa));
 }
 
+//Suppression de la liaison vendeur - article 
+function deleteNote($appa) {
+    $bdd = $GLOBALS["bdd"];
+    $ia = $bdd -> prepare('DELETE FROM `notes` WHERE idNotes = :ap');
+    $ia -> execute(array('ap' => $appa));
+}
+
 ?>
