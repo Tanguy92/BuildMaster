@@ -28,12 +28,8 @@
                 <li><a href="#">Mes commandes</a></li>
                 <li><a href="index.php?page=monSite">Mon site</a></li>
                 <li><a href="index.php?page=signaler">Signaler un compte</a></li>
-<<<<<<< HEAD
                 <li><a href="index.php?page=noter">Noter un magasin</a></li>
                 <li><a href="index.php?page=boiteOutil">Boite a Outil</a></li>
-=======
-                <li><a href="index.php?page=boiteOutil">Boîte à Outil</a></li>
->>>>>>> d957945c73662f8afbd6a2d42296040cfc57ea9f
                 <li><a href="index.php?page=deconnexion">Déconnexion</a></li>
               
         </nav>
