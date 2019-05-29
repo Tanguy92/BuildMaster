@@ -2,7 +2,6 @@
 session_start();
 include("Modele/ConnectBDD.php");
 
-
 if (!isset($_GET['page'])) {
     include('Controleur/All/acceuil.php');
 } else {
@@ -31,6 +30,12 @@ if (!isset($_GET['page'])) {
             case 'connexionUtilisateur':
             include('Controleur/All/connexionUtilisateur.php');
             break;
+            case 'search':
+            include('Controleur/All/search.php');
+            break;
+            case 'description':
+            include('Controleur/All/description.php');
+            break;
             case 'adminTheme':
             include('Controleur/Admin/adminTheme.php');
             break;
@@ -51,6 +56,9 @@ if (!isset($_GET['page'])) {
             break;
             case 'boiteOutil':
             include('Controleur/Vendeur/boiteOutil.php');
+            break;
+            case 'acceuilClient':
+            include('Controleur/Client/acceuil.php');
             break;
             //MESSAGE
             case 'messageVendeur':

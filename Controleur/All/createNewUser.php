@@ -43,7 +43,8 @@ if ($grade == "v"){
     // header("Location: index.php");
     
 
-}else{
-    // include("View/All/newUserV.html");  
+}elseif ($grade == "c"){
+    
+     include("Controleur/All/createNewUser2.php");  
 }
 ?>

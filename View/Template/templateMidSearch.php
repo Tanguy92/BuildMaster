@@ -37,14 +37,15 @@ include("Modele/connectBDD.php");
 
 <?php
 
-$reponse = Tanguy();
 
+//if(isset($_SESSION["search"])){
 
 while ($donnees = $reponse->fetch()) {
     include("Controleur/Client/function.php");
     // echo $donnees["prix"];
-    
+
 }
+//}
 
 //   <figure>
 //   <img src="https://i.imgur.com/ruU04I6.jpg">

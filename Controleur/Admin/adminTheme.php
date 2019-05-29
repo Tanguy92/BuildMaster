@@ -17,12 +17,11 @@ include("Modele/delete.php");
 
     $reponse = selectAllTheme();
     while ($donnees = $reponse->fetch()) {
-        //include("View/Admin/adminTheme.php");
         $idTheme = $donnees['idTheme'];
         $nom = $donnees['nom'];
     }
 
-    if (isset($_POST["newColor"]) || isset($_POST["newColorName"])) {
+    if (isset($_POST["newColor"]) || isset($_POST["newColorName"])) {   // Ajouter le thème en fonction du nom et de la couleur choisie par le user.
         $nom = $_POST["newColorName"];
         $couleur = $_POST["newColor"];
         $ajoutTheme = insertTheme($nom, $couleur);
@@ -31,9 +30,9 @@ include("Modele/delete.php");
     
     }
 
-    if (isset($_POST["oldColor"])) {
-        $toto = $_POST["oldColor"];
-        $supprTheme = deleteTheme($toto);  
+    if (isset($_POST["oldColor"])) {   // Supprimer un thème 
+        $delete = $_POST["oldColor"];
+        $supprTheme = deleteTheme($delete); 
     }
 
 

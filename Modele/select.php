@@ -143,7 +143,7 @@ function selectAllTheme(){
     $reponse = $bdd->query("SELECT * FROM theme WHERE idTheme = $id");
     return $reponse;
 }*/
-
+// Tanguy
 /////// Trouve un Mot de passe  ////
 function mdp()
 {
@@ -169,7 +169,7 @@ function prenom()
         'mail' => $_SESSION['mail']
     ));
 
-
+    $prenom = "";
     while ($donnees2 = $reponse2->fetch()) {
         $_SESSION['prenom'] = $donnees2['prenom'];
     }
@@ -191,4 +191,40 @@ function statut()
     }
     return $grade;
 }
+function selectAllArticleTanguy()
+{
+    $bdd = $GLOBALS["bdd"];
+    $mail = $_SESSION["mail"];
+    $reponse = $bdd->query("SELECT * FROM article ");
+    return $reponse;
+}
+function Tanguy()
+{
+
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->query("SELECT * FROM article");
+    return $reponse;
+}
+function search($search)
+{
+
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->prepare("SELECT * FROM `article` WHERE `nom` LIKE :search");
+    $reponse->execute(array(
+        'search' => $search
+    ));
+    return $reponse;
+}
+   
+function description($idProduit){
+    
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->prepare("SELECT * FROM `article` WHERE `idProduit` LIKE :idProduit ");
+    $reponse->execute(array(
+        'idProduit' => $idProduit
+    ));
+   
+    return $reponse;
+}
+
 ?>

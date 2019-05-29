@@ -23,13 +23,17 @@
         <nav>
             <img class="logo" src="/BuildMaster/View/Image/Logo.png">
             <ul>
-            <li><a href="index.php?page=messageVendeur">Mes Messages</a></li>
-                <li><a href="index.php?page=articleVendeur">Mes Articles</a></li>
-                <li><a href="#">Mes Commandes</a></li>
+            <li><a href="index.php?page=messageVendeur">Mes messages</a></li>
+                <li><a href="index.php?page=articleVendeur">Mes articles</a></li>
+                <li><a href="#">Mes commandes</a></li>
                 <li><a href="index.php?page=monSite">Mon site</a></li>
                 <li><a href="index.php?page=signaler">Signaler un compte</a></li>
+<<<<<<< HEAD
                 <li><a href="index.php?page=noter">Noter un magasin</a></li>
                 <li><a href="index.php?page=boiteOutil">Boite a Outil</a></li>
+=======
+                <li><a href="index.php?page=boiteOutil">Boîte à Outil</a></li>
+>>>>>>> d957945c73662f8afbd6a2d42296040cfc57ea9f
                 <li><a href="index.php?page=deconnexion">Déconnexion</a></li>
               
         </nav>
@@ -38,7 +42,7 @@
         <section class="kvsection">
             <div class="kv">
                 <h1>Bonjour : <?php echo  $_SESSION['prenom']; ?> </h1>
-                <p class="introcopy">Boite a outil : VENDEUR</p>
+                <p class="introcopy">Boîte à outil : VENDEUR</p>
                 <!--<a class="abutton" href="#">Onze diensten</a>-->
             </div>
             <!--<div class="kvsubbox">
@@ -60,7 +64,7 @@
                     <a href="index.php?page=articleVendeur">
                         <h1>Mes articles</h1>
                     </a>
-                    <p>Cette page vous permet de gere vos article .</p>
+                    <p>Cette page vous permet de gérer vos articles .</p>
                     <a class="abutton" href="index.php?page=articleVendeur">Aller</a>
                 </div>
 
@@ -89,9 +93,9 @@
             <div class="card-left">
                 <div class="card-copy">
                     <a href="#">
-                        <h1>Mes commande</h1>
+                        <h1>Mes commandes</h1>
                     </a>
-                    <p>Suivez ici tout vos commande </p>
+                    <p>Suivez ici toutes vos commandes </p>
                     <a class="abutton" href="#">Aller</a>
                 </div>
 
@@ -106,7 +110,7 @@
             <div class="card-right">
                 <div class="card-copy">
                     <h1>Modifier Mon Site</h1></a>
-                    <p>Cette fonctionalité vous permet de modifier votre site affiche.</p>
+                    <p>Cette fonctionalité vous permet de modifier l'affichage de votre site.</p>
                     <a class="abutton" href="index.php?page=monSite">Aller</a>
                 </div>
                 <div class="card-img" style="background-image:url(https://sdwebdesign.nl/wp-content/uploads/2016/04/prestashop-bord-1.jpg)">
@@ -195,11 +199,11 @@
         <section class="infosection">
             <ul class="contact-info">
                 <li>
-                    <a>info@BuildMaster.fr
+                    <a>e-mail
                     </a>
                 </li>
                 <li>
-                    <a>06.51.20.36.80</a>
+                    <a>Numéro</a>
                 </li>
                 <li>
                     Intech info</li>

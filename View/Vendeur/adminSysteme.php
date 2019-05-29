@@ -9,7 +9,7 @@
         <p id='sys'>
             <table>
 			    <tr id="ligne">
-				    <th>Message Systeme</th>
+				    <th>Message système</th>
 				    <th>Action</th>
 			    </tr>
 		        <tr>

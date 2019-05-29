@@ -74,6 +74,7 @@ function updateSignal($som,$com) {
     $s -> execute(array('nb' => $som, 'identifiant' => $com));
 }
 
+<<<<<<< HEAD
 //Inserer une note
 function insertNote($c,$m) {
     $bdd = $GLOBALS["bdd"];
@@ -90,6 +91,9 @@ function updateNote($n, $personne) {
 
 //IHSANE
 function updateTheme(){
+=======
+/*function updateTheme(){
+>>>>>>> d957945c73662f8afbd6a2d42296040cfc57ea9f
     $bdd = $GLOBALS["bdd"];
     $query =
     "UPDATE membre SET idTheme = (SELECT idTheme FROM theme WHERE couleur LIKE '#000000') WHERE idMembre = 1";
@@ -105,7 +109,7 @@ function updateTheme(){
     }
 
     return $check;
-}
+}*/
 
 
 

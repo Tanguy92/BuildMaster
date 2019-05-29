@@ -14,7 +14,7 @@
 
 
     <head>
-        <meta name="format-detection" content="telephone=no" />
+        <meta name="format-detection" content="telephone=no"/>
     </head>
 
     <header class="topnav">
@@ -23,10 +23,10 @@
             <ul>
                 <li><a href="index.php?page=messageVendeur">Mes Messages</a></li>
                 <li><a href="index.php?page=articleVendeur">Mes Articles</a></li>
-                <li><a href="#">Mes Commandes</a></li>
-                <li><a href="#">Mon site</a></li>
+                <li><a href="index.php?page=connexionUtilisateur">Mes Commandes</a></li>
+                <li><a href="index.php?page=adminTheme">Mon site</a></li>
                 <li><a href="index.php?page=signaler">Signaler un compte</a></li>
-                <li><a href="#">Déconnexion</a></li>
+                <li><a href="index.php?">Déconnexion</a></li>
               
         </nav>
     </header>
@@ -35,16 +35,16 @@
             <div class="kv">
                 <h1>Bonjour : <?php echo  $_SESSION['prenom']; ?> </h1>
                 <p class="introcopy">Boite a outil : ADMIN</p>
-                <a class="abutton" href="#">Onze diensten</a>
+                <a class="abutton" href="#">Bouton</a>
             </div>
             <div class="kvsubbox">
                 <div class="kvsub-left">
-                    <h2>Missie</h2>
-                    <p>De beleving tussen mensen en websites verbeteren.</h2>
+                    <h2>Title</h2>
+                    <p>Texte à rajouter.</h2>
                 </div>
                 <div class="kvsub-right">
-                    <h2>Kenmerken</h2>
-                    <p>Snelle communicatie, nuchterheid en kennis van zaken.</p>
+                    <h2>Title</h2>
+                    <p>Texte à rajouter.</p>
                 </div>
             </div>
         </section>
@@ -54,9 +54,9 @@
             <div class="card-left">
                 <div class="card-copy">
                     <a href="index.php?page=articleVendeur">
-                        <h1>Gerer les utilisateurs</h1>
+                        <h1>Gérer les utilisateurs</h1>
                     </a>
-                    <p>Cette page vous permet de gere vos article .</p>
+                    <p>Cette page vous permet de gérer vos articles .</p>
                     <a class="abutton" href="index.php?page=articleVendeur">Goo</a>
                 </div>
 
@@ -70,8 +70,8 @@
 
             <div class="card-right">
                 <div class="card-copy">
-                    <h1>Modifier un theme</h1></a>
-                    <p> Vous pouvez aller manger des pankaes</p>
+                    <h1>Modifier un thème</h1></a>
+                    <p> Vous pouvez aller manger des pancakes</p>
                     <a class="abutton" href="index.php?page=adminTheme">Goo</a>
                 </div>
                 <div class="card-img" style="background-image:url(https://sdwebdesign.nl/wp-content/uploads/2016/04/prestashop-bord-1.jpg)">
@@ -89,7 +89,7 @@
                     <a href="#">
                         <h1>Mes Messages</h1>
                     </a>
-                    <p>Suivez ici tout vos commande </p>
+                    <p>Suivez ici toutes vos commandes </p>
                     <a class="abutton" href="#">Goo</a>
                 </div>
 
@@ -149,18 +149,18 @@
 
     <footer>
         <section class="quotesection">
-            <h1>Klanten over ons</h1>
+            <h1>Title</h1>
             <blockquote><span class="bigquote">"</span>
-                <p>SD Webdesign luistert naar je wensen en zoekt naar de beste oplossing. Onze webshop is helemaal naar wens! We zijn zeer tevreden.</p>
+                <p>Texte à rajouter.</p>
                 <footer>
-                    <cite>- Tescity.be</cite>
+                    <cite>Texte à rajouter.</cite>
                 </footer>
             </blockquote>
 
             <blockquote><span class="bigquote">"</span>
-                <p>De nieuwe site is echt een pareltje in designinspiratie voor de zakelijke markt. De site is ontworpen door Yellow Agency en gebouwd door SD Webdesign.</p>
+                <p>Texte à rajouter.</p>
                 <footer>
-                    <cite>- Roes.nu</cite>
+                    <cite>Texte à rajouter.</cite>
                 </footer>
             </blockquote>
         </section>
@@ -168,17 +168,17 @@
         <section class="infosection">
             <ul class="contact-info">
                 <li>
-                    <a>info@sdwebdesign.nl
+                    <a>e-mail
                     </a>
                 </li>
                 <li>
-                    <a>0546 - 23 20 04</a>
+                    <a>Numéro</a>
                 </li>
                 <li>
-                    Hofkampstraat 49 7607NC Almelo</li>
+                    Texte à rajouter.</li>
         </section>
         <div class="copyrightsection">
-            <p>&copy;SD Webdesign - Algemene voorwaarden</p>
+            <p>&copy;Texte à rajouter.</p>
             </section>
     </footer>
 

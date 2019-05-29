@@ -23,6 +23,9 @@
   .logo{
     height:80px;
     margin:10px 0;
+    background: transparent;
+    border: none !important;
+    font-size:0;
   }
   
   nav ul{

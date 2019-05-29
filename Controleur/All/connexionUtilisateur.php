@@ -13,16 +13,25 @@ $_SESSION['id'] = $id;
 
 $_SESSION['prenom'] = prenom();
 $grade = statut();
+$_SESSION["grade"] = $grade;
 $mdp = mdp();
 
 // //// redirection de compte ///////////
 
 if ($mdp === $_SESSION['pass'] && $grade === "v" ) {
-    include ("Controleur/Vendeur/boiteOutil.php");
+    $_SESSION["connect"] = true;
+   // include ("Controleur/Vendeur/boiteOutil.php");
+    header ("refresh:0;url=index.php?page=boiteOutil");
     
 }elseif($mdp === $_SESSION['pass'] && $grade === "a"){
-    include ("Controleur/Admin/boiteOutil.php");
+    $_SESSION["connect"] = true;
+ //   include ("Controleur/Admin/boiteOutil.php");
+    header ("refresh:0;url=index.php?page=boiteOutil");
+}elseif($mdp === $_SESSION['pass'] && $grade === "c"){
+    $_SESSION["connect"] = true;
+    header ("refresh:0;url=index.php?page=acceuilClient");
 }else {
+    $_SESSION["connect"] = false;
     include ("Controleur/All/retry.php");
 }
 
