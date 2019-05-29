@@ -180,6 +180,13 @@ function Tanguy()
     $reponse = $bdd->query("SELECT * FROM article");
     return $reponse;
 }
+function TanguyMagasin()
+{
+
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->query("SELECT * from membre where membre.magasin NOT LIKE 'NULL';");
+    return $reponse;
+}
 function search($search)
 {
 
@@ -202,4 +209,14 @@ function description($idProduit){
     return $reponse;
 }
 
+function descriptionMagasin($idMagasin){
+    
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->prepare("SELECT * FROM `membre` WHERE `idMembre` LIKE :idMembre ");
+    $reponse->execute(array(
+        'idMembre' => $idMagasin
+    ));
+   
+    return $reponse;
+}
 ?>
