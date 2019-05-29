@@ -16,7 +16,9 @@ while ($donnees = $selectidMembre->fetch()) {
 $selectArticlePanier = selectArticlePanier($idMembre);
 
 while ($donnees2 = $selectArticlePanier->fetch()) {
-    include("View/Client/panier.php");
+    if(!isset($_POST["commander"])){
+        include("View/Client/panier.php");
+    }
 }
 
 if (isset($_POST["supprimerPanier"])) {
@@ -49,11 +51,17 @@ if(isset($_POST["dateDebut"]) && isset($_POST["dateFin"])){
 
 if (isset($_POST["commander"]) && $echec != true) {
 
+    $_SESSION["idProduit"] = $_POST["commander"];
+    $_SESSION["dateDebut"] = $_POST["dateDebut"];
+    $_SESSION["dateFin"] = $_POST["dateFin"];
+    include("View/Client/carte.php");
+}
 
-    $idProduit = $_POST["commander"];
-   // insertDispo($_POST["dateDebut"],$_POST["dateFin"],$idProduit);
-    //insertCommande();
-    updateDeletePanier($idProduit, $idMembre,$_POST["dateDebut"],$_POST["dateFin"]);
+
+
+if (isset($_POST["carte"])) {
+
+    updateDeletePanier($_SESSION["idProduit"], $idMembre,$_SESSION["dateDebut"],$_SESSION["dateFin"]);
     header('Location: index.php?page=panier');
 }
 
