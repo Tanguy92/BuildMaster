@@ -1,6 +1,12 @@
 <?php
 session_start();
 include("Modele/ConnectBDD.php");
+require_once("Modele/Update.php");
+
+
+updateDateDebutArticle();
+updateFermetureCommande();
+
 
 if (!isset($_GET['page'])) {
     include('Controleur/All/acceuil.php');
@@ -57,8 +63,13 @@ if (!isset($_GET['page'])) {
             case 'monSite':
             include('Controleur/Vendeur/monSite.php');
             break;
-            case 'boiteOutil':
-            include('Controleur/Vendeur/boiteOutil.php');
+            // Boîte à outil en tant que Vendeur
+            case 'boiteOutilV':
+            include('Controleur/Vendeur/boiteOutilV.php');
+            break;
+            // Boîte à outil en tant qu'admin
+            case 'boiteOutilA':
+            include('Controleur/Admin/boiteOutilA.php');
             break;
             case 'acceuilClient':
             include('Controleur/Client/acceuil.php');
@@ -89,6 +100,19 @@ if (!isset($_GET['page'])) {
             break;
             case 'supCompte':
             include('Controleur/Admin/supCompte.php');
+            break;  
+            //Articles Client
+            case 'afficheArticle':
+            include('Controleur/Client/afficheArticle.php');
+            break;
+            case 'panier':
+            include('Controleur/Client/panier.php');
+            break;
+            case 'commande':
+            include('Controleur/Client/commande.php');
+            break;
+            case 'categorie':
+            include('Controleur/Admin/categorie.php');
             break;
             //Noter des magasins
             case 'noter':

@@ -12,7 +12,22 @@ $noter = selectNote($seller);
 $n = $noter[0][0];
 $actu = updateNote($n, $seller); 
 
-include('View/Template/templateTop.html');
+$selectidMembre = selectIdMembre();
+while ($donnees2 = $selectidMembre->fetch()) {
+    $statut = $donnees2["statut"];
+    $idMembre = $donnees2["idMembre"];
+}
+
+if(isset($statut)){
+
+    if($statut == "v"){
+        include('View/Template/templateTop.html');
+    }elseif ($statut == "c") {
+        include("View/Template/templateTopAllClient.php");
+    } else {
+        include("View/Template/templateTopAdmin.html");
+    }
+}
 include('View/Vendeur/okNote.php');
 
 ?>

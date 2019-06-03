@@ -6,7 +6,7 @@ function insertArticle($s1,$s2,$s4,$s5,$s6,$s7){
     $bdd = $GLOBALS["bdd"];
 
     $query =
-    "INSERT INTO article (nom, prix, idCategorie, photo, dispo,dateDebut,dateFin) VALUES(:set1, :set2, :set4, :set5,'oui',:set6,:set7)";
+    "INSERT INTO article (nom, prix, idCategorie, photo, dateDebut, dateFin) VALUES(:set1, :set2, :set4, :set5,:set6,:set7)";
     try {
         $queries = $bdd -> prepare($query);
         $queries -> execute(array(":set1" => $s1,
@@ -41,6 +41,46 @@ function insertAppartenance($s1,$s2){
             die("Fail : ".$ex);
         }
     }
+
+function insertCommande($s1,$s2,$s3){
+        $bdd = $GLOBALS["bdd"];
+    
+        $query =
+        "INSERT INTO commande (idProduit, idMembre, prix) VALUES(:set1, :set2, :set3)";
+        try {
+            $queries = $bdd -> prepare($query);
+            $queries -> execute(array(":set1" => $s1,
+                                      ":set2" => $s2,
+                                      ":set3" => $s3
+                                    ));
+            $check = true;
+            }catch(PDOException $ex)
+            {
+                die("Fail : ".$ex);
+            }
+}
+
+
+/*function insertDispo($s1,$s2,$s3){
+    $bdd = $GLOBALS["bdd"];
+
+    $query =
+    "INSERT INTO dispo (dateDebut,dateFin,idProduit) VALUES(:set1, :set2, :set3)";
+    try {
+        $queries = $bdd -> prepare($query);
+        $queries -> execute(array(":set1" => $s1,
+                                  ":set2" => $s2,
+                                  ":set3" => $s3
+                                ));
+        $check = true;
+        }catch(PDOException $ex)
+        {
+            die("Fail : ".$ex);
+        }
+}*/
+
+
+
 function insertTheme($s2, $s3){
     $bdd = $GLOBALS["bdd"];
 
@@ -142,4 +182,22 @@ function updatePc($path)
         'mail' => $_SESSION["mail"]
     ));
 }
+
+function insertCategorie($s1){
+    $bdd = $GLOBALS["bdd"];
+
+    $query =
+    "INSERT INTO categorie (nom) VALUES (:set1)";
+    try {
+        $queries = $bdd -> prepare($query);
+        $queries -> execute(array(":set1" => $s1
+                    ));
+        $check = true;
+
+    }catch(PDOException $ex)
+    {
+        die("Fail : ".$ex);
+    }
+}
+
 ?>

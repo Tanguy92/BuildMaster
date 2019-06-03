@@ -1,7 +1,6 @@
 <?php
 include("View/Template/templateTop.html");
 include("Modele/select.php");
-include("Modele/update.php");
 
 
 if (isset($_POST["modifier"])){

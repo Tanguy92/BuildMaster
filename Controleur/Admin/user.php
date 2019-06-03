@@ -1,6 +1,6 @@
 <?php
 include('Modele/connectBDD.php');
-include('View/Template/templateTop.html');
+include('View/Template/templateTopAdmin.html');
 include('Modele/select.php');
 
 //Selectionner tous les vendeurs et faire une table

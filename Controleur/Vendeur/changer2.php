@@ -2,7 +2,6 @@
 include('View/Template/templateTop.html');
 include('Modele/select.php');
 include('Modele/insert.php');
-include('Modele/update.php');
 
 //Recuperer les infos de la personne de la bdd
 $s = selectSpecMembre($_SESSION['id']);
@@ -24,19 +23,24 @@ if ($o == $u AND $mot == $motOld) {
     }
 
     //Si il a modifie son mot de passe
-    $o = strlen($_GET['mot']);
-    $u = strlen($_GET['mot2']);
+    if ($_GET['mot'] != "") {
+        
+    
 
-    if ($_GET['mot'] == $_GET['mot2'] AND $o == $u AND $_GET['mot'] != "" AND $_GET['mot'] != " " AND $o != 2) {
-       
-        //update le mot de passe dans la bdd
-        $confirme = $_GET['mot'];
-        $actu = updateMdp($confirme, $seller);
+        $o = strlen($_GET['mot']);
+        $u = strlen($_GET['mot2']);
 
-    }   else {
+        if ($_GET['mot'] == $_GET['mot2'] AND $o == $u AND $_GET['mot'] != "" AND $_GET['mot'] != " " AND $o != 2) {
+        
+            //update le mot de passe dans la bdd
+            $confirme = $_GET['mot'];
+            $actu = updateMdp($confirme, $seller);
 
-        include('View/Vendeur/pasConf.php');
+        }   else {
 
+            include('View/Vendeur/pasConf.php');
+
+        }
     }
 
     //Si il a modifie son adresse
@@ -50,6 +54,7 @@ if ($o == $u AND $mot == $motOld) {
     }
 
     //Si il a modifie son nom de magasin
+if(isset($_GET["magasin"])){
     if ($_GET['magasin'] != "" AND $_GET['magasin'] != " " AND strlen($_GET['magasin']) >= 3) {
         
         //update le mail dans la bdd
@@ -58,8 +63,10 @@ if ($o == $u AND $mot == $motOld) {
 
 
     }
+}
     
     include('View/Vendeur/bien.php');
+    header("refresh:1;url=index.php?page=deconnexion");
 
 }   else {
 

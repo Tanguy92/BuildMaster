@@ -1,7 +1,7 @@
 <?php
 include("Modele/connectBDD.php");
 
-//AMINE
+//Article
 function selectCategorie()
 {
     $bdd = $GLOBALS["bdd"];
@@ -17,10 +17,35 @@ function selectArticle()
     return $reponse;
 }
 
+function selectAllArticle()
+{
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->query("SELECT * FROM article");
+    return $reponse;
+}
+
+function selectArticlePanier($s1)
+{
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->query("SELECT article.idProduit,article.nom,article.prix,article.photo,article.dateDebut,article.dateFin,article.idCategorie,commande.idMembre FROM article JOIN commande ON article.idProduit = commande.idProduit WHERE idMembre = $s1 AND panier LIKE 'true'");
+    return $reponse;
+}
+
+function selectDispo()
+{
+    $bdd = $GLOBALS["bdd"];
+    $idProduit = $_POST["commander"];
+    $reponse = $bdd->query("SELECT dateDebut,dateFin FROM commande WHERE idProduit = $idProduit AND etat NOT LIKE 'ferme'");
+    return $reponse;
+}
+
 function selectIdMembre(){
     $bdd =$GLOBALS["bdd"];
-    $mail = $_SESSION["mail"];
-    $reponse = $bdd->query("SELECT idMembre FROM membre WHERE mail LIKE '$mail'");
+    $mail ="";
+    if(isset($_SESSION["mail"])){
+        $mail = $_SESSION["mail"];
+    }
+    $reponse = $bdd->query("SELECT * FROM membre WHERE mail LIKE '$mail'");
     return $reponse;
 }
 
@@ -39,6 +64,22 @@ function selectModifierArticle(){
  
     return $reponse;
 }
+
+
+function selectCommandeOuverte($s1)
+{
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->query("SELECT commande.prix,commande.dateFin,commande.dateDebut,article.nom,article.photo FROM commande JOIN article ON commande.idProduit = article.idProduit WHERE etat LIKE 'ouverte' AND idMembre = $s1");
+    return $reponse;
+}
+
+function selectCommandeFerme($s1)
+{
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->query("SELECT commande.prix,commande.dateFin,commande.dateDebut,article.nom,article.photo  FROM commande JOIN article ON commande.idProduit = article.idProduit WHERE etat LIKE 'ferme' AND idMembre = $s1");
+    return $reponse;
+}
+
 
 //ANNIA
 //Prendre tous les infos de la table 
@@ -169,7 +210,8 @@ function prenom()
         'mail' => $_SESSION['mail']
     ));
 
-    $prenom = "";
+    $prenom ="";
+    
     while ($donnees2 = $reponse2->fetch()) {
         $_SESSION['prenom'] = $donnees2['prenom'];
     }
@@ -241,7 +283,13 @@ function descriptionMagasin($idMagasin){
     $reponse->execute(array(
         'idMembre' => $idMagasin
     ));
+}
    
+
+//Select toutes les categories.
+function selectAllCategorie(){
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->query("SELECT * FROM categorie");
     return $reponse;
 }
 ?>
