@@ -2,7 +2,6 @@
 include("Modele/connectBDD.php");
 include("Modele/insert.php");
 include("Modele/select.php");
-include("Modele/update.php");
 include("Controleur/Vendeur/function.php");
 
 // Browse image 

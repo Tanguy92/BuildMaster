@@ -2,7 +2,6 @@
 session_start();
 include("Modele/ConnectBDD.php");
 require_once("Modele/Update.php");
-var_dump($_POST);
 
 updateDateDebutArticle();
 updateFermetureCommande();
