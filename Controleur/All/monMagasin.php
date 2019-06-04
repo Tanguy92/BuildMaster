@@ -15,9 +15,9 @@ if(isset($statut)){
         include('View/Template/templateTop.html');
     }elseif ($statut == "c") {
         include("View/Template/templateTopAllClient.php");
-    } else {
-        include("View/Template/templateTopAllMagasin.html");
-    }
+    } 
+}   else {
+  include("View/Template/templateTopAllMagasin.html");
 }
 
 
