@@ -255,7 +255,7 @@ function TanguyMagasin()
 {
 
     $bdd = $GLOBALS["bdd"];
-    $reponse = $bdd->query("SELECT * from membre where membre.magasin NOT LIKE 'NULL';");
+    $reponse = $bdd->query("SELECT * from membre where membre.statut LIKE 'v';");
     return $reponse;
 }
 function search($search)
@@ -287,6 +287,7 @@ function descriptionMagasin($idMagasin){
     $reponse->execute(array(
         'idMembre' => $idMagasin
     ));
+    return $reponse;
 }
    
 
