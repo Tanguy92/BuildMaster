@@ -1,3 +1,4 @@
+<body onload="createHtml();">
 <script
               src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
               integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
@@ -13,7 +14,7 @@
     <link rel="stylesheet" href="View/Css/carte.css">
   </header>
 
-  <form action="index.php?page=panier" method="POST" id="my-sample-form" class="scale-down" >
+  <form action="index.php?page=panier" method="POST" id="my-sample-form" onsubmit="checkInputs(event);" class="scale-down" >
     <div class="cardinfo-card-number">
       <label class="cardinfo-label" for="card-number">Card Number</label>
       <div class='input-wrapper' id="card-number"></div>
@@ -47,6 +48,16 @@
 var form = document.querySelector('#my-sample-form');
 var submit = document.querySelector('input[type="submit"]');
 
+function createHtml()
+{
+
+  var ccnum = document.createElement("input");
+  ccnum.required = true;
+  ccnum.placeholder = "1234 5678 9876 5432";
+  document.getElementById('input-wrappe').appendChild(ccnum);
+}
+//card-number.setAttribute("required");
+/** 
 braintree.client.create({
   authorization: 'sandbox_g42y39zw_348pk9cgf3bgyw2b'
 }, function (err, clientInstance) {
@@ -164,5 +175,15 @@ braintree.client.create({
     }, false);
   });
 });
-
+*/
+function checkInputs(e)
+{
+  //e.preventDefault();
+  console.log(document.getElementById("credit-card-number"));
+  if(document.getElementById("credit-card-number").value.Length == 16 && document.getElementById("credit-card-number").value.length == 7 
+  && document.getElementById("cvv").value.length == 3)
+  {
+    document.getElementById("my-sample-form").submit;
+  }
+}
 </script>

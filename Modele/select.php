@@ -215,7 +215,11 @@ function prenom()
     while ($donnees2 = $reponse2->fetch()) {
         $_SESSION['prenom'] = $donnees2['prenom'];
     }
-    return  $_SESSION['prenom'];
+
+    if (isset($_SESSION['prenom'])) {
+        return  $_SESSION['prenom'];
+    }
+
 }
 
 /////// Trouve un statut  ////

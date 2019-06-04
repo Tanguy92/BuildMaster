@@ -4,7 +4,7 @@ include('Modele/select.php');
 
 $selectidMembre = selectIdMembre();
 while ($donnees2 = $selectidMembre->fetch()) {
-    $statut = $donnees2["statut"];
+    $statut = $donnees2["statut"]; 
     $idMembre = $donnees2["idMembre"];
 }
 
