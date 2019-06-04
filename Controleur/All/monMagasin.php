@@ -2,7 +2,23 @@
 // include("Modele/connectBDD.php");
 include("Modele/select.php");
 include("Modele/insert.php");
-include("View/Template/templateTopAllMagasin.html");
+
+$selectidMembre = selectIdMembre();
+while ($donnees3 = $selectidMembre->fetch()) {
+    $statut = $donnees3["statut"]; 
+    $idMembre = $donnees3["idMembre"];
+}
+
+if(isset($statut)){
+
+    if($statut == "v"){
+        include('View/Template/templateTop.html');
+    }elseif ($statut == "c") {
+        include("View/Template/templateTopAllClient.php");
+    } else {
+        include("View/Template/templateTopAllMagasin.html");
+    }
+}
 
 
 
