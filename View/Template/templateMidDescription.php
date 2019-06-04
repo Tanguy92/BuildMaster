@@ -49,9 +49,12 @@
         </div>
         
       </div>
-      
+      </div> 
       <div class="buy">
-        <button class="chart">Ajouter au Pannier</button>
+        <form action="index.php?page=description" method="POST">
+          <input type="hidden" name="prix" value = <?php echo $donnees["prix"]; ?>>
+          <?php echo "<button class=chart name=ajoutPanier type=submit value=", $donnees["idProduit"], ">Ajouter au panier</button>"; ?>
+        </form>
       </div>
       
     </div>

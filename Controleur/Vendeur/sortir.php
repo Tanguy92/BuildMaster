@@ -2,7 +2,6 @@
     include('View/Vendeur/templateTmp.php');
     include('Modele/delete.php');
     include('Modele/select.php');
-    include('Modele/update.php');
 
     //Recuperer les infos de la personne de la bdd
     $s = selectSpecMembre($_SESSION['id']);

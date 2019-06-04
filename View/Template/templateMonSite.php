@@ -29,15 +29,15 @@
     </head>
 
     <header class="topnav">
-        <nav>
+        <nav><a href="index.php?page=boiteOutilV">
             <img class="logo" src="/BuildMaster/View/Image/Logo.png">
             <ul>
                 <li><a href="index.php?page=messageVendeur">Mes messages</a></li>
                 <li><a href="index.php?page=articleVendeur">Mes articles</a></li>
-                <li><a href="#">Mes commandes</a></li>
                 <li><a href="index.php?page=monSite">Mon site</a></li>
+                <li><a href="index.php?page=noter">Noter un magasin</a></li>
                 <li><a href="index.php?page=signaler">Signaler un compte</a></li>
-                <li><a href="index.php?page=boiteOutil">Boîte à Outil</a></li>
+                <li><a href="index.php?page=change">Mes infos</a></li>
                 <li><a href="index.php?page=deconnexion">Déconnexion</a></li>
     </header>
 

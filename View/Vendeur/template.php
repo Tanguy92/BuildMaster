@@ -20,16 +20,15 @@
     </head>
 
     <header class="topnav">
-        <nav>
+        <nav><a href="index.php?page=boiteOutilV">
             <img class="logo" src="/BuildMaster/View/Image/Logo.png">
             <ul>
             <li><a href="index.php?page=messageVendeur">Mes messages</a></li>
                 <li><a href="index.php?page=articleVendeur">Mes articles</a></li>
-                <li><a href="#">Mes commandes</a></li>
                 <li><a href="index.php?page=monSite">Mon site</a></li>
                 <li><a href="index.php?page=signaler">Signaler un compte</a></li>
                 <li><a href="index.php?page=noter">Noter un magasin</a></li>
-                <li><a href="index.php?page=boiteOutil">Boite a Outil</a></li>
+                <li><a href="index.php?page=change">Mes infos</a></li>
                 <li><a href="index.php?page=deconnexion">Déconnexion</a></li>
               
         </nav>
@@ -37,8 +36,8 @@
     <main>
         <section class="kvsection">
             <div class="kv">
-                <h1>Bonjour : <?php echo  $_SESSION['prenom']; ?> </h1>
-                <p class="introcopy">Boîte à outil : VENDEUR</p>
+                <h1>Bonjour <?php echo  $_SESSION['prenom']; ?> </h1>
+                <p class="introcopy">Boîte à outil : Vendeur</p>
                 <!--<a class="abutton" href="#">Onze diensten</a>-->
             </div>
             <!--<div class="kvsubbox">
@@ -86,21 +85,6 @@
 
 
         <section class="cardsection">
-            <div class="card-left">
-                <div class="card-copy">
-                    <a href="#">
-                        <h1>Mes commandes</h1>
-                    </a>
-                    <p>Suivez ici toutes vos commandes </p>
-                    <a class="abutton" href="#">Aller</a>
-                </div>
-
-                <div class="card-img" style="background-image:url(https://sdwebdesign.nl/wp-content/uploads/2016/04/waterlaptop-1.jpg)">
-                    <div class="card-img error-img">
-
-                    </div>
-                </div>
-            </div>
 
 
             <div class="card-right">
@@ -195,7 +179,7 @@
         <section class="infosection">
             <ul class="contact-info">
                 <li>
-                    <a>e-mail
+                    <a>admin@bm.fr
                     </a>
                 </li>
                 <li>
