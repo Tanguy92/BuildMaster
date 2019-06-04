@@ -6,12 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Vendeur</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="View/Template/cssMonSite.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="View/Template/csstoto.css">
+    <?php 
+    
+    $reponse = idTheme($mail);
+    
+ while ($donnees = $reponse->fetch()) {  
+    $couleur = $donnees["couleur"];
+     
+  }
+    
+    include("View/Vendeur/theme.php");?>
+
     <script src="log.js"></script>
 </head>
 
-<body>
 
+<body>
 
     <head>
         <meta name="format-detection" content="telephone=no" />
@@ -30,8 +41,8 @@
                 <li><a href="index.php?page=deconnexion">Déconnexion</a></li>
     </header>
 
-    <style>
-</style>
+    
+
     <?php affiche($chemin); ?>
     <main>
         <section class="kvsection">
@@ -48,8 +59,18 @@
                     </form>
                 </div>
                 <div class="kvsub-right">
+
                     <h2>Changer de thème</h2>
-                    <p>1 2 3 4 5 6</p>
+                    <p><form action="index.php?page=monSite" method="POST"> <?php  
+                    $reponse = RadioTheme();
+                    
+                    while ($donnees = $reponse->fetch()) {
+                        include("View/Vendeur/functionRadioTheme.php");
+                    }
+                     ?><br><button>Modifier</button>
+                     </form></p>
+
+
                 </div>
             </div>
         </section>
@@ -69,3 +90,4 @@ function readURL(input) {
     }
 }
 </script>
+</body>

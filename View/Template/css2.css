@@ -7,11 +7,10 @@
   }
   
   body{
-    background-color:#fff;
-    width: 10px;
+    background-color:#20355C;
     height:100%;
     font-family:sans-serif;
-  /*   min-width:1024pxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+  /*   min-width:1024px; */
   }
   .topnav{
     background-color:#fff;
@@ -24,9 +23,6 @@
   .logo{
     height:80px;
     margin:10px 0;
-    background: transparent;
-    border: none !important;
-    font-size:0;
   }
   
   nav ul{
@@ -92,7 +88,12 @@
     background-color:#fff;
     box-shadow:0 5px 10px #111;
   }
- 
+  .kv{
+    color:#fff;
+    padding:200px 100px;
+    background-image:url(https://i.pinimg.com/originals/d1/54/52/d154529382635f2718693fb82a0db6cb.png);
+    background-size:cover;
+  }
   .kvsubbox{
     padding:20px;
     text-align:center;
@@ -257,3 +258,27 @@
   /*   z-index:2; */
   /*   position:relative; */
   }
+  
+  #namanyay-search-btn {
+    background:white;
+    color:#20355C;
+    font: 'trebuchet ms', trebuchet;
+    padding:10px 50px;
+    border-radius:0 10px 10px 0;
+    -moz-border-radius:0 10px 10px 0;
+    -webkit-border-radius:0 10px 10px 0;
+    -o-border-radius:0 10px 10px 0;
+    border:0 none;
+    font-weight:bold;
+    }
+     
+    #namanyay-search-box {
+    background: #eee;
+    padding:10px;
+     border-radius:10px 0 0 10px;
+    -moz-border-radius:10px 0 0 10px;
+    -webkit-border-radius:10px 0 0 10px;
+    -o-border-radius:10px 0 0 10px;
+    border:0 none;
+    width:500px;
+     }

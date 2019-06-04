@@ -244,4 +244,54 @@ function descriptionMagasin($idMagasin){
    
     return $reponse;
 }
+
+
+function couleurCss($idTheme){
+    
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->prepare("SELECT couleur from theme JOIN membre on theme.idTheme like membre.idTheme WHERE membre.idTheme = :theme;");
+    $reponse->execute(array(
+        'theme' => $idTheme
+    ));
+   
+    return $reponse;
+}
+function articleMagasin($idMagasin)
+    {
+        $bdd = $GLOBALS["bdd"];
+        $reponse = $bdd->prepare("SELECT article.nom,article.idProduit,article.photo,prix FROM article JOIN appartenance ON article.idProduit = appartenance.idProduit JOIN membre ON appartenance.idMembre = membre.idMembre  WHERE  membre.idMembre LIKE :magasin ");
+        $reponse->execute(array(
+            'magasin' => $idMagasin
+        ));
+
+        return $reponse;
+    }
+function radioTheme()
+    {
+        $bdd = $GLOBALS["bdd"];
+        $reponse = $bdd->query("SELECT * FROM theme");
+        return $reponse;
+    }
+function idTheme($mail)
+    {
+        $bdd = $GLOBALS["bdd"];
+        $reponse = $bdd->prepare("SELECT couleur from theme JOIN membre on theme.idTheme like membre.idTheme WHERE membre.mail =:mail ;");
+        $reponse->execute(array(
+            ':mail' => $mail
+        ));
+       
+        return $reponse;
+    }
+    function idTheme2($color)
+    {
+        $bdd = $GLOBALS["bdd"];
+        $reponse = $bdd->prepare("SELECT idTheme FROM theme WHERE nom like :color");
+        $reponse->execute(array(
+            ':color' => $color
+        ));
+        return $reponse;
+    }
+
+  
+
 ?>

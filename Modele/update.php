@@ -57,4 +57,11 @@ function updateMagasin($n, $personne) {
     $s -> execute(array('nb' => $n, 'identifiant' => $personne));
 }
 
+//theme
+
+function updateTheme($s1,$s2) {
+    $bdd = $GLOBALS["bdd"];
+    $s = $bdd -> prepare("UPDATE `membre` SET `idTheme` = :idTheme WHERE `membre`.`idMembre` = :identifiant;");
+    $s -> execute(array('idTheme' => $s1, 'identifiant' => $s2));
+}
 ?>

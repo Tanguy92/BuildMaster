@@ -2,6 +2,7 @@
 include("Modele/connectBDD.php");
 include("Modele/insert.php");
 include("Modele/select.php");
+include("Modele/update.php");
 include("Controleur/Vendeur/function.php");
 
 // Browse image 
@@ -28,6 +29,24 @@ if(!empty($_FILES['photo']))
    
 }
 
+if(isset($_POST['color'])) {
+    $color = $_POST['color'];
+
+
+$reponse= idTheme2($color);
+while ($donnees = $reponse->fetch()) {
+    $s1= $donnees['idTheme'];
+}
+
+$reponse=selectIdMembre();
+while ($donnees = $reponse->fetch()) {
+    $s2= $donnees['idMembre'];
+    echo $s2;
+}
+ $toto = updateTheme($s1,$s2);
+}
+
+$mail =  $_SESSION['mail'];
 $bdd = $GLOBALS["bdd"];
 $reponse4 = $bdd->prepare("SELECT membre.photo FROM `membre` WHERE mail LIKE :mail");
 $reponse4->execute(array(
@@ -39,11 +58,6 @@ while ($donnees4 = $reponse4->fetch()) {
     $chemin = $donnees4['photo'];
 
 }
-
-
-
-
-
 
 include("View/Template/templateMonSite.php");
 

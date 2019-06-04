@@ -2,21 +2,56 @@
 // include("Modele/connectBDD.php");
 include("Modele/select.php");
 include("Modele/insert.php");
-include("View/Template/templateTopAll.html");
+include("View/Template/templateTopAllMagasin.html");
+
 
 
 $idMagasin=$_POST["idMembre"];
 $reponse =descriptionMagasin($idMagasin);
+
  while ($donnees = $reponse->fetch()) {  
     echo $donnees["idMembre"],"puteee";
-    include("View/Template/templateMidMagasin.php");
+    $chemin = $donnees["photo"];
+    $idTheme = $donnees["idTheme"];
+    echo $idTheme ;
+    $magasin = $donnees["magasin"];
+    
  }
+
+
+ $reponse = couleurCss($idTheme);
+ 
+ while ($donnees2 = $reponse->fetch()) {  
+   $couleur = $donnees2["couleur"];
+    
+ }
+ echo $idMagasin;
+
+
+    echo  '<style>
+    .kv {
+        color: #fff;
+        min-height: 400px;
+        padding: 50px 100px;
+        background-image: url("',$chemin,'");
+        background-size: cover;
+    }
+
+     
+  body{
+    background-color:',$couleur,';
+    height:100%;
+    font-family:sans-serif;
+  
+  }
+</style>';
+
+
+ include("View/Template/templateMidMagasin.php");
  
 
 
-
-
-
-
-
+ 
+ 
 ?>
+
