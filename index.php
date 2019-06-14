@@ -8,6 +8,7 @@ updateFermetureCommande();
 
 
 if (!isset($_GET['page'])) {
+    session_destroy();
     include('Controleur/All/acceuil.php');
 } else {
     switch ($_GET['page']) {
