@@ -7,6 +7,7 @@ updateDateDebutArticle();
 updateFermetureCommande();
 
 
+
 if (!isset($_GET['page'])) {
     session_destroy();
     include('Controleur/All/acceuil.php');
@@ -134,6 +135,12 @@ if (!isset($_GET['page'])) {
             break;
             case 'prep':
             include('Controleur/Vendeur/sortir.php');
+            break;
+            case 'mail':
+            include('Controleur/All/mail.php');
+            break;
+            case 'mail2':
+            include('Controleur/All/mail2.php');
             break;
             
             //Deconnexion

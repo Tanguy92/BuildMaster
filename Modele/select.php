@@ -344,6 +344,15 @@ function idTheme($mail)
         ));
         return $reponse;
     }
+    function check($mail)
+    {
+        $bdd = $GLOBALS["bdd"];
+        $reponse = $bdd->prepare("SELECT count(*) FROM membre WHERE mail like :mail");
+        $reponse->execute(array(
+            ':mail' => $mail
+        ));
+        return $reponse;
+    }
 
   
 

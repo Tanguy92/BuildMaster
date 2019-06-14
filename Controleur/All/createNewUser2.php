@@ -18,6 +18,10 @@ $grade = $_SESSION['grade'];
 echo $grade;
 
 
+
+
+
+
 // Condition Vendeur 
 if ($grade === "v") {
     // Insertion sql
@@ -34,6 +38,7 @@ if ($grade === "v") {
     $id = detId();
     $_SESSION['id'] = $id;
     // HTML VENDEUR
+    header ("refresh:0;url=index.php");
     include("View/All/acceuil.php");
 }
 ?>
