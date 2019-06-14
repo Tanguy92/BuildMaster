@@ -18,16 +18,16 @@ $mdp = mdp();
 
 // //// redirection de compte ///////////
 
-if ($mdp === $_SESSION['pass'] && $grade === "v" ) {
+if ($mdp === md5($_SESSION['pass']) && $grade === "v" ) {
     $_SESSION["connect"] = true;
    // include ("Controleur/Vendeur/boiteOutil.php");
     header ("refresh:0;url=index.php?page=boiteOutilV");
     
-}elseif($mdp === $_SESSION['pass'] && $grade === "a"){
+}elseif($mdp === md5($_SESSION['pass']) && $grade === "a"){
     $_SESSION["connect"] = true;
  //   include ("Controleur/Admin/boiteOutil.php");
     header ("refresh:0;url=index.php?page=boiteOutilA");
-}elseif($mdp === $_SESSION['pass'] && $grade === "c"){
+}elseif($mdp === md5($_SESSION['pass']) && $grade === "c"){
     $_SESSION["connect"] = true;
     header ("refresh:0;url=index.php?page=acceuilClient");
 }else {

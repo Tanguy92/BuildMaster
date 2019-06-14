@@ -6,7 +6,7 @@
     //Recuperer les infos de la personne de la bdd
     $s = selectSpecMembre($_SESSION['id']);
     $mot = $s['mdp'];
-    $motOld = $_GET['motOld'];
+    $motOld = md5($_GET['motOld']);
     $o = strlen($mot);
     $u = strlen($motOld);
 
@@ -37,7 +37,7 @@
         }
 
         //Sup son compte de la table notes
-        $ap = selectNotes($bdd);
+        /*$ap = selectNotes($bdd);
 
         for ($i = 0; $i < count($ap)-1; $i++) {
             if ($ap[$i]['idMembre'] == $moi) {
@@ -46,7 +46,7 @@
                 $ip = deleteNote($idN);
                 
             }
-        }
+        }*/
 
         //Supprimer le compte
         $del = deleteSignale($moi);

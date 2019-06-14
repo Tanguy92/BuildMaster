@@ -40,7 +40,7 @@ function insertAppartenance($s1,$s2){
         {
             die("Fail : ".$ex);
         }
-    }
+}
 
 function insertCommande($s1,$s2,$s3){
         $bdd = $GLOBALS["bdd"];
@@ -161,7 +161,7 @@ function createMembre()
         'nom' => $_SESSION['nom'],
         'prenom' => $_SESSION["prenom"],
         'mail' => $_SESSION["mail"],
-        'pass' => $_SESSION["pass"],
+        'pass' => md5($_SESSION["pass"]),
         'adresse' => $_SESSION["adresse"],
         'grade' => $_SESSION["grade"],
         'magasin' => $_SESSION["magasin"],
