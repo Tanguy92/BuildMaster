@@ -35,7 +35,7 @@
                 <li><a href="index.php?page=messageVendeur">Mes messages</a></li>
                 <li><a href="index.php?page=articleVendeur">Mes articles</a></li>
                 <li><a href="index.php?page=monSite">Mon site</a></li>
-                <li><a href="index.php?page=noter">Noter un magasin</a></li>
+              
                 <li><a href="index.php?page=signaler">Signaler un compte</a></li>
                 <li><a href="index.php?page=change">Mes infos</a></li>
                 <li><a href="index.php?page=deconnexion">Déconnexion</a></li>

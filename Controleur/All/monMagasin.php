@@ -26,10 +26,10 @@ $idMagasin=$_POST["idMembre"];
 $reponse =descriptionMagasin($idMagasin);
 
  while ($donnees = $reponse->fetch()) {  
-    echo $donnees["idMembre"],"puteee";
+   
     $chemin = $donnees["photo"];
     $idTheme = $donnees["idTheme"];
-    echo $idTheme ;
+   
     $magasin = $donnees["magasin"];
     
  }
@@ -41,7 +41,7 @@ $reponse =descriptionMagasin($idMagasin);
    $couleur = $donnees2["couleur"];
     
  }
- echo $idMagasin;
+
 
 
     echo  '<style>
