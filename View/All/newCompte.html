@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="/BuildMaster/View/Css/connexion.css">
   <script src="main.js"></script>
+  <script src="View/All/verif.js"></script>
 </head>
 
 <body>
@@ -17,7 +18,7 @@
     <H1>Etape 1</H1>
     <h1>Creation de compte</h1><br>
 
-    <form action="index.php?page=createNewUser" method="POST">
+    <form action="index.php?page=createNewUser" method="POST" onsubmit="return verifForm(this)">
 
 
 
@@ -25,7 +26,7 @@
       Votre Nom  <input  type="text" name="nom" required placeholder="Nom">
       Votre Prénom  <input  type="text" name="prenom" required placeholder="Prénom">
        <!-- Votre Pseudo  <input  type="text" name="pseudo" placeholder="Pseudo"> -->
-       Votre Email  <input type="text" name="mail" required placeholder="Email">
+       Votre Email  <input type="text" name="mail" required placeholder="example@gmail.com" onblur="verifMail(this)">
        Votre statut <select name="grade">
           <option value="v">Vendeur</option>
           <option value="c" selected>Client</option>
