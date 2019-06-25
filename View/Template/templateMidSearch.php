@@ -31,9 +31,11 @@ include("Modele/connectBDD.php");
     <!--Changing the number in the column_# class changes the number of columns-->
 
     <link rel="stylesheet" type="text/css" media="screen" href="View/Template/cssMonSiteArticle.css">
+   
 <body>
 	<div id="wrap">
 	<div id="columns" class="columns_4">
+    <h2> Articles</h2>
 
 <?php
 
@@ -45,49 +47,19 @@ while ($donnees = $reponse->fetch()) {
     // echo $donnees["prix"];
 
 }
-//}
 
-//   <figure>
-//   <img src="https://i.imgur.com/ruU04I6.jpg">
-// 	<figcaption>Green Checkered Shirt</figcaption>
-//     <span class="price">$44</span>
-//     <a class="button" href="#">Book Now</a>
-// 	</figure>
-	
-// 	<figure>
-// 	<img src="https://i.imgur.com/sPxEkEI.jpg">
-// 	<figcaption>Green and Black Flowers</figcaption>
-//     <span class="price">$44</span>
-//     <a class="button" href="#">Book Now</a>
-// 	</figure>
-	
-//   <figure>
-// 	<img src="https://i.imgur.com/S3Umfmb.jpg">
-// 	<figcaption>Black Dots</figcaption>
-//     <span class="price">$44</span>
-//     <a class="button" href="#">Book Now</a>
-// 	</figure>
-  
-// 	<figure>
-// 	<img src="https://i.imgur.com/x1IZjjy.jpg">
-// 	<figcaption>Red Flowy</figcaption>
-//     <span class="price">$44</span>
-//     <a class="button" href="#">Book Now</a>
-// 	</figure>
-	
-//    <figure>
-// 	 <img src="https://i.imgur.com/Jv8IWKQ.jpg">
-// 	<figcaption>Yellow Button-Up</figcaption>
-//     <span class="price">$44</span>
-//     <a class="button" href="#">Book Now</a>
-// 	</figure>
-	
-//    <figure>
-// 	 <img src="https://i.imgur.com/MpLejRu.jpg">
-// 	<figcaption>Put a Bird On It</figcaption>
-//      <span class="price">$44</span>
-//      <a class="button" href="#">Book Now</a>
-// 	</figure>
-  
-// </body>
 ?>
+
+<H2>Magasin</H1>
+<?php
+while ($donnees = $reponse2->fetch()) {
+    include("Controleur/Client/functionMagasin.php");
+    // echo $donnees["prix"];
+    
+}
+
+?>
+
+
+  
+

@@ -26,6 +26,7 @@ $search = $_SESSION["search"];
 
 
 $reponse = search($search);
+$reponse2 = search2($search);
 
 
 // while ($donnees = $reponse->fetch()) {

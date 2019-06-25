@@ -268,6 +268,16 @@ function search($search)
     ));
     return $reponse;
 }
+function search2($search)
+{
+
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->prepare("SELECT * FROM `membre` WHERE `magasin` LIKE :search");
+    $reponse->execute(array(
+        'search' => $search
+    ));
+    return $reponse;
+}
    
 function description($idProduit){
     
