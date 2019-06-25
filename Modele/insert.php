@@ -183,6 +183,19 @@ function updatePc($path)
     ));
 }
 
+function updatePc2($path) 
+{
+
+    $bdd = $GLOBALS["bdd"];
+
+    $reponse = $bdd->prepare("UPDATE `membre` SET `logo` = (:photo) WHERE `membre`.`mail` = (:mail);");
+
+    $reponse->execute(array(
+        'photo' => $path,
+        'mail' => $_SESSION["mail"]
+    ));
+}
+
 function insertCategorie($s1){
     $bdd = $GLOBALS["bdd"];
 
