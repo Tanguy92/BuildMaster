@@ -22,7 +22,7 @@ if(isset($_SESSION['adresse'])){
 $reponse =check($mail);
 while ($donnees = $reponse->fetch()) {
     $var = intval($donnees["count(*)"]);
-    echo $var;
+    
     
     if ($var != 0 ){
         header ("refresh:0;url=index.php?page=mail2");

@@ -8,14 +8,14 @@ include("Modele/insert.php");
 
 // include("View/Template/templateTopAll.html");
 $_SESSION['magasin'] = $_POST['magasin'];
-$_SESSION['theme'] = $_POST['theme'];
+
 $_SESSION['adresse'] = $_POST['adresse'];
 
 
 
 
 $grade = $_SESSION['grade'];
-echo $grade;
+
 
 
 
