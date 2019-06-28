@@ -46,6 +46,9 @@ Catégorie de l'article : <select name ="categorieArticle" required> <br><br>
 </select> <br><br>
  Choisir une photo   :<input type="file" name="icone" id="pic" /><br><br>
 
+ Description de l'article : <textarea name="description"
+                            rows="5" cols="30"></textarea> <br> <br>
+
           <input type="submit" name="ajoutArticle" class="login login-submit" value="Ajouter">
 
     </form>

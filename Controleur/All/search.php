@@ -2,7 +2,11 @@
 // include("Modele/connectBDD.php");
 include("Modele/select.php");
 include("Modele/insert.php");
-$_SESSION["search"] = $_POST["search"];
+
+if (isset($_POST["search"])) {
+    $_SESSION["search"] = $_POST["search"];
+}
+
 
 
 $selectidMembre = selectIdMembre();
@@ -22,17 +26,26 @@ if(isset($statut)){
    include("View/Template/templateTopAll.html");
 }
 
-$search = $_SESSION["search"];
 
+if (isset($_POST["search"])) {
+    $search = $_SESSION["search"];
+} else {
+    $search = "";
+}
 
-$reponse = search($search);
-
-
-// while ($donnees = $reponse->fetch()) {
-//     include("Controleur/Client/function.php");
-//     echo $donnees["prix"];
+    $reponse = search($search);
+    $reponse2 = search2($search);
     
-// }
+if(isset($_POST["categorie"])){    
+    $searchCate = $_POST["categorie"];
+} else {
+    $searchCate = "";
+}
+
+$reponse3 = search3($searchCate);
+
+
+
 
 include("View/Template/templateMidSearch.php");
 

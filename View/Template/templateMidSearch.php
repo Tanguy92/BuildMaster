@@ -10,7 +10,7 @@ include("Modele/connectBDD.php");
             <p class="introcopy">
                 <form id="searchthis" action="index.php?page=search" style="display:inline;" method="POST">
                   
-                    <input id="namanyay-search-box" name="search" size="80" type="text" placeholder="Rechercher un article" />
+                    <input id="namanyay-search-box" name="search" size="80" type="text" placeholder="Rechercher un article" required />
                     <input id="namanyay-search-btn" value="Rechercher" type="submit" />
                 </form>
             </p>
@@ -31,9 +31,20 @@ include("Modele/connectBDD.php");
     <!--Changing the number in the column_# class changes the number of columns-->
 
     <link rel="stylesheet" type="text/css" media="screen" href="View/Template/cssMonSiteArticle.css">
+   
 <body>
+    <form id="searchthis" action="index.php?page=search" style="display:inline;" method="POST">
+      <?php  $selectCategorie = selectAllCategorie();
+        while ($donnees3 = $selectCategorie->fetch()) {
+            $idCategorie = $donnees3["idCategorie"];
+            $nom = $donnees3["nom"];
+         ?>
+        <button name ="categorie" value = <?php echo $idCategorie; ?> ><?php echo $nom; ?></button>
+        <?php } ?>
+    </form>
 	<div id="wrap">
 	<div id="columns" class="columns_4">
+    <h2> Articles</h2>
 
 <?php
 
@@ -45,49 +56,24 @@ while ($donnees = $reponse->fetch()) {
     // echo $donnees["prix"];
 
 }
-//}
 
-//   <figure>
-//   <img src="https://i.imgur.com/ruU04I6.jpg">
-// 	<figcaption>Green Checkered Shirt</figcaption>
-//     <span class="price">$44</span>
-//     <a class="button" href="#">Book Now</a>
-// 	</figure>
-	
-// 	<figure>
-// 	<img src="https://i.imgur.com/sPxEkEI.jpg">
-// 	<figcaption>Green and Black Flowers</figcaption>
-//     <span class="price">$44</span>
-//     <a class="button" href="#">Book Now</a>
-// 	</figure>
-	
-//   <figure>
-// 	<img src="https://i.imgur.com/S3Umfmb.jpg">
-// 	<figcaption>Black Dots</figcaption>
-//     <span class="price">$44</span>
-//     <a class="button" href="#">Book Now</a>
-// 	</figure>
-  
-// 	<figure>
-// 	<img src="https://i.imgur.com/x1IZjjy.jpg">
-// 	<figcaption>Red Flowy</figcaption>
-//     <span class="price">$44</span>
-//     <a class="button" href="#">Book Now</a>
-// 	</figure>
-	
-//    <figure>
-// 	 <img src="https://i.imgur.com/Jv8IWKQ.jpg">
-// 	<figcaption>Yellow Button-Up</figcaption>
-//     <span class="price">$44</span>
-//     <a class="button" href="#">Book Now</a>
-// 	</figure>
-	
-//    <figure>
-// 	 <img src="https://i.imgur.com/MpLejRu.jpg">
-// 	<figcaption>Put a Bird On It</figcaption>
-//      <span class="price">$44</span>
-//      <a class="button" href="#">Book Now</a>
-// 	</figure>
-  
-// </body>
+while ($donnees = $reponse3->fetch()) {
+    include("Controleur/Client/function.php");
+    // echo $donnees["prix"];
+
+}
 ?>
+
+<H2>Magasin</H1>
+<?php
+while ($donnees = $reponse2->fetch()) {
+    include("Controleur/Client/functionMagasin.php");
+    // echo $donnees["prix"];
+    
+}
+
+?>
+
+
+  
+
