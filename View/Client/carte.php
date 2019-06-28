@@ -16,23 +16,30 @@
 
   <form action="index.php?page=panier" method="POST" id="my-sample-form" onsubmit="checkInputs(event);" class="scale-down" >
     <div class="cardinfo-card-number">
-      <label class="cardinfo-label" for="card-number">Card Number</label>
+      <label class="cardinfo-label" name="card-number" for="card-number">Card Number</label>
       <div class='input-wrapper' id="card-number"></div>
       <div id="card-image"></div>
     </div>
 
     <div class="cardinfo-wrapper">
       <div class="cardinfo-exp-date">
-        <label class="cardinfo-label" for="expiration-date">Valid Thru</label>
+        <label class="cardinfo-label" name="expiration-date" for="expiration-date">Valid Thru</label>
         <div class='input-wrapper' id="expiration-date"></div>
       </div>
 
       <div class="cardinfo-cvv">
-        <label class="cardinfo-label" for="cvv">CVV</label>
+        <label class="cardinfo-label" name="cvv" for="cvv">CVV</label>
         <div class='input-wrapper' id="cvv"></div>
       </div>
     </div>
-    <button id="button-pay" name="carte"> Valider </button>
+    <?php
+      if(isset($_POST["card-number"]) && isset($_POST["expiration-date"]) && isset($_POST["cvv"])) {
+
+    ?>
+        <button id="button-pay" name="carte"> Valider </button> 
+    <?php
+      }
+    ?>
   </form>
 
   
@@ -57,7 +64,7 @@ function createHtml()
   document.getElementById('input-wrappe').appendChild(ccnum);
 }
 //card-number.setAttribute("required");
-/** 
+
 braintree.client.create({
   authorization: 'sandbox_g42y39zw_348pk9cgf3bgyw2b'
 }, function (err, clientInstance) {
@@ -175,7 +182,7 @@ braintree.client.create({
     }, false);
   });
 });
-*/
+
 function checkInputs(e)
 {
   //e.preventDefault();

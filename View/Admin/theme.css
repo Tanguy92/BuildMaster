@@ -40,7 +40,7 @@ section {
   background: #30c076;
   color: white;
 }
-.checkbox:nth-child($) .face {
+.checkbox:nth-child(1) .face {
   background: url('');
   background-size: cover;
 }

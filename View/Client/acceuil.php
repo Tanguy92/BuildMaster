@@ -9,4 +9,4 @@ include("View/Template/templateMidAll.php");
 ///////////// NOOOPPPPP
 
 ?>
-dezfdzfaefazc" ggez T TRGREREZ
+

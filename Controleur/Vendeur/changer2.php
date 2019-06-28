@@ -1,12 +1,12 @@
 <?php
-include('View/Template/templateTop.html');
+include('View/Template/templateTopAllClient.php');
 include('Modele/select.php');
 include('Modele/insert.php');
 
 //Recuperer les infos de la personne de la bdd
 $s = selectSpecMembre($_SESSION['id']);
 $mot = $s['mdp'];
-$motOld = $_GET['motOld'];
+$motOld = md5($_GET['motOld']);
 $o = strlen($mot);
 $u = strlen($motOld);
 $seller = $_SESSION['id'];
@@ -33,7 +33,7 @@ if ($o == $u AND $mot == $motOld) {
         if ($_GET['mot'] == $_GET['mot2'] AND $o == $u AND $_GET['mot'] != "" AND $_GET['mot'] != " " AND $o != 2) {
         
             //update le mot de passe dans la bdd
-            $confirme = $_GET['mot'];
+            $confirme = md5($_GET['mot']);
             $actu = updateMdp($confirme, $seller);
 
         }   else {

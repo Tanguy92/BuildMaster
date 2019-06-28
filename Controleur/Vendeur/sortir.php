@@ -5,7 +5,7 @@
 
     //Recuperer les infos de la personne de la bdd
     $s = selectSpecMembre($_SESSION['id']);
-    $mot = $s['mdp'];
+    $mot = md5($s['mdp']);
     $motOld = md5($_GET['motOld']);
     $o = strlen($mot);
     $u = strlen($motOld);
