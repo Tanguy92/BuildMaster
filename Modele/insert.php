@@ -2,11 +2,11 @@
 include("Modele/connectBDD.php");
 
 //AMINE
-function insertArticle($s1,$s2,$s4,$s5,$s6,$s7){
+function insertArticle($s1,$s2,$s4,$s5,$s6,$s7,$s8){
     $bdd = $GLOBALS["bdd"];
 
     $query =
-    "INSERT INTO article (nom, prix, idCategorie, photo, dateDebut, dateFin) VALUES(:set1, :set2, :set4, :set5,:set6,:set7)";
+    "INSERT INTO article (nom, prix, idCategorie, photo, dateDebut, dateFin, `description`) VALUES(:set1, :set2, :set4, :set5,:set6,:set7,:set8)";
     try {
         $queries = $bdd -> prepare($query);
         $queries -> execute(array(":set1" => $s1,
@@ -14,7 +14,8 @@ function insertArticle($s1,$s2,$s4,$s5,$s6,$s7){
                         ":set4" => $s4,
                         ":set5" => $s5,
                         ":set6" => $s6,
-                        ":set7" => $s7));
+                        ":set7" => $s7,
+                        ":set8" => $s8));
         $check = true;
        
     }catch(PDOException $ex)
@@ -176,6 +177,19 @@ function updatePc($path)
     $bdd = $GLOBALS["bdd"];
 
     $reponse = $bdd->prepare("UPDATE `membre` SET `photo` = (:photo) WHERE `membre`.`mail` = (:mail);");
+
+    $reponse->execute(array(
+        'photo' => $path,
+        'mail' => $_SESSION["mail"]
+    ));
+}
+
+function updatePc2($path) 
+{
+
+    $bdd = $GLOBALS["bdd"];
+
+    $reponse = $bdd->prepare("UPDATE `membre` SET `logo` = (:photo) WHERE `membre`.`mail` = (:mail);");
 
     $reponse->execute(array(
         'photo' => $path,

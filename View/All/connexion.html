@@ -8,6 +8,7 @@
      <title>Page Title</title>
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <link rel="stylesheet" type="text/css" media="screen" href="/BuildMaster/View/Css/connexion.css">
+     <script src="View/All/verif.js"></script>
 
  </head>
 
@@ -16,9 +17,9 @@
 
          <h1>Connexion</h1><br>
 
-         <form method="POST" action="index.php?page=connexionUtilisateur">
+         <form method="POST" action="index.php?page=connexionUtilisateur" onsubmit="return verifForm(this)">
              
-            e-mail <input type="text" name="mail" required placeholder="e-mail">
+            e-mail <input type="text" name="mail" required placeholder="example@gmail.com" onblur="verifMail(this)">
             Mot de passe <input type="password" required name="pass" placeholder="password">
              <input type="submit" name="login" class="login login-submit" value="Connexion">
          </form>

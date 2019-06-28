@@ -23,7 +23,7 @@
            <label for="tab-1"><span>Description</span></label>
            
           <div class="content">
-            <p>Description</p>
+            <p><?php echo $donnees["description"];?></p>
           </div> 
         </div>
 

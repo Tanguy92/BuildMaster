@@ -60,10 +60,14 @@ if($echec != true){
             $categorie = $_POST['categorieArticle'];
             $dateDebut = $_POST["dateDebut"];
             $dateFin = $_POST["dateFin"];
+            $description = $_POST["description"];
+            if ($description == "") {
+                $description = "Aucune description";
+            }
 
         }
         for ($i=1; $i <= $quantite ; $i++) { 
-            if(insertArticle($nom,$prix,$categorie,$path,$dateDebut,$dateFin) ){
+            if(insertArticle($nom,$prix,$categorie,$path,$dateDebut,$dateFin,$description) ){
                 $reponse1 = selectDernierArticle();
 
                 while ($donnees1 = $reponse1->fetch()) {

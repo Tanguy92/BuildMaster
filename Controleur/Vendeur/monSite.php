@@ -27,6 +27,29 @@ if(!empty($_FILES['photo']))
     
    
 }
+if(!empty($_FILES['logo']))
+{   
+    $dir = "./View/Images/";
+    if(!is_dir($dir))
+    {
+        mkdir($dir);
+    }
+    
+    $path = $dir.basename($_FILES['logo']['name']);
+
+    if(move_uploaded_file($_FILES['logo']['tmp_name'],$path))
+    {
+        //echo '<script>alert("fichier déplacé");</script>';
+        
+        updatePc2($path) ;
+    } else {
+        //echo '<script>alert("fichier non déplacé");</script>';
+
+    }
+    
+   
+}
+
 
 if(isset($_POST['color'])) {
     $color = $_POST['color'];
@@ -40,6 +63,7 @@ while ($donnees = $reponse->fetch()) {
 $reponse=selectIdMembre();
 while ($donnees = $reponse->fetch()) {
     $s2= $donnees['idMembre'];
+    $logo = $donnees['logo'];
     echo $s2;
 }
  $toto = updateTheme($s1,$s2);

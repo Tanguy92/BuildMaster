@@ -48,7 +48,7 @@
         <section class="kvsection">
             <div class="kv" id="blah">
 
-                <p class="introcopy">Nom du magasin:</p>
+                <p class="introcopy"></p>
                 <!--<a class="abutton" href="#">Onze diensten</a>-->
             </div>
             <div class="kvsubbox">
@@ -90,4 +90,37 @@ function readURL(input) {
     }
 }
 </script>
+  <section class="cardsection">
+
+
+
+<div class="card-right">
+    <div class="card-copy">
+        <h1>Modifier Mon Logo</h1></a>
+        <p>Cette fonctionalité vous permet de modifier votre logo.</p><br>
+
+
+        <form action="index.php?page=monSite" method="POST" enctype="multipart/form-data">
+                        <p><input type="file" id="logo" name="logo"></h2><br><button type="submit">Changer</button>
+                    </form>
+       
+    </div>
+    
+    <?php 
+    $reponse=selectIdMembre();
+    while ($donnees = $reponse->fetch()) {
+        $logo = $donnees["logo"];
+    }
+
+    
+
+
+    
+    include("View/Vendeur/functionLogo.php") 
+    ?>
+    
+      
+    </div>
+</div>
+</section>
 </body>

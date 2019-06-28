@@ -142,6 +142,10 @@ if (!isset($_GET['page'])) {
             case 'mail2':
             include('Controleur/All/mail2.php');
             break;
+            case 'vendeurTheme':
+            include('Controleur/Vendeur/vendeurTheme.php');
+            break;
+            
             
             //Deconnexion
             case 'deconnexion':

@@ -15,6 +15,7 @@ if (isset($_POST["modifier"])){
         $idProduit = $donnees["idProduit"];
         $dateDebut = $donnees["dateDebut"];
         $dateFin = $donnees["dateFin"];
+        $description = $donnees["description"];
     }
     include("View/Vendeur/modifierArticle.php");
 }
@@ -59,9 +60,10 @@ if (isset($_POST["modifierArticle"])) {
         $categorie = $_POST['categorieArticle'];
         $dateDebut = $_POST["dateDebut"];
         $dateFin = $_POST["dateFin"];
+        $description = $_POST["description"];
 
 
-        if(updateArticle($nom,$prix,$categorie,$photo,$dateDebut,$dateFin)){
+        if(updateArticle($nom,$prix,$categorie,$photo,$dateDebut,$dateFin,$description)){
             header("refresh:0;url=index.php?page=articleVendeur");
         }
     }

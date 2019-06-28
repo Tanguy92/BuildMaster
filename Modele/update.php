@@ -1,6 +1,6 @@
 <?php
 
-function updateArticle($s1,$s2,$s3,$s4,$s5,$s6){
+function updateArticle($s1,$s2,$s3,$s4,$s5,$s6,$s7){
     $bdd = $GLOBALS["bdd"];
     if(isset($_POST['modifier'])){
         $idProduit = $_POST['modifier'];
@@ -9,7 +9,7 @@ function updateArticle($s1,$s2,$s3,$s4,$s5,$s6){
     }
 
     $query =
-    "UPDATE `article` SET `nom` = :set1, `prix` = :set2, `idCategorie` = :set3, photo = :set4, dateDebut = :set5, dateFin = :set6 WHERE `article`.`idProduit` = $idProduit";
+    "UPDATE `article` SET `nom` = :set1, `prix` = :set2, `idCategorie` = :set3, photo = :set4, dateDebut = :set5, dateFin = :set6, `description`=:set7 WHERE `article`.`idProduit` = $idProduit";
     try {
         $queries = $bdd -> prepare($query);
         $queries -> execute(array(":set1" => $s1,
@@ -17,7 +17,8 @@ function updateArticle($s1,$s2,$s3,$s4,$s5,$s6){
                         ":set3" => $s3,
                         ":set4" => $s4,
                         ":set5" => $s5,
-                        ":set6" => $s6));
+                        ":set6" => $s6,
+                        ":set7" => $s7));
         $check = true;
        
     }catch(PDOException $ex)
