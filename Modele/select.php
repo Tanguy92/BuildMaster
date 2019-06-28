@@ -293,7 +293,7 @@ function search3($search)
 function description($idProduit){
     
     $bdd = $GLOBALS["bdd"];
-    $reponse = $bdd->prepare("SELECT * FROM `article` WHERE `idProduit` LIKE :idProduit ");
+    $reponse = $bdd->prepare("SELECT article.prix AS prix,article.idProduit AS idProduit,article.nom AS nom,`description` AS `description`,article.photo AS photo, adresse FROM `article` JOIN appartenance ON article.idProduit LIKE appartenance.idProduit JOIN membre ON appartenance.idMembre LIKE membre.idMembre WHERE article.idProduit LIKE :idProduit ");
     $reponse->execute(array(
         'idProduit' => $idProduit
     ));
