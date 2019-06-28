@@ -13,10 +13,12 @@ for ($i = 0; $i < count($message)-1; $i++) {
 
 	$top = count($liste);
 	$present = false;
-	for ($j=0; $j < $top; $j++) { 
+	$j=0;
+	while ($j<$top) {
 		if ($liste[$j] == $toi) {
 			$present = true;		
 		}
+		$j++;
 	}
 
 	if ($present == true) {
@@ -32,12 +34,19 @@ for ($i = 0; $i < count($message)-1; $i++) {
 			if ($donnees[$i]['idMembre'] == $toi) {
 				if ($donnees[$i]['statut'] == 'v') {
 					$prenom = $donnees[$i]['magasin'];
+					$statut = 'VENDEUR';
+					$photo = './View/Images/base.JPG';
+					$id = $donnees[$i]['idMembre'];
 				} else {
 					$prenom = $donnees[$i]['prenom'];
+					$statut = 'CLIENT';
+					$photo = './View/Images/base.JPG';
+					$îd = $donnees[$i]['idMembre'];
 				}
 				include ('View/Vendeur/message2.php');
 			}
 		}
 	}
 }
+
 ?>

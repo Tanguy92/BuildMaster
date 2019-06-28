@@ -172,6 +172,14 @@ function selectV($bdd) {
     return $v;
 }
 
+function selectVendeurProduit($idProduit) {
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->prepare('SELECT * FROM appartenance WHERE idProduit = :t');
+    $reponse->execute(array('t' => $idProduit));
+    $rep = $reponse->fetch();    
+    return $rep;
+}
+
 //IHSANE
 // Sélectionne un thème selon l'ID choisi
 function selectAllTheme(){

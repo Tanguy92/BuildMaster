@@ -21,12 +21,16 @@ if(isset($statut)){
 }
 
 if(isset($_POST["idProduit"])){
+    $idProduit=$_POST["idProduit"];
 
-   $idProduit=$_POST["idProduit"];
-   $reponse = description($idProduit);
-   while ($donnees = $reponse->fetch()) {  
-      include("View/Template/templateMidDescription.php");
-   }
+    //Determination de l'id du vendeur pour le contacter
+    $rep = selectVendeurProduit($idProduit);
+    $vendeur = $rep['idMembre'];
+    
+    $reponse = description($idProduit);
+    while ($donnees = $reponse->fetch()) {  
+        include("View/Template/templateMidDescription.php");
+    }
 }
 
  if (isset($_POST["ajoutPanier"])) {

@@ -56,6 +56,15 @@
           <?php echo "<button class=chart name=ajoutPanier type=submit value=", $donnees["idProduit"], ">Ajouter au panier</button>"; ?>
         </form>
       </div>
+
+
+      <div class="buy">
+        <form action="index.php" method="GET">
+          <input type="hidden" name="destinataire" value = <?php echo $vendeur; ?>>
+          <input type="hidden" name="page" value ='conversation'>
+          <button class="chart" type="submit">Contacter le vendeur</button>
+        </form>
+      </div>
       
     </div>
     

@@ -1,21 +1,14 @@
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Accueil</title>
-        <link rel="stylesheet" type="text/css" href="View/Css/message.css"/>
-    </head>
-
-    <body><center>
-        <p>
+</ul>
+		<footer>
             <form action="index.php" method="GET">
-				<p>
-					<input id="zoneText" type="text_area" name="message" value="">
-			
-				<input type="hidden" name="page" value="addMessage">
-                <input type="submit" value="Envoyer à <?php echo $prenom2; ?>">
-                </p>
+			    <textarea name="message" placeholder="Type your message"></textarea>
+			    <input type="hidden" name="page" value="addMessage">
+                <input type="submit" value="SEND">
             </form>
-        </p>
-    </center></body>
+		</footer>
+	</main>
+</div>
+
+</body>
 </html>

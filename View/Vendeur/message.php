@@ -7,29 +7,32 @@
 </head>
 
 <body><center>
-<p>
-	<form action="index.php" method="GET">
-	<h1>Parler avec : </h1>
-			<select id="menuDeroulant" name="destinataire" onchange="this.form.submit()">
-				<option></option>
-				<?php			
-					for($i = 0; $i < count($donnees)-1;$i++){	
-						if ($donnees[$i]['idMembre'] != "1" AND $donnees[$i]['idMembre'] != "2" AND $donnees[$i]['idMembre'] != $_SESSION['id'] ) {
-							if ($donnees[$i]['statut'] == 'v') {
-								echo '<option value="' . $donnees[$i]['idMembre'] . '">' . $donnees[$i]['magasin'] . '</option>';
-							}	else {
-								echo '<option value="' . $donnees[$i]['idMembre'] . '">' . $donnees[$i]['prenom'] . " " . $donnees[$i]['nom'] . '</option>';
-							}
-						}
-					}	 	
-				?>
-			</select>
-		
-		<input type="hidden" name="page" value="conversation">
-	</form>
-</p>
-<h1>Conversations en cours </h1>
+<div id="container">
+	<aside>
+		<ul>
+			
+			<?php 
+			for ($i = 0; $i < count($donnees)-1;$i++){
+				if ($donnees[$i]['idMembre'] != "1" AND $donnees[$i]['idMembre'] != "2" AND $donnees[$i]['idMembre'] != $_SESSION['id'] ) {
+				echo '<li>';
+				echo '<form action="index.php" method="GET">';	
+				echo '<img src="' . $donnees[$i]['photo'] . '" alt="">';
 
-</center></body>
-</html>
+				if ($donnees[$i]['statut'] == 'v') {
+					echo '<div><h2><input type="submit" value="' . $donnees[$i]['magasin'] . '"></h2>';
+					echo '<h3>VENDEUR</h3>';
+				} else {
+					echo '<div><h2><input type="submit" value="' . $donnees[$i]['prenom'] . " " . $donnees[$i]['nom'] . '"></h2>';
+					echo '<h3>CLIENT</h3>';
+				} ?>
+			<input type="hidden" name="page" value="conversation">
+			<?php echo '<input type="hidden" name="destinataire" value="' . $donnees[$i]['idMembre'] . '">'; ?>
+			</form>
+			</div>
+			</li>
+			<?php }
+				 } ?>
+		</ul>
+	</aside>
+	
 
