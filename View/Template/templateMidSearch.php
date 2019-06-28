@@ -10,7 +10,7 @@ include("Modele/connectBDD.php");
             <p class="introcopy">
                 <form id="searchthis" action="index.php?page=search" style="display:inline;" method="POST">
                   
-                    <input id="namanyay-search-box" name="search" size="80" type="text" placeholder="Rechercher un article" />
+                    <input id="namanyay-search-box" name="search" size="80" type="text" placeholder="Rechercher un article" required />
                     <input id="namanyay-search-btn" value="Rechercher" type="submit" />
                 </form>
             </p>
@@ -33,6 +33,15 @@ include("Modele/connectBDD.php");
     <link rel="stylesheet" type="text/css" media="screen" href="View/Template/cssMonSiteArticle.css">
    
 <body>
+    <form id="searchthis" action="index.php?page=search" style="display:inline;" method="POST">
+      <?php  $selectCategorie = selectAllCategorie();
+        while ($donnees3 = $selectCategorie->fetch()) {
+            $idCategorie = $donnees3["idCategorie"];
+            $nom = $donnees3["nom"];
+         ?>
+        <button name ="categorie" value = <?php echo $idCategorie; ?> ><?php echo $nom; ?></button>
+        <?php } ?>
+    </form>
 	<div id="wrap">
 	<div id="columns" class="columns_4">
     <h2> Articles</h2>
@@ -48,6 +57,11 @@ while ($donnees = $reponse->fetch()) {
 
 }
 
+while ($donnees = $reponse3->fetch()) {
+    include("Controleur/Client/function.php");
+    // echo $donnees["prix"];
+
+}
 ?>
 
 <H2>Magasin</H1>

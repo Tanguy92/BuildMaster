@@ -279,6 +279,17 @@ function search2($search)
     return $reponse;
 }
    
+function search3($search)
+{
+
+    $bdd = $GLOBALS["bdd"];
+    $reponse = $bdd->prepare("SELECT * FROM `article` WHERE `idCategorie` LIKE :search");
+    $reponse->execute(array(
+        'search' => $search
+    ));
+    return $reponse;
+}
+
 function description($idProduit){
     
     $bdd = $GLOBALS["bdd"];
