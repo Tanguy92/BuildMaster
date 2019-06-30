@@ -29,11 +29,36 @@ include("Modele/connectBDD.php");
         </div> -->
 
     <!--Changing the number in the column_# class changes the number of columns-->
+    
+  
+    <link rel="stylesheet" type="text/css" media="screen" href="View/Template/categorie.css">
+    <ul class="navbar">
+
+ 
+
+<form id="searchthis" action="index.php?page=search" style="display:inline;" method="POST">
+      <?php  $selectCategorie = selectAllCategorie();
+        while ($donnees3 = $selectCategorie->fetch()) {
+            $idCategorie = $donnees3["idCategorie"];
+            $nom = $donnees3["nom"];
+         ?>
+         <li class="navbar"><button><a   name ="categorie" value = <?php echo $idCategorie; ?> ><?php echo $nom; ?></a></button></li>
+       
+        <?php } ?>
+    </form>
+    </ul>
+ 
+
+
+
+
+
 
     <link rel="stylesheet" type="text/css" media="screen" href="View/Template/cssMonSiteArticle.css">
 <body>
 	<div id="wrap">
 	<div id="columns" class="columns_4">
+        
 <H2>Article</H1>
 <?php
 
@@ -103,3 +128,5 @@ while ($donnees = $reponse->fetch()) {
     
 }
 ?>
+
+

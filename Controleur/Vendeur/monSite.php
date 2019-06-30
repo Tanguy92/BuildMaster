@@ -23,9 +23,7 @@ if(!empty($_FILES['photo']))
     } else {
         //echo '<script>alert("fichier non déplacé");</script>';
 
-    }
-    
-   
+    } 
 }
 if(!empty($_FILES['logo']))
 {   
@@ -45,12 +43,8 @@ if(!empty($_FILES['logo']))
     } else {
         //echo '<script>alert("fichier non déplacé");</script>';
 
-    }
-    
-   
+    }  
 }
-
-
 if(isset($_POST['color'])) {
     $color = $_POST['color'];
 
@@ -64,7 +58,7 @@ $reponse=selectIdMembre();
 while ($donnees = $reponse->fetch()) {
     $s2= $donnees['idMembre'];
     $logo = $donnees['logo'];
-    echo $s2;
+   
 }
  $toto = updateTheme($s1,$s2);
 }

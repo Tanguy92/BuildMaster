@@ -4,7 +4,7 @@
 echo"
 <figure>
 <form action ='index.php?page=description' method='POST'>
-<input name='idProduit' type='button' value='",$donnees['idProduit'],"'>
+
         <img src=",$donnees['photo'],">
           <figcaption>",$donnees['nom'],"</figcaption>
           <span class=","'price'",">",$donnees['prix'],"</span>

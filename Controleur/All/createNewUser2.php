@@ -7,15 +7,15 @@ include("Modele/insert.php");
 
 
 // include("View/Template/templateTopAll.html");
-$_SESSION['magasin'] = $_POST['magasin'];
-$_SESSION['theme'] = $_POST['theme'];
-$_SESSION['adresse'] = $_POST['adresse'];
-
+if(isset($_POST["magasin"])){
+    $_SESSION['magasin'] = $_POST['magasin'];
+    $_SESSION['adresse'] = $_POST['adresse'];
+}
 
 
 
 $grade = $_SESSION['grade'];
-echo $grade;
+
 
 
 
@@ -31,7 +31,7 @@ if ($grade === "v") {
     // HTML VENDEUR
     include("View/Vendeur/template.php");
 }elseif ($grade === "c") {
-    $_SESSION["magasin"] = "";
+    $_SESSION["magasin"] = null;
     $_SESSION["theme"]= 1;
     // Insertion sql
     createMembre();
@@ -39,6 +39,5 @@ if ($grade === "v") {
     $_SESSION['id'] = $id;
     // HTML VENDEUR
     header ("refresh:0;url=index.php");
-    include("View/All/acceuil.php");
 }
 ?>

@@ -12,7 +12,6 @@
             <div class="kvsubbox">
                 <div class="kvsub-left">
                     <h2><?php echo $magasin;?> </h2>
-                    
                 </div>
                
                 </div>

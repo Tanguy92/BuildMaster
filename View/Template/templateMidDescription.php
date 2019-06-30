@@ -1,5 +1,13 @@
 <link rel="stylesheet" type="text/css" media="screen" href="View/Template/cssDescription.css">
 <script src="description.js"></script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=
+AIzaSyBLLLIQ1Mh1k-uEqFG_ZbmKhTFbtTLrjE4
+&callback=initMap">
+</script>
+
+
+
 
 <div id="container">
     
@@ -32,18 +40,26 @@
           <label for="tab-2"><span>Localisation</span></label>
 
           <div class="content">
+            <?php echo $donnees["adresse"];?>
          
           
             <link rel="stylesheet" type="text/css" media="screen" href="View/Template/cssmap.css">
            
-            <div id="map"></div>
-            <script src="apiMaps.js"></script>
-
-  
-
-               
-              <!-- <li>In euismod nibh in finibus rhoncus</li>
-              <li>Donec cursus purus vitae purus</li> -->
+          <div id="map">
+          <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 48.8534, lng: 2.3488},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLLLIQ1Mh1k-uEqFG_ZbmKhTFbtTLrjE4&callback=initMap"
+    async defer></script>
+          </div>
+    
+    
           
           </div>
         </div>

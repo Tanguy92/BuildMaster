@@ -155,6 +155,7 @@ function createMembre()
 {
     $toto= 0;
     $bdd = $GLOBALS["bdd"];
+    $tata="1";
 
     $reponse = $bdd->prepare("INSERT INTO `membre` (`nom`, `prenom`, `mail`, `mdp`, `adresse`, `statut`, `magasin`, `signalements`, `idTheme`)
     VALUES (:nom,:prenom,:mail,:pass,:adresse,:grade,:magasin,'0',:theme);");
@@ -166,7 +167,7 @@ function createMembre()
         'adresse' => $_SESSION["adresse"],
         'grade' => $_SESSION["grade"],
         'magasin' => $_SESSION["magasin"],
-        'theme' => $_SESSION["theme"]
+        'theme' => $tata
     ));
     
 }
