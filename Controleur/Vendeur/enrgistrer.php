@@ -31,6 +31,6 @@ if ($somme == 6) {
     $add = insertMessage($raison, 2, 1);
 }
 
-include('View/Template/templateTop.html');
+include("View/Template/templateTopAllClient.php");
 include('View/Vendeur/okSignalment.php');
 ?>

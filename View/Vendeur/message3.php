@@ -3,9 +3,9 @@
 	</aside>
 <main>
 		<header>
-		<img src="./View/Images/moto.png" alt="">
+		<img id="foto" src="./View/Images/avatar.png" alt="">
 			<div>
-				<h2>Chat with Vincent Porter</h2>
+				<h2>Aperçu des conversation avec ...</h2>
 			</div>
 		</header>
 		<ul id="chat">
@@ -20,13 +20,12 @@
 			
 				<div class="triangle"></div>
 				<div class="message">
-					Choissisez votre partenaire
+					Choissisez votre destinataire!
 				</div>
 			</li>
 		</ul>
 		<footer>
-			<textarea placeholder="Type your message"></textarea>
-			<a href="#">Send</a>
+			<textarea placeholder="Votre mesage"></textarea>
 		</footer>
 	</main>
 </div>

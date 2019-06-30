@@ -2,7 +2,7 @@
 			
 			<?php 
 				echo '<li>';
-				echo '<img src="' . $photo . '" alt="">';
+				echo '<img id="foto" src="' . $photo . '" alt="">';
 				echo '<form action="index.php" method="GET">';
 				echo '<div><h2><input type="submit" value="' . $prenom . '"></h2>';
 				echo '<h3>' . $statut . '</h3>';

@@ -2,9 +2,9 @@
 </ul>
 		<footer>
             <form action="index.php" method="GET">
-			    <textarea name="message" placeholder="Type your message"></textarea>
+			    <textarea name="message" placeholder="Votre message"></textarea>
 			    <input type="hidden" name="page" value="addMessage">
-                <input type="submit" value="SEND">
+                <input type="submit" value="ENVOYER">
             </form>
 		</footer>
 	</main>

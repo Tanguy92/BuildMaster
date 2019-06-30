@@ -8,14 +8,14 @@ $idMembre = selectIdMembre();
 while ($donnees2 = $idMembre -> fetch()) {
     $statut = $donnees2["statut"];
 }
-    /*
+    
     if($statut == "v"){
         include('View/Template/templateTop.html');
     }elseif ($statut == "c") {
         include("View/Template/templateTopAllClient.php");
     } else {
         include("View/Template/templateTopAdmin.html");
-    }*/
+    }
 
 if($moi != "1") {
     //Debut de la table
@@ -47,10 +47,10 @@ if($moi != "1") {
 			} elseif ($donnees[$i]['idMembre'] == $toi) {
 				if ($donnees[$i]['statut'] == 'v') {
 					$prenom2 = $donnees[$i]['magasin'];
-					$photo = './View/Images/base.JPG';
+					$photo = $donnees[$i]['photo'];
 				} else {
 					$prenom2 = $donnees[$i]['prenom'];
-					$photo = './View/Images/base.JPG';
+					$photo = $donnees[$i]['photo'];
 				}
 			}
 		}	

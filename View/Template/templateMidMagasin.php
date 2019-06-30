@@ -33,7 +33,7 @@
             <input type="hidden" name="vendeur" value = <?php echo $idMagasin; ?>>
         
             <div class="colonne">
-            <h2>Sa note | 10 </h2>
+            <h2>Vous lui donnez | 10 </h2>
 
             <fieldset class="rate">
                 <input id="rate3-star10" type="radio" name="note" value="5" />
