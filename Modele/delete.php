@@ -122,4 +122,20 @@ function deleteCategorie($v1){
     }
 
 }
+
+function deleteCommande(){
+    $bdd = $GLOBALS["bdd"];
+    $idMembre = $_SESSION["id"];
+
+    try
+    {
+        $query =  $bdd -> prepare("DELETE FROM `commande` WHERE `idMembre` = $idMembre");
+        $query -> execute(array());
+
+    } catch(PDOException $ex)
+    {
+        die("failed to run the query : ".$ex->getMessage());
+    }
+
+}
 ?>
