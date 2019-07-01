@@ -1,10 +1,9 @@
 <?php
 include('Modele/select.php');
 
-$idMembre = selectIdMembre();
-while ($donnees2 = $idMembre -> fetch()) {
-    $statut = $donnees2["statut"];
-}
+$s = selectSpecMembre($_SESSION['id']);
+    $statut = $s["statut"];
+
 if($statut == "v"){
     include('View/Template/templateTop.html');
 }elseif ($statut == "c") {

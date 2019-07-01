@@ -73,7 +73,8 @@ AIzaSyBLLLIQ1Mh1k-uEqFG_ZbmKhTFbtTLrjE4
         </form>
       </div>
 
-
+      <?php
+      if (isset($_SESSION['id'])) { ?>
       <div class="buy">
         <form action="index.php" method="GET">
           <input type="hidden" name="destinataire" value = <?php echo $vendeur; ?>>
@@ -81,7 +82,7 @@ AIzaSyBLLLIQ1Mh1k-uEqFG_ZbmKhTFbtTLrjE4
           <button class="chart" type="submit">Contacter le vendeur</button>
         </form>
       </div>
-      
+      <?php } ?>
     </div>
     
   </div>

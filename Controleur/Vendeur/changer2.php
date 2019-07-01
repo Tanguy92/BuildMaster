@@ -1,12 +1,24 @@
 <?php
-include('View/Template/templateTopAllClient.php');
+
 include('Modele/select.php');
+$moi = $_SESSION['id'];			
+$idMembre = selectSpecMembre($moi);
+        $statut = $idMembre["statut"];
+    
+if($statut == "v"){
+	include('View/Template/templateTopMessage.html');
+}elseif ($statut == "c") {
+	include("View/Template/templateTopAllClientMessage.php");
+} else {
+	include("View/Template/templateTopAdminMessage.html");
+}
+
 include('Modele/insert.php');
 
 //Recuperer les infos de la personne de la bdd
 $s = selectSpecMembre($_SESSION['id']);
 $mot = $s['mdp'];
-$motOld = md5($_GET['motOld']);
+$motOld = md5($_POST['motOld']);
 $o = strlen($mot);
 $u = strlen($motOld);
 $seller = $_SESSION['id'];
@@ -14,26 +26,26 @@ $seller = $_SESSION['id'];
 if ($o == $u AND $mot == $motOld) {
 
     //Si il a modifie son mail
-    if ($_GET['mail'] != "" AND strlen($_GET['mail']) >= 2) {
+    if ($_POST['mail'] != "" AND strlen($_POST['mail']) >= 2) {
         
         //update le mail dans la bdd
-        $mail =  $_GET['mail'] . $_GET['domaine'];
+        $mail =  $_POST['mail'];
         $actu = updateMail($mail, $seller);
 
     }
 
     //Si il a modifie son mot de passe
-    if ($_GET['mot'] != "") {
+    if ($_POST['mot'] != "") {
         
     
 
-        $o = strlen($_GET['mot']);
-        $u = strlen($_GET['mot2']);
+        $o = strlen($_POST['mot']);
+        $u = strlen($_POST['mot2']);
 
-        if ($_GET['mot'] == $_GET['mot2'] AND $o == $u AND $_GET['mot'] != "" AND $_GET['mot'] != " " AND $o != 2) {
+        if ($_POST['mot'] == $_POST['mot2'] AND $o == $u AND $_POST['mot'] != "" AND $_POST['mot'] != " " AND $o != 2) {
         
             //update le mot de passe dans la bdd
-            $confirme = md5($_GET['mot']);
+            $confirme = md5($_POST['mot']);
             $actu = updateMdp($confirme, $seller);
 
         }   else {
@@ -44,21 +56,21 @@ if ($o == $u AND $mot == $motOld) {
     }
 
     //Si il a modifie son adresse
-    if ($_GET['adresse'] != "" AND $_GET['adresse'] != " " AND strlen($_GET['adresse']) >= 3) {
+    if ($_POST['adresse'] != "" AND $_POST['adresse'] != " " AND strlen($_POST['adresse']) >= 3) {
         
         //update le mail dans la bdd
-        $localisation = $_GET['adresse'];
+        $localisation = $_POST['adresse'];
         $actu = updateAdresse($localisation, $seller);
 
 
     }
 
     //Si il a modifie son nom de magasin
-if(isset($_GET["magasin"])){
-    if ($_GET['magasin'] != "" AND $_GET['magasin'] != " " AND strlen($_GET['magasin']) >= 3) {
+if(isset($_POST["magasin"])){
+    if ($_POST['magasin'] != "" AND $_POST['magasin'] != " " AND strlen($_POST['magasin']) >= 3) {
         
         //update le mail dans la bdd
-        $m = $_GET['magasin'];
+        $m = $_POST['magasin'];
         $actu = updateMagasin($m, $seller);
 
 
@@ -66,7 +78,7 @@ if(isset($_GET["magasin"])){
 }
     
     include('View/Vendeur/bien.php');
-    header("refresh:1;url=index.php?page=deconnexion");
+    //header("refresh:1;url=index.php?page=deconnexion");
 
 }   else {
 

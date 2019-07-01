@@ -18,7 +18,7 @@
             </div>
         </section>
 
-        
+        <?php if (isset($_SESSION['id'])) { ?>
         <form action="index.php" method="GET">
           <input type="hidden" name="compte" value = <?php echo $idMagasin; ?>>
           <input type="hidden" name="page" value="signaler2">
@@ -70,7 +70,7 @@
             <button type="submit">Noter</button>
         </form>
 
-
+        <?php } ?>
        
 
 

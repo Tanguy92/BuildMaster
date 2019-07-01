@@ -2,7 +2,7 @@
 	box-sizing:border-box;
 }
 body{
-	background-color:#20355C;
+	background-color:#abd9e9;
 	font-family:Arial;
 }
 #container{
@@ -66,29 +66,18 @@ aside li:hover{
 h2,h3{
 	margin:0;
 }
-aside li{
-	border-radius:0%;
-	margin-top:10px;
-	margin-left:20px;
-	margin-right:8px;
-}
-
-
-#foto {
+aside li img{
 	border-radius:50%;
 	margin-left:20px;
 	margin-right:8px;
-	width:65px;
-	height:70px;
 }
-
 aside li div{
 	display:inline-block;
 	vertical-align:top;
 	margin-top:12px;
 }
 aside li h2{
-	font-size:15px;
+	font-size:14px;
 	color:#fff;
 	font-weight:normal;
 	margin-bottom:5px;
@@ -99,34 +88,47 @@ aside li h3{
 	font-weight:normal;
 }
 
+.status{
+	width:8px;
+	height:8px;
+	border-radius:50%;
+	display:inline-block;
+	margin-right:7px;
+}
+.green{
+	background-color:#58b666;
+}
+.orange{
+	background-color:#ff725d;
+}
+.blue{
+	background-color:#6fbced;
+	margin-right:0;
+	margin-left:7px;
+}
+
 main header{
-	height:130px;
+	height:110px;
 	padding:30px 20px 30px 40px;
 }
 main header > *{
 	display:inline-block;
 	vertical-align:top;
 }
-main header #foto:first-child{
+main header img:first-child{
 	border-radius:50%;
 }
-main header #foto:last-child{
+main header img:last-child{
 	width:24px;
 	margin-top:8px;
 }
-
-#foto:last-child{
-	width:30px;
-	margin-top:10px;
-}
-
 main header div{
 	margin-left:10px;
 	margin-right:145px;
 }
 main header h2{
 	font-size:16px;
-	margin-bottom:10px;
+	margin-bottom:5px;
 }
 main header h3{
 	font-size:14px;
@@ -208,7 +210,7 @@ main footer textarea{
 main footer textarea::placeholder{
 	color:#ddd;
 }
-main footer #foto{
+main footer img{
 	height:30px;
 	cursor:pointer;
 }

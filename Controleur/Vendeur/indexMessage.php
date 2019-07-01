@@ -3,17 +3,15 @@ $moi = $_SESSION['id'];
 $toi = null;
     include('Modele/connectBDD.php');
     include('Modele/select.php');
-    $idMembre = selectIdMembre();
-    while ($donnees2 = $idMembre -> fetch()) {
-        $statut = $donnees2["statut"];
-    }
+    $idMembre = selectSpecMembre($moi);
+        $statut = $idMembre["statut"];
 
     if($statut == "v"){
-        include('View/Template/templateTop.html');
+        include('View/Template/templateTopMessage.html');
     }elseif ($statut == "c") {
-        include("View/Template/templateTopAllClient.php");
+        include("View/Template/templateTopAllClientMessage.php");
     } else {
-        include("View/Template/templateTopAdmin.html");
+        include("View/Template/templateTopAdminMessage.html");
     }
 
 if($moi != "1") {
