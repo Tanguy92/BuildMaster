@@ -6,7 +6,6 @@ include("View/Template/templateTopAllClient.php");
 
 
 include("View/Template/templateMidAll.php");
-///////////// NOOOPPPPP
 
 ?>
 

@@ -33,12 +33,12 @@
       </div>
     </div>
     <?php
-      if(isset($_POST["card-number"]) && isset($_POST["expiration-date"]) && isset($_POST["cvv"])) {
+      //if(isset($_POST["card-number"]) && isset($_POST["expiration-date"]) && isset($_POST["cvv"])) {
 
     ?>
         <button id="button-pay" name="carte"> Valider </button> 
     <?php
-      }
+      //}
     ?>
   </form>
 

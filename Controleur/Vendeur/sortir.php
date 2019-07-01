@@ -5,7 +5,7 @@
 
     //Recuperer les infos de la personne de la bdd
     $s = selectSpecMembre($_SESSION['id']);
-    $mot = md5($s['mdp']);
+    $mot = ($s['mdp']);
     $motOld = md5($_GET['motOld']);
     $o = strlen($mot);
     $u = strlen($motOld);
@@ -35,6 +35,8 @@
                 
             }
         }
+
+        deleteCommande();
 
         //Sup son compte de la table notes
         /*$ap = selectNotes($bdd);

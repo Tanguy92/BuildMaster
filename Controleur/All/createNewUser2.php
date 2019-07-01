@@ -10,6 +10,8 @@ include("Modele/insert.php");
 if(isset($_POST["magasin"])){
     $_SESSION['magasin'] = $_POST['magasin'];
     $_SESSION['adresse'] = $_POST['adresse'];
+} else{
+    $_SESSION["adresse"] = null;
 }
 
 

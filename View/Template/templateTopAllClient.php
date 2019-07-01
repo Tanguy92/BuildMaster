@@ -30,7 +30,8 @@
                 <li><a href="index.php?page=panier">Mon panier</a></li>
                 <li><a href="index.php?page=noter">Noter un magasin</a></li>
                 <li><a href="index.php?page=change" >Mes infos</a></li>
-                <li><a href="index.php?page=afficheArticle" >Afficher les articles</a></li>
+                <li><a href="index.php?page=acceuilClient" >Afficher les articles</a></li>
+                <li><a href="index.php?page=signaler" >Signaler un compte</a></li>
                 <li><a href="index.php?page=sortir" >Supprimer votre compte</a></li>
                 <li><a href="index.php?page=deconnexion" >Déconnexion</a></li>
            

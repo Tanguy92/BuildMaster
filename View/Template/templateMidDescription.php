@@ -1,10 +1,5 @@
 <link rel="stylesheet" type="text/css" media="screen" href="View/Template/cssDescription.css">
 <script src="description.js"></script>
-<script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=
-AIzaSyBLLLIQ1Mh1k-uEqFG_ZbmKhTFbtTLrjE4
-&callback=initMap">
-</script>
 
 
 
@@ -38,9 +33,17 @@ AIzaSyBLLLIQ1Mh1k-uEqFG_ZbmKhTFbtTLrjE4
         <div class="tab">
           <input type="radio" id="tab-2" name="tab-group-1">
           <label for="tab-2"><span>Localisation</span></label>
+          
 
           <div class="content">
             <?php echo $donnees["adresse"];?>
+
+            <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=
+AIzaSyBLLLIQ1Mh1k-uEqFG_ZbmKhTFbtTLrjE4
+&callback=initMap">
+</script>
+
          
           
             <link rel="stylesheet" type="text/css" media="screen" href="View/Template/cssmap.css">

@@ -10,7 +10,7 @@ include("Modele/connectBDD.php");
             <p class="introcopy">
                 <form id="searchthis" action="index.php?page=search" style="display:inline;" method="POST">
                   
-                    <input id="namanyay-search-box" name="search" size="80" type="text" placeholder="Rechercher un article" />
+                    <input id="namanyay-search-box" name="search" size="80" type="text" required placeholder="Rechercher un article" />
                     <input id="namanyay-search-btn" value="Rechercher" type="submit" />
                 </form>
             </p>
@@ -42,7 +42,7 @@ include("Modele/connectBDD.php");
             $idCategorie = $donnees3["idCategorie"];
             $nom = $donnees3["nom"];
          ?>
-         <li class="navbar"><button><a   name ="categorie" value = <?php echo $idCategorie; ?> ><?php echo $nom; ?></a></button></li>
+         <li class="navbar"><button name ="categorie" value = <?php echo $idCategorie; ?>><a   name ="categorie" value = <?php echo $idCategorie; ?> ><?php echo $nom; ?></a></button></li>
        
         <?php } ?>
     </form>

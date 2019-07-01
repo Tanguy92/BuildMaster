@@ -23,6 +23,7 @@
             <ul>
                 <li><a href="index.php?page=messageVendeur">Mes Messages</a></li>
                 <li><a href="index.php?page=adminTheme">Modifier les thèmes</a></li>
+                <li><a href="index.php?page=categorie">Modifier les catégories</a></li>
                 <li><a href="index.php?page=affUser">Afficher les comptes</a></li>
                 <li><a href="index.php?">Déconnexion</a></li>
               

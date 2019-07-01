@@ -24,7 +24,7 @@
       <div class="figure face"></div>
     </div>
     <div class="text" id="<?= $i; ?>">
-     <span><input type="radio" id="<?= $i; ?>"
+     <span><input type="radio" id="<?php= $i; ?>"
      name="categorie" value="<?php echo $donnees['nom']; ?>"><?php echo $donnees['nom']; ?></span> 
      <input type="hidden" name="supprCategorie" value="<?php echo $donnees['idCategorie']; ?>">
     </div>

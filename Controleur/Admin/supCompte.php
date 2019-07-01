@@ -1,5 +1,5 @@
 <?php
- include('View/Template/templateTop.html');
+ include("View/Template/templateTopAdmin.html");
  include('Modele/delete.php');
  include('Modele/select.php');
  
