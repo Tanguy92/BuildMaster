@@ -78,7 +78,7 @@ if(isset($_POST["magasin"])){
 }
     
     include('View/Vendeur/bien.php');
-    //header("refresh:1;url=index.php?page=deconnexion");
+    header("refresh:1;url=index.php?page=deconnexion");
 
 }   else {
 

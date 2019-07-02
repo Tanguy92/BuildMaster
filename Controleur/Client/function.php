@@ -7,7 +7,7 @@ echo"
 
         <img src=",$donnees['photo'],">
           <figcaption>",$donnees['nom'],"</figcaption>
-          <span class=","'price'",">",$donnees['prix'],"</span>
+          <span class=","'price'",">",$donnees['prix'],"€</span>
           <button name = idProduit value=",$donnees['idProduit'],">Consulter</button>
        
           </figure>
