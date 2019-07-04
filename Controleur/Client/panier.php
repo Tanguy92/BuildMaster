@@ -15,16 +15,18 @@ while ($donnees = $selectidMembre->fetch()) {
 
 $selectArticlePanier = selectArticlePanier($idMembre);
 
-while ($donnees2 = $selectArticlePanier->fetch()) {
-    if(!isset($_POST["commander"])){
-        include("View/Client/panier.php");
-    }
-}
+
 
 if (isset($_POST["supprimerPanier"])) {
     $idProduit = $_POST["supprimerPanier"];
     deletePanier($idProduit, $idMembre);
     header('Location: index.php?page=panier');
+}
+
+while ($donnees2 = $selectArticlePanier->fetch()) {
+    if(!isset($_POST["commander"])){
+        include("View/Client/panier.php");
+    }
 }
 
 if(isset($_POST["dateDebut"]) && isset($_POST["dateFin"])){

@@ -11,10 +11,10 @@
 <section>
 
     <?php
+
             $reponse = selectAllCategorie();
             $i=0;
             while($donnees = $reponse->fetch()){
-                
          
 ?>
 <form class="submit" action="index.php?page=categorie" method ="POST">
@@ -23,8 +23,8 @@
     <div class="figure-container">
       <div class="figure face"></div>
     </div>
-    <div class="text" id="<?= $i; ?>">
-     <span><input type="radio" id="<?php= $i; ?>"
+    <div class="text" id="<?php $i; ?>">
+     <span><input type="radio" id="<?php $i; ?>"
      name="categorie" value="<?php echo $donnees['nom']; ?>"><?php echo $donnees['nom']; ?></span> 
      <input type="hidden" name="supprCategorie" value="<?php echo $donnees['idCategorie']; ?>">
     </div>

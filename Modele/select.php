@@ -270,7 +270,7 @@ function search($search)
 {
 
     $bdd = $GLOBALS["bdd"];
-    $reponse = $bdd->prepare("SELECT * FROM `article` WHERE `nom` LIKE :search");
+    $reponse = $bdd->prepare("SELECT *,count(*) FROM `article` WHERE `nom` LIKE :search");
     $reponse->execute(array(
         'search' => $search
     ));
@@ -280,7 +280,7 @@ function search2($search)
 {
 
     $bdd = $GLOBALS["bdd"];
-    $reponse = $bdd->prepare("SELECT * FROM `membre` WHERE `magasin` LIKE :search");
+    $reponse = $bdd->prepare("SELECT *,count(*) FROM `membre` WHERE `magasin` LIKE :search");
     $reponse->execute(array(
         'search' => $search
     ));
