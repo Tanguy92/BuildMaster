@@ -13,10 +13,7 @@ include("Modele/connectBDD.php");
                     <input id="namanyay-search-box" name="search" size="80" type="text" placeholder="Rechercher un article" required />
                     <input id="namanyay-search-btn" value="Rechercher" type="submit" />
                 </form>
-            </p>
-           <!-- <a class="abutton" href="#">Onze diensten</a> -->
-
-        </div>
+            
         <!-- <div class="kvsubbox">
             <div class="kvsub-lef</div>t">
                 <h2>Missie</h2>
@@ -47,6 +44,10 @@ include("Modele/connectBDD.php");
     </form>
     </ul>
  
+    </p>
+           <!-- <a class="abutton" href="#">Onze diensten</a> -->
+
+        </div>
 
 
 
@@ -77,7 +78,7 @@ while ($donnees = $reponse3->fetch()) {
 }
 ?>
 
-<H2>Magasin</H1>
+<H2>Magasin</H2>
 <?php
 while ($donnees = $reponse2->fetch()) {
     include("Controleur/Client/functionMagasin.php");

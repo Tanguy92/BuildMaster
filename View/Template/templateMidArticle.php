@@ -20,6 +20,7 @@ include("Modele/connectBDD.php");
     <!--Changing the number in the column_# class changes the number of columns-->
 
     <link rel="stylesheet" type="text/css" media="screen" href="View/Template/cssMonSiteArticle.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="View/Template/categorie.css">
 <body>
 	<div id="wrap">
 	<div id="columns" class="columns_4">

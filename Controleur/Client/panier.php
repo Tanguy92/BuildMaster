@@ -31,7 +31,7 @@ while ($donnees2 = $selectArticlePanier->fetch()) {
 
 if(isset($_POST["dateDebut"]) && isset($_POST["dateFin"])){
     if($_POST["dateDebut"]> $_POST["dateFin"]){
-        echo "La date de début de la location ne peut pas être supérieur à la date de fin";
+        echo " La date de début de la location ne peut pas être supérieur à la date de fin <br>";
         $echec = true;
     }
     $selectDispo = selectDispo();

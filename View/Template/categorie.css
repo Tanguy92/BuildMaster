@@ -3,17 +3,65 @@ ul.navbar {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;}
+    position: relative;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0);}
 
 li.navbar {
     float: left;}
 
 li.navbar button {
-    display: block;
+   
+    margin: 3px;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    margin-top: 50px;
+    padding: 6px 16px;
+    box-shadow:  white;
+    background :white;
     text-decoration: none;}
 
 li.navbar button:hover {
     background-color: #111;}
+
+    button {
+        color: white;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        font-family: "Roboto Mono", monospace;
+        font-size: 18px;
+        -webkit-transform: translate(0);
+                transform: translate(0);
+        background-image: linear-gradient(45deg, #4568DC, #B06AB3);
+        padding: 10px 20px;
+        border-radius: 5px;
+        box-shadow: 0 22px 44px rgba(128, 128, 128, 0.1);
+        transition: box-shadow 0.25s;
+      }
+      button .text {
+       
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(45deg, #4568DC, #B06AB3);
+      }
+      button:after {
+        content: "";
+        border-radius: 4px;
+        position: absolute;
+        margin: 1px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        background:rgba(11, 38, 59, 0.596);
+      }
+      button:hover {
+        background-image: linear-gradient(-45deg, #4568DC, #B06AB3);
+        box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+      }
+      button:hover .text {
+        background-image: linear-gradient(-45deg, #4568DC, #B06AB3);
+      }
+      
