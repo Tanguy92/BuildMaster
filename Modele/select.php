@@ -132,6 +132,7 @@ function selectAppartenance($bdd) {
 	return $ap;
 }
 
+
 //Selectionner le message d'avertissement envoyé par le systeme (affichage diff)
 function selectAdv($o) {
     $bdd = $GLOBALS["bdd"];

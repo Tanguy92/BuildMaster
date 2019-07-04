@@ -26,6 +26,27 @@ if(isset($_POST["idProduit"])){
     //Determination de l'id du vendeur pour le contacter
     $rep = selectVendeurProduit($idProduit);
     $vendeur = $rep['idMembre'];
+
+    //j'ai l'id du produit je vais en appartenance et je prend l'id du vendeur ADRESSE
+    $req = selectVendeurProduit($idProduit);
+    $identifiant = $req['idMembre'];
+    $personne = selectSpecMembre($identifiant);
+    $adresse = $personne['adresse'];
+
+    $ad = explode(" ", $adresse);
+
+    $top = count($ad);
+    $affichage = [];
+    $affichage[] = '<a href="https://www.google.com/maps/place/';
+    for($i=0; $i<$top; $i++) {
+        if (isset($affichage[$i+1])) {
+            $ca = '+';
+        } else {
+            $ca = null;
+        }
+        $affichage[] =  $ad[$i] . ' ' . $ca; 
+    }
+    $affichage[] = '" target="_blank">Cliquez ici pour localiser</a>';
     
     $reponse = description($idProduit);
     while ($donnees = $reponse->fetch()) {  

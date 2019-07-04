@@ -49,17 +49,12 @@ AIzaSyBLLLIQ1Mh1k-uEqFG_ZbmKhTFbtTLrjE4
             <link rel="stylesheet" type="text/css" media="screen" href="View/Template/cssmap.css">
            
           <div id="map">
-          <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 48.8534, lng: 2.3488},
-          zoom: 8
-        });
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLLLIQ1Mh1k-uEqFG_ZbmKhTFbtTLrjE4&callback=initMap"
-    async defer></script>
+            <?php
+          $top = count($affichage);
+    for($i=0; $i<$top; $i++) {
+       echo strval($affichage[$i]);
+    }
+    ?>
           </div>
     
     
