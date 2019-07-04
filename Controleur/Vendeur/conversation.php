@@ -32,24 +32,10 @@ if($moi != "1") {
 		$moi = $_SESSION['id'];			
 
 		$donnees = selectMembre($bdd);
-
 		for ($i = 0; $i < count($donnees); $i++) {
-			if ($donnees[$i]['idMembre'] == $moi) {
-				if ($donnees[$i]['statut'] == 'v') {
-					$prenom1 = $donnees[$i]['magasin'];
-				} elseif ($donnees[$i]['statut'] == 'a') {
-					$prenom1 = $donnees[$i]['nom'];
-				} else {
-					$prenom1 = $donnees[$i]['prenom'];
-				}
-			} elseif ($donnees[$i]['idMembre'] == $toi) {
-				if ($donnees[$i]['statut'] == 'v') {
-					$prenom2 = $donnees[$i]['magasin'];
-					$photo = $donnees[$i]['photo'];
-				} else {
-					$prenom2 = $donnees[$i]['prenom'];
-					$photo = $donnees[$i]['photo'];
-				}
+			if ($donnees[$i]['idMembre'] == $toi) {
+					$prenom = $donnees[$i]['magasin'];
+					$photo = $donnees[$i]['logo'];
 			}
 		}	
 				

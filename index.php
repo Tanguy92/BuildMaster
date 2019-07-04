@@ -3,6 +3,10 @@ session_start();
 include("Modele/ConnectBDD.php");
 require_once("Modele/Update.php");
 
+if (isset($_SESSION['toi'])) {
+    echo $_SESSION['toi'];
+}
+
 updateDateDebutArticle();
 updateFermetureCommande();
 

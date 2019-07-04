@@ -26,7 +26,7 @@
 					echo '<h3>CLIENT</h3>';
 				} ?>
 			<input type="hidden" name="page" value="conversation">
-			<?php echo '<input type="hidden" name="destinataire" value="' . $donnees[$i]['idMembre'] . '">'; ?>
+			<?php echo '<input type="hidden" name="destinataire" value="' . $_SESSION['toi'] . '">'; ?>
 			</form>
 			</div>
 			</li>

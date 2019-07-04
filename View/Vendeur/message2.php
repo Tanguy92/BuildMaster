@@ -8,7 +8,7 @@
 				echo '<h3>' . $statut . '</h3>';
 				?>
 			<input type="hidden" name="page" value="conversation">
-			<?php echo '<input type="hidden" name="destinataire" value="' . $donnees[$i]['idMembre'] . '">'; ?>
+			<?php echo '<input type="hidden" name="destinataire" value="' . $toi . '">'; ?>
 			</form>
 			</div>
 			</li>

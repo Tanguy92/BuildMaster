@@ -35,12 +35,12 @@ for ($i = 0; $i < count($message)-1; $i++) {
 				if ($donnees[$i]['statut'] == 'v') {
 					$prenom = $donnees[$i]['magasin'];
 					$statut = 'VENDEUR';
-					$photo = $donnees[$i]['photo'];
+					$photo = $donnees[$i]['logo'];
 					$id = $donnees[$i]['idMembre'];
 				} else {
 					$prenom = $donnees[$i]['prenom'];
 					$statut = 'CLIENT';
-					$photo = $donnees[$i]['photo'];
+					$photo = $donnees[$i]['logo'];
 					$îd = $donnees[$i]['idMembre'];
 				}
 				include ('View/Vendeur/message2.php');
