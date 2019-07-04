@@ -11,7 +11,7 @@ while ($donnees = $selectidMembre->fetch()) {
     $idMembre = $donnees["idMembre"];
 }
 
-echo "Commande(s) ouverte(s) : <br>";
+
 
 $selectCommandeOuverte = selectCommandeOuverte($idMembre);
 
@@ -28,7 +28,7 @@ while ($donnees2 = $selectCommandeOuverte->fetch()) {
 
 $selectCommandeFerme = selectCommandeFerme($idMembre);
 
-echo "Commande(s) fermée(s) : <br>";
+
 
 while ($donnees3 = $selectCommandeFerme->fetch()) {
     $prix2 = $donnees3["prix"];

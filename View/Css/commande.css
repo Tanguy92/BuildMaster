@@ -1,0 +1,114 @@
+.c-card {
+    border-radius: 4px;
+  }
+  
+  /*.c-card__right {
+    text-align: right;
+  }*/
+  .c-card--data {
+    border-bottom: 0;
+    box-shadow: none;
+  }
+  
+  .c-card__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: 4px 4px 0 0;
+  }
+  .c-card--data .c-card__header {
+    background-color: #EFEFEF;
+  }
+  
+  .c-card__primary-text {
+    margin: 0;
+  }
+  
+  .c-card__body {
+    padding: 12px;
+    border-radius: 0 0 4px 4px;
+  }
+  .c-card__body ~ .c-card__footer {
+    border-radius: 0;
+  }
+  .c-card--data .c-card__body {
+    background-color: #fcfcfc;
+  }
+  
+  .c-card__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 0 0;
+  }
+  
+  .c-card__item {
+    padding: 0 8px;
+  }
+  .c-card__item:first-of-type {
+    padding-left: 0;
+  }
+  .c-card__item:last-of-type {
+    padding-right: 0;
+  }
+  
+  @media screen and (min-width: 968px) {
+    .c-card__item--size-1 {
+      flex: 1;
+    }
+  }
+  
+  .c-card__item--button-group {
+    padding: 0;
+    display: flex;
+    flex: 1 0 50%;
+  }
+  @media screen and (min-width: 968px) {
+    .c-card__item--button-group {
+      flex-basis: auto;
+      flex-grow: 150px;
+      justify-content: flex-end;
+    }
+  }
+  .c-card__item--button-group > .btn {
+    width: 100%;
+  }
+  @media screen and (min-width: 968px) {
+    .c-card__item--button-group > .btn {
+      max-width: 250px;
+    }
+  }
+  
+  .c-card__footer {
+    border-radius: 0 0 4px 4px;
+  }
+  
+  .c-card__row--segmented {
+    background-image: linear-gradient(to right, #CACACA 0%, #CACACA 64.7058823529%, rgba(0, 0, 0, 0) 64.7058823529%);
+    background-position: 0 bottom;
+    background-size: 17px 2px;
+    background-repeat: repeat-x;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .c-card__row--segmented:first-of-type {
+    padding-top: 0;
+  }
+  .c-card__row--segmented:last-of-type {
+    background: none;
+    padding-bottom: 0;
+  }
+  
+  body {
+    font-family: "Proxima Nova" !important;
+  }
+  
+  p.btn.btn-link {
+    -webkit-user-select: all;
+       -moz-user-select: all;
+        -ms-user-select: all;
+            user-select: all;
+  }
+  
