@@ -107,6 +107,12 @@ function deleteNote($appa) {
     $ia -> execute(array('ap' => $appa));
 }
 
+function deleteCommandeA($appa) {
+    $bdd = $GLOBALS["bdd"];
+    $ia = $bdd -> prepare('DELETE FROM `commande` WHERE idMembre = :ap');
+    $ia -> execute(array('ap' => $appa));
+}
+
 
 function deleteCategorie($v1){
     $bdd = $GLOBALS["bdd"];

@@ -107,6 +107,15 @@ function selectMessage($bdd) {
 	return $message;
 }
 
+function selectMessageSup($coco) {
+    $bdd = $GLOBALS["bdd"];
+	$premier = $bdd ->prepare('SELECT messagerie.idMessagerie FROM `messagerie` WHERE messagerie.expediteur = :ca OR messagerie.destinataire = :ca;');
+	$premier -> execute(array('ca' => $coco));
+
+	while ($message[] = $premier->fetch()) {}
+	return $message;
+}
+
 function selectNote($coco) {
     $bdd = $GLOBALS["bdd"];
 	$premier = $bdd ->prepare('SELECT AVG(note) FROM notes WHERE idMembre = :ca');

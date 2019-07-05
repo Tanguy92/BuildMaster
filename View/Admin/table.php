@@ -2,23 +2,25 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="View/Css/message.css"/>
+	<link rel="stylesheet" type="text/css" href="View/Css/utilisateurs.css"/>
 	<title>Accueil</title>
 </head>
 
 <body><center>
 <p>
     <label><h1><font color="white">Vendeurs</font></h1></label>
-    <table>
-		<tr id="ligne">
-			<th>Prenom</th>
-			<th>Nom</th>
-			<th>Magasin</th>
-            <th>Mail</th>
-            <th>Adresse</th>
-            <th>Signalements</th>
+ 
+    <table class="flat-table flat-table-1">
+        <thead>
+			<th><h2>Prenom</h2></th>
+			<th><h2>Nom</h2></th>
+			<th><h2>Magasin</h2></th>
+            <th><h2>Mail</h2></th>
+            <th><h2>Adresse</h2></th>
+            <th><h2>Signalements</h2></th>
             <th> </th>
-		</tr>
+        </thead>
+        <tbody>
 <?php 
     for($i = 0; $i < count($v)-1;$i++){
 ?>
@@ -41,6 +43,7 @@
 <?php
 }
 ?>
+</tbody>
 	</table>
 </p>
 

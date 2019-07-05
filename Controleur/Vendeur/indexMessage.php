@@ -26,14 +26,18 @@ include ('View/Vendeur/chat.php');
 include ('View/Vendeur/message3.php');
 
 } else {
+//Debut de la table
+include ('View/Vendeur/a.php');
+
+
     $adv = selectAdv($_SESSION['id']);
-  
     for ($i = 0; $i < count($adv)-1; $i++) {
         $pu = $adv[$i]['idMessagerie'];
         $mot = $adv[$i]['text']; 
         $top = strlen($mot)-1;
-        $sup = $mot[$top];
+        $sup = $mot[$top-1] . $mot[$top];
         include ('View/Vendeur/adminSysteme.php');
     }
-}
+    include ('View/Vendeur/as1.php');
+ }
 ?>

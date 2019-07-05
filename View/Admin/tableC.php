@@ -1,14 +1,14 @@
 <p>
     <label><h1><font color="white">Clients</font></h1></label>
-    <table>
-		<tr id="ligne">
-			<th>Prenom</th>
-			<th>Nom</th>
-            <th>Mail</th>
-            <th>Adresse</th>
-            <th>Signalements</th>
+ 
+    <table class="flat-table flat-table-1">
+        <thead>
+        <th><h2>Prenom</h2></th>
+			<th><h2>Nom</h2></th>
+            <th><h2>Mail</h2></th>
             <th> </th>
-		</tr>
+        </thead>
+        <tbody>
 <?php 
     for($i = 0; $i < count($c)-1;$i++){
 ?>
@@ -17,8 +17,6 @@
 			<td id="col"><h3><font color="white"><?php echo $c[$i]['prenom']; ?></font></h3></td>
             <td id="col"><h3><font color="white"><?php echo $c[$i]['nom']; ?></font></h3></td>
             <td id="col"><h3><font color="white"><?php echo $c[$i]['mail']; ?></font></h3></td>
-            <td id="col"><h3><font color="white"><?php echo $c[$i]['adresse']; ?></font></h3></td>
-            <td id="col"><h3><font color="white"><?php echo $c[$i]['signalements']; ?></font></h3></td>
             <td id ="col">
                 <form action="index.php" method="GET">
                     <input type="hidden" name="page" value="supCompte">
@@ -30,6 +28,7 @@
 <?php
 }
 ?>
+</tbody>
 	</table>
 </p>
 

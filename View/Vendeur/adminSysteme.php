@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="View/Css/message.css"/>
-        <title>Accueil</title>
-    </head>
 
-    <body><center>
-        <p id='sys'>
-            <table>
-			    <tr id="ligne">
-				    <th>Message système</th>
-				    <th>Action</th>
-			    </tr>
+			
+      
 		        <tr>
-			        <td id="col"><h3><font color="white"><?php echo $adv[$i]['text']; ?></font><h3></td>
+			        <td id="col"><h2><font color="black"><?php echo $adv[$i]['text']; ?></font><h2></td>
 			        <td id ="col">
                         <form action="index.php" method="GET">
                             <input type="hidden" name="page" value="supSign">
@@ -23,7 +12,4 @@
                         </form>
                     </td>
 		        </tr>	
-            </table>
-        </p>
-    </center></body>
-</html>
+           

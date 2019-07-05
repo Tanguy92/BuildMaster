@@ -26,8 +26,8 @@ if ($somme == 4) {
     $enregistrer = insertMessage($advertissement3, 2, $compte); 
 } 
 
-if ($somme == 6) {	
-    $raison = "6 Signalements atteint, compte à supprimer = " . $_GET['compte'];
+if ($somme >= 6) {	
+    $raison = "6 Signalements atteints, compte à supprimer = " . $_GET['compte'];
     $add = insertMessage($raison, 2, 1);
 }
 
