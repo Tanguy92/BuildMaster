@@ -31,9 +31,14 @@
     </header>
     <main>
         <section class="kvsection">
+        <style type="text/css">
+.kv {
+    padding:50px 100px;
+}
+</style>
             <div class="kv">
                 <h1>Bonjour <?php echo  $_SESSION['prenom']; ?> </h1>
-                <p class="introcopy">Boite a outil : Admin</p>
+                
             </div>
             <div class="kvsubbox">
                 <div class="kvsub-left">

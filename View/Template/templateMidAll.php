@@ -13,10 +13,7 @@ include("Modele/connectBDD.php");
                     <input id="namanyay-search-box" name="search" size="80" type="text" required placeholder="Rechercher un article" />
                     <input id="namanyay-search-btn" value="Rechercher" type="submit" />
                 </form>
-            </p>
-           <!-- <a class="abutton" href="#">Onze diensten</a> -->
-
-        </div>
+            
         <!-- <div class="kvsubbox">
             <div class="kvsub-lef</div>t">
                 <h2>Missie</h2>
@@ -48,7 +45,10 @@ include("Modele/connectBDD.php");
     </form>
     </ul>
  
+    </p>
+           <!-- <a class="abutton" href="#">Onze diensten</a> -->
 
+        </div>
 
 
 
@@ -59,7 +59,7 @@ include("Modele/connectBDD.php");
 	<div id="wrap">
 	<div id="columns" class="columns_4">
         
-<H2>Article</H1>
+<H2>Articles</H1>
 <?php
 
 $reponse = Tanguy();
@@ -116,7 +116,7 @@ while ($donnees = $reponse->fetch()) {
 // </body>
 ?>
 
-<H2>Magasin</H1>
+<H2>Magasins</H1>
 <?php
 
 $reponse = TanguyMagasin();

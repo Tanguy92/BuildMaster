@@ -7,7 +7,9 @@ echo"
           <span class=","'price'",">",$donnees['prix'],"€</span>
           <button name =modifier value=",$donnees['idProduit'],">Modifier</button>
           </form>
+          <br>
           <form action ='index.php?page=articleVendeur' method='POST'>
+          &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
           <button name =supprimer value=",$donnees['idProduit'],">Supprimer</button>
           </form>
           <form action ='index.php?page=description' method='POST'>

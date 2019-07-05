@@ -21,7 +21,7 @@
              
             Email <input type="text" name="mail" required placeholder="Email">
             Mot de passe <input type="password" required name="pass" placeholder="Password">
-             <input type="submit" name="login" class="login login-submit" value="Connection">
+             <input type="submit" name="login" class="login login-submit" value="Connexion">
          </form>
 
 
